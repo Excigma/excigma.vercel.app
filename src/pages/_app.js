@@ -35,8 +35,6 @@ export default function MyApp({ Component, pageProps }) {
                 <title>{nicePath} - PastpaperArmyKnife</title>
 
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                
-                {{/*<meta name="robots" content="noindex, nofollow" /> */ }}
 
                 <meta name="description" content="A storage of Excigma's class notes and some past paper questions - by topic." />
                 <meta name="theme-color" content="#2f3136" />
