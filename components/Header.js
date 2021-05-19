@@ -31,18 +31,19 @@ export default function Header(props) {
                 <AppBar position="sticky">
                     <Toolbar>
                         <Link href="/" color="inherit">
-                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            <IconButton edge="start" className={classes.menuButton} aria-label="menu">
                                 <Image src="/static/img/icon.png" alt="Product icon" width="30" height="30" />
                             </IconButton>
                         </Link>
 
-                        <Typography variant="h6" className={classes.title}><Link href="/" color="inherit">PastpaperArmyKnife </Link></Typography>
+                        <Typography variant="h6" className={classes.title}>
+                            <Link href="/" style={{ color: 'white' }}>PastpaperArmyKnife</Link>
+                        </Typography>
 
                         <Button>Subjects</Button>
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
         </Fragment>
-       
     );
 }

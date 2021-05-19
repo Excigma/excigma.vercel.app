@@ -40,11 +40,11 @@ function Link(props) {
     });
 
     if (naked) {
-        return <NextComposed className={className} ref={innerRef} href={href} color="secondary" {...other} />;
+        return <NextComposed className={className} ref={innerRef} href={href} style={{ color: '#63ade5' }} {...other} />;
     }
 
     return (
-        <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} color="secondary" {...other} />
+        <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} style={{ color: '#63ade5' }} {...other} />
     );
 }
 
