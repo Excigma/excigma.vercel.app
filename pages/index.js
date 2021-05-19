@@ -1,4 +1,4 @@
-
+import React from "react";
 
 export default function Home() {
     return (
@@ -30,7 +30,7 @@ export default function Home() {
 
                     <p>Javascript is injected into <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> instances to determine the position of text on the PDF, which is used to:
 
-                    <ol>
+                        <ol>
                             <li>Locate the location of questions on the page</li>
                             <li>Using the above, to extract the text between two questions to guess the topic it is from</li>
                         </ol>
@@ -38,7 +38,7 @@ export default function Home() {
 
                     <p>The screenshots were cropped and saved according to the values returned from <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>, and as so may be inaccurate, but generally it has turned out well</p>
 
-                    <p>Screenshots are grouped by topics, which is written into a database to be read from later (jk, it's just a JSON)</p>
+                    <p>Screenshots are grouped by topics, which is written into a database to be read from later (jk, it is just a JSON)</p>
 
                     <p>A <a href="https://www.python.org/">Python</a> script using <a href="https://github.com/opencv/opencv-python">OpenCV</a> is then used to remove unnecessary whitespace in between pages and working space in questions to make the image smaller</p>
                 </div>
@@ -93,19 +93,25 @@ export default function Home() {
 
                     <blockquote>
                         <b>You're gonna waste 100 hours to write a stupid script to screenshot it instead of doing it yourself in less time</b>
-                    </blockquote>- Anonymous.
+                    </blockquote>
+                    - Anonymous.
 
-        <blockquote><b>Get a life lol</b></blockquote>        - Anonymous.
+                    <blockquote>
+                        <b>Get a life lol</b>
+                    </blockquote>
+                    - Anonymous.
 
-        <blockquote>
+                    <blockquote>
                         <b>have a sleep and get back to it somewhat not dead in the morning</b>
-                    </blockquote>        - Anonymous.
+                    </blockquote>
+                    - Anonymous.
 
-        <blockquote>
-                        <b>62.5% of a week spent on this <br /> you're aren't making yourself look less insane btw</b>
-                    </blockquote>        - Anonymous.
-
-                <br />
+                    <blockquote>
+                        <b>62.5% of a week spent on this <br /> you aren't making yourself look less insane btw</b>
+                    </blockquote>
+                    - Anonymous.
+                    
+                    <br />
                 </div>
             </div>
 
@@ -167,5 +173,5 @@ export default function Home() {
 
             </div>
         </div>
-    )
+    );
 }

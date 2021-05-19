@@ -1,9 +1,10 @@
+import React from "react";
 
 export default function Footer() {
     return (
 
-        <footer class="page-footer blue darken-4 valign-wrapper">
-            <div class="container">
+        <footer className="page-footer blue darken-4 valign-wrapper">
+            <div className="container">
                 <p>Made by Excigma during some term break in 2021 to assist study.</p>
             </div>
 
@@ -11,5 +12,5 @@ export default function Footer() {
         </footer>
 
 
-    )
+    );
 }
