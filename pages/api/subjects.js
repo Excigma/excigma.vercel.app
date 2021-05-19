@@ -1,8 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const fetch = require("petitio")
 
 export default async (req, res) => {
-  const response = await fetch("https://pastpaperarmyknife.up.railway.app/api/subjects").send().json()
+  const response = await fetch("https://pastpaperarmyknife.up.railway.app/api/subjects")
   res.statusCode = 200
-  res.json(response)
+  res.json(await response.json())
 }
