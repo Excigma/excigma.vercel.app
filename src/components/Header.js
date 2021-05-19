@@ -32,7 +32,7 @@ export default function Header(props) {
                     <Toolbar>
                         <Link href="/" color="inherit">
                             <IconButton edge="start" className={classes.menuButton} aria-label="menu">
-                                <Image src="/static/img/icon.png" alt="Product icon" width="30" height="30" />
+                                <Image src="/icons/icon-48x48.png" alt="Product icon" width="30" height="30" />
                             </IconButton>
                         </Link>
 

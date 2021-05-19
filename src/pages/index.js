@@ -14,7 +14,8 @@ import Link from 'components/Link.js';
 import { Grid,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
 
-export default function Home() {
+
+export default function Home() {    
     return (
         <Container>
             <Box my={10}>
