@@ -7,7 +7,7 @@ export default function Footer() {
         <Fragment>
             <footer>
                 <Container>
-                    <Typography variant="h6" align="center">
+                    <Typography variant="h6" component="span" align="center">
                         PastpaperArmyKnife
                     </Typography>
 
