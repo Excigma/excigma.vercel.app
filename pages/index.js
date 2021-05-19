@@ -56,7 +56,7 @@ export default function Home() {
                         </Typography>
                
                
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" component="h3" gutterBottom>
                             <StorageIcon fontSize="small" /> A storage of Excigma's class notes and some past paper questions - by topic.
                         </Typography>
 
@@ -75,7 +75,7 @@ export default function Home() {
                     </Grid>
                     
                     <Grid item xs={12} sm={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" component="h4" gutterBottom>
                             <HelpIcon fontSize="small" /> About
                         </Typography>
 
@@ -85,7 +85,7 @@ export default function Home() {
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" component="h4" gutterBottom>
                             <FormatListBulletedIcon fontSize="small" /> Subjects
                         </Typography>
 
@@ -97,7 +97,7 @@ export default function Home() {
                     
                     
                     <Grid item xs={12} sm={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" component="h4" gutterBottom>
                             <HourglassFullIcon fontSize="small" /> How it works
                         </Typography>
 
@@ -131,7 +131,7 @@ export default function Home() {
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" component="h4" gutterBottom>
                             <HelpIcon fontSize="small" /> When + Why
                         </Typography>
 
@@ -145,6 +145,10 @@ export default function Home() {
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
+                        <Typography variant="h5" component="h4" gutterBottom>
+                            <ChatBubbleIcon fontSize="small" /> Unless statistics no one cares about
+                        </Typography>
+
                         <TableContainer>
                             <Table aria-label="simple table">
                                 <TableBody>
@@ -178,7 +182,7 @@ export default function Home() {
                     </Grid>
                     
                     <Grid item xs={12} sm={6}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" component="h4" gutterBottom>
                             <ChatBubbleIcon fontSize="small" /> "Testimonials" (Maybe)
                         </Typography>
 
