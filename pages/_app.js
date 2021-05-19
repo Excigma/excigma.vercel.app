@@ -21,6 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 
     const name = router.pathname.substring(1);
     const path = name || '/';
+    const nicePath = path.charAt(0).toUpperCase() + path.slice(1);
 
     React.useEffect(() => {
         const jssStyles = document.querySelector('#jss-server-side');
@@ -30,7 +31,7 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <CacheProvider value={cache}>
             <Head>
-                <title>{path} - PastpaperArmyKnife</title>
+                <title>{nicePath} - PastpaperArmyKnife</title>
 
                 <meta name="robots" content="noindex, nofollow" />
 
@@ -39,7 +40,7 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="subject" content="Notes"/>
                 <meta name="author" content="Excigma" />
                 
-                <meta name="og:title" content={`${path} - PastpaperArmyKnife`}/>
+                <meta name="og:title" content={`${nicePath} - PastpaperArmyKnife`}/>
                 <meta name="og:type" content="website"/>
                 <meta name="og:image" content="/static/img/favicon-32x32.png"/>
                 <meta name="og:site_name" content="PastpaperArmyKnife + Notes"/>
