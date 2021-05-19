@@ -6,14 +6,13 @@ import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import HourglassFullIcon from '@material-ui/icons/HourglassFull';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
-
 import HelpIcon from '@material-ui/icons/Help';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Link from '../components/Link.js';
+import Link from 'components/Link.js';
 import { Grid,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
-import Blockquote from '../components/Blockquote.js';
+import Blockquote from 'components/Blockquote.js';
 
 
 // const columns = [

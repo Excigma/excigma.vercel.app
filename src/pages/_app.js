@@ -2,16 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import '../styles/globals.css';
+import 'styles/globals.css';
 
-import Header from '../components/Header.js';
-import Footer from '../components/Footer.js';
+import Header from 'components/Header.js';
+import Footer from 'components/Footer.js';
 
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CacheProvider } from '@emotion/react';
 
 import createCache from '@emotion/cache';
-import theme from '../theme';
+import theme from 'theme.js';
 
 
 export const cache = createCache({ key: 'css', prepend: true });
