@@ -12,16 +12,38 @@ import Footer from "../components/footer";
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
+
     const name = router.pathname.substring(1);
+    const path = name ? name + " -" : "";
 
     return (
         <div>
             <Head>
-                <title>{ name ? name+ " |" : ""} PastpaperArmyKnife</title>
+                <title>{path} PastpaperArmyKnife</title>
+
+                <meta name="robots" content="noindex, nofollow" />
+
+                <meta name="description" content={`${path} PastpaperArmyKnife. A storage of Excigma's Notes.`} />
+                <meta name="theme-color" content="#2f3136" />
+                <meta name="subject" content="Notes"/>
+                <meta name="author" content="Excigma" />
+                
+
+                <meta name="og:title" content={`${path} PastpaperArmyKnife`}/>
+                <meta name="og:type" content="website"/>
+                <meta name="og:image" content="/static/img/favicon-32x32.png"/>
+                <meta name="og:site_name" content="PastpaperArmyKnife"/>
+                <meta name="og:description" content={`${path} PastpaperArmyKnife. A storage of Excigma's Notes.`}/>
+                
+                <link rel="shortcut icon" href="favicon.ico" />
+
+                <script src="https://umami.up.railway.app/umami.js"></script>
             </Head>
 
             <Header />
+
             <Component {...pageProps} />
+            
             <Footer />
         </div>
     );

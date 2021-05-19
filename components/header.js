@@ -1,16 +1,8 @@
 import React from "react";
-import Head from "next/head";
 
 export default function Header() {
     return (
         <div>
-            <Head>
-                <meta name="description" content="A storage of Excigma's Notes." />
-                <meta name="robots" content="noindex, nofollow" />
-                <link rel="shortcut icon" href="favicon.ico" />
-                <script src="https://umami.up.railway.app/umami.js"></script>
-            </Head>
-
             <main>
                 <nav className="blue darken-3" role="navigation">
                     <div className="nav-wrapper container">
