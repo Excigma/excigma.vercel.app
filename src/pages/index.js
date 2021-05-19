@@ -14,34 +14,6 @@ import Link from 'components/Link.js';
 import { Grid,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
 
-
-// const columns = [
-//     { field: 'statistic', headerName: 'Statistic', width: 130 },
-//     { field: 'data', headerName: 'Data', width: 130 }
-// ];
-
-// const rows = [
-//     {statistic: 'Time spent writing and running the code', data: 'Over 200 hours'},
-//     {statistic: 'Images saved in total', data: 'Around 1440'},
-//     {statistic: 'Time spent screenshotting', data: '35 minutes 24 seconds'},
-//     {statistic: 'Size of entire project on disk', data: 'Around 1.7 GiB'},
-//     {statistic: 'Number of GOTOs in the code', data: 'Absolutely zero.'},
-//     {statistic: 'Brain-cells lost making this', data: 'A lot'}
-// ];
-
-
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
 export default function Home() {
     return (
         <Container>
