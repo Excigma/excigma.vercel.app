@@ -14,26 +14,26 @@ function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     const name = router.pathname.substring(1);
-    const path = name ? name + " -" : "";
+    const path = name || "/";
 
     return (
         <div>
             <Head>
-                <title>{path} PastpaperArmyKnife</title>
+                <title>{path} - PastpaperArmyKnife</title>
 
                 <meta name="robots" content="noindex, nofollow" />
 
-                <meta name="description" content={`${path} PastpaperArmyKnife. A storage of Excigma's Notes.`} />
+                <meta name="description" content="A storage of Excigma's class notes and some past paper questions - by topic." />
                 <meta name="theme-color" content="#2f3136" />
                 <meta name="subject" content="Notes"/>
                 <meta name="author" content="Excigma" />
                 
 
-                <meta name="og:title" content={`${path} PastpaperArmyKnife`}/>
+                <meta name="og:title" content={`${path} - PastpaperArmyKnife`}/>
                 <meta name="og:type" content="website"/>
                 <meta name="og:image" content="/static/img/favicon-32x32.png"/>
                 <meta name="og:site_name" content="PastpaperArmyKnife"/>
-                <meta name="og:description" content={`${path} PastpaperArmyKnife. A storage of Excigma's Notes.`}/>
+                <meta name="og:description" content="A storage of Excigma's class notes and some past paper questions - by topic."/>
                 
                 <link rel="shortcut icon" href="favicon.ico" />
 
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
             <Header />
 
             <Component {...pageProps} />
-            
+
             <Footer />
         </div>
     );
