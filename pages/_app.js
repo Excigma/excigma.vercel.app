@@ -48,8 +48,7 @@ export default function MyApp({ Component, pageProps }) {
                 
                 <link rel="shortcut icon" href="favicon.ico" />
 
-                <script src="https://umami.up.railway.app/umami.js"/>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+                <script async defer data-website-id="881890a9-90ba-4436-9317-cd7f43d11d60" src="https://umami.up.railway.app/umami.js"/>
             </Head>
 
             <ThemeProvider theme={theme}>
