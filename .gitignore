@@ -19,6 +19,9 @@
 **/public/workbox-*.js
 **/public/sw.js
 **/public/sw.map.js
+/public/workbox-*.js
+/public/sw.js
+/public/sw.map.js
 
 # misc
 .DS_Store
