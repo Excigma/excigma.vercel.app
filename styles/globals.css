@@ -1,16 +1,61 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+p {
+  line-height: 1.5em;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+footer.page-footer {
+  padding-top: 0;
 }
 
-* {
-  box-sizing: border-box;
+.dark {
+  background: #212121 !important;
+  color: white !important;
+}
+
+.dark .black-text {
+  color: white !important;
+}
+
+/*
+.dark #image {
+  filter: invert();
+}
+*/
+
+.dark .sidenav {
+  background: #616161;
+}
+
+.dark .sidenav a {
+  color: white !important;
+}
+.dark tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.dark .btn.disabled {
+  background-color: #424242 !important;
+  color: #bdbdbd !important;
+}
+
+.dark .collapsible {
+  box-shadow: 0 2px 2px 0 rgb(255 255 255 / 14%), 0 3px 1px -2px rgb(255 255 255 / 12%), 0 1px 5px 0 rgb(255 255 255 / 20%);
+  border:#424242 !important;
+}
+
+
+.dark .collapsible-header.active {
+  background: #424242;
+}
+
+.dark .collapsible-header,
+.dark .collapsible-body {
+  background: #212121;
+  border-bottom:1px solid #424242 !important;
+}
+
+.feather {
+  transform: translateY(0.2rem) scale(0.85)
+}
+
+.icon-small {
+  transform: translateY(.3em) scale(.65)
 }
