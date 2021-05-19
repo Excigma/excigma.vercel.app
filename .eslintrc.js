@@ -1,45 +1,45 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
+    'env': {
+        'browser': true,
+        'es2021': true,
+        'node': true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+    'extends': [
+        'eslint:recommended',
+        'plugin:react/recommended'
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
+    'parserOptions': {
+        'ecmaFeatures': {
+            'jsx': true
         },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+        'ecmaVersion': 12,
+        'sourceType': 'module'
     },
-    "plugins": [
-        "react"
+    'plugins': [
+        'react'
     ],
-    "rules": {
-        "indent": [
-            "error",
+    'rules': {
+        'indent': [
+            'error',
             4
         ],
-        "react/no-unescaped-entities": [
+        'react/no-unescaped-entities': [
             0
         ],
-        "react/prop-types": [
+        'react/prop-types': [
             0
         ],
-        "linebreak-style": [
-            "error",
-            "windows"
+        'linebreak-style': [
+            'error',
+            'windows'
         ],
-        "quotes": [
-            "error",
-            "double"
+        'quotes': [
+            'error',
+            'single'
         ],
-        "semi": [
-            "error",
-            "always"
+        'semi': [
+            'error',
+            'always'
         ]
     }
 };

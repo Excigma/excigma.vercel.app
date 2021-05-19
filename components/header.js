@@ -1,29 +1,48 @@
-import React from "react";
+import { AppBar, Button, CssBaseline, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import React, { Fragment } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Image from 'next/image';
+import Link from './Link';
 
-export default function Header() {
+
+const useStyles = makeStyles({
+    title: { flexGrow: 1 }
+});
+
+function HideOnScroll(props) {
+    const { children } = props;
+    const trigger = useScrollTrigger();
+
     return (
-        <div>
-            <main>
-                <nav className="blue darken-3" role="navigation">
-                    <div className="nav-wrapper container">
-                        <a id="logo-container" href="/" className="brand-logo">
-                            <img height="40px" width="40px" src="/static/img/favicon-96x96.png" style={{ transform: "translateY(6px)" }} />
-                        </a>
+        <Slide appear={false} direction="down" in={!trigger}>
+            {children}
+        </Slide>
+    );
+}
 
-                        <ul className="right hide-on-med-and-down waves-effect waves-dark">
-                            <li><a href="/<%- subject %>">lmao</a></li>
-                        </ul>
+export default function Header(props) {
+    const classes = useStyles();
 
-                        <ul id="nav-mobile" className="sidenav">
-                            <li><a href="/">Home</a></li>
+    return (
+        <Fragment>
+            <CssBaseline />
+            <HideOnScroll {...props}>
+               
+                <AppBar position="sticky">
+                    <Toolbar>
+                        <Link href="/" color="inherit">
+                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                                <Image src="/static/img/icon.png" alt="Product icon" width="30" height="30" />
+                            </IconButton>
+                        </Link>
 
-                            <li><a href="<%- subject %>">joy</a></li>
-                        </ul>
+                        <Typography variant="h6" className={classes.title}><Link href="/" color="inherit">PastpaperArmyKnife </Link></Typography>
 
-                        <a href="#" data-target="nav-mobile" className="sidenav-trigger" style={{ fontSize: "30px" }}>≡</a>
-                    </div>
-                </nav>
-            </main>
-        </div>
+                        <Button>Subjects</Button>
+                    </Toolbar>
+                </AppBar>
+            </HideOnScroll>
+        </Fragment>
+       
     );
 }
