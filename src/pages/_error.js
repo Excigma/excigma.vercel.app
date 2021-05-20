@@ -4,16 +4,7 @@ import { Box } from '@material-ui/core';
 import Link from 'components/Link';
 import React from 'react';
 
-const statusCodes  = {
-    400: 'Bad Request',
-    404: 'This page could not be found',
-    405: 'Method Not Allowed',
-    500: 'Internal Server Error',
-};
-    
-export default function ErrorPage({ statusCode, title }) {
-    const description = title || statusCodes[statusCode] || 'An unexpected error has occurred';
-    
+export default function ErrorPage() {    
     return (
         <Container>
             <Box my={10}>
@@ -21,7 +12,7 @@ export default function ErrorPage({ statusCode, title }) {
                     <Grid item xs={12}>
                         <Typography variant="h2" gutterBottom>
                             <Box fontWeight="fontWeightMedium">
-                                {statusCode || null} {description}
+                                An unexpected error has occurred
                             </Box>
                         </Typography>
                     </Grid>
@@ -49,10 +40,4 @@ export default function ErrorPage({ statusCode, title }) {
             </Box>
         </Container>
     );
-}
-
-
-export async function getInitialProps({ res, err }) {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
-    return { statusCode };
 }
