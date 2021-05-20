@@ -15,12 +15,6 @@ const NextComposed = React.forwardRef(function NextComposed(props, ref) {
     );
 });
 
-NextComposed.propTypes = {
-    as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    href: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    prefetch: PropTypes.bool,
-};
-
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
 function Link(props) {

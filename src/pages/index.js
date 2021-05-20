@@ -7,11 +7,9 @@ import HourglassFullIcon from '@material-ui/icons/HourglassFull';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 import HelpIcon from '@material-ui/icons/Help';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import { Box } from '@material-ui/core';
 import Link from 'components/Link.js';
-import { Grid,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
+import { Grid, Typography, Container, Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
 
 
@@ -27,11 +25,9 @@ export default function Home() {
                             </Box>
                         </Typography>
                
-               
                         <Typography variant="h5" component="h3" gutterBottom>
                             <StorageIcon fontSize="small" /> A storage of Excigma's class notes and some past paper questions - by topic.
                         </Typography>
-
                         
                         <br />
                         
@@ -42,7 +38,7 @@ export default function Home() {
                         <br />
                         
                         <Typography gutterBottom>
-                    K, I've now read that and I wanna <Link href="/notes">go to the notes page</Link>
+                    K, I've now read that and I wanna <Link href="/subjects">go to the subjects page</Link>
                         </Typography>
                     </Grid>
                     
@@ -66,8 +62,6 @@ export default function Home() {
                         </Typography>
                     </Grid>
 
-                    
-                    
                     <Grid item xs={12} sm={6}>
                         <Typography variant="h5" component="h4" gutterBottom>
                             <HourglassFullIcon fontSize="small" /> How it works
