@@ -1,11 +1,8 @@
-import { AppBar, Button, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Button, Divider, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import Link from './Link';
-
-
-const useStyles = makeStyles({ title: { flexGrow: 1 } });
 
 function HideOnScroll(props) {
     const { children } = props;
@@ -19,7 +16,6 @@ function HideOnScroll(props) {
 }
 
 export default function Header(props) {
-    const classes = useStyles();
 
     return (
         <Fragment>
@@ -27,16 +23,16 @@ export default function Header(props) {
                 <AppBar position="sticky">
                     <Toolbar>
                         <Link href="/" color="inherit">
-                            <IconButton edge="start" className={classes.menuButton} aria-label="menu">
+                            <IconButton edge="start">
                                 <Image src="/icons/icon-48x48.png" alt="Product icon" width="30" height="30" />
                             </IconButton>
                         </Link>
 
-                        <Typography variant="h6" className={classes.title}>
+                        <Typography variant="h6" style={{ flexGrow: 1 }}>
                             <Link href="/" style={{ color: 'white' }}>PastpaperArmyKnife</Link>
                         </Typography>
 
-                        <Button>Subjects</Button>
+                        <Button variant="outlined" href="/subjects" component={Link} style={{ color: 'white' }}>Subjects</Button>
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>

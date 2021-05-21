@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <Container>
             <Box my={10}>
-                <Grid container spacing={7}>
+                <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography variant="h2" gutterBottom>
                             <Box fontWeight="fontWeightMedium">

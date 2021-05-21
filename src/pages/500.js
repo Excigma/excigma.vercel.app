@@ -8,7 +8,7 @@ export default function ErrorPage() {
     return (
         <Container>
             <Box my={10}>
-                <Grid container spacing={7}>
+                <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Typography variant="h2" gutterBottom>
                             <Box fontWeight="fontWeightMedium">
@@ -32,6 +32,12 @@ export default function ErrorPage() {
                                 <br/>
                                 (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻
                             </Box>
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Typography gutterBottom>
+                                Thank you for coming to my TED talk.
                         </Typography>
                     </Grid>
                 </Grid>

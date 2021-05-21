@@ -30,10 +30,16 @@ export default function ErrorPage() {
                     <Grid item xs={12}>
                         <Typography gutterBottom>
                             <Box fontWeight="fontWeightMedium">
-                                WHY CAN I NOT WRITE GOOD CODE WITH ROBUST ERROR CHECKING REEEEEEEEEEEE
+                                WHY CAN I NOT WRITE ROBUST CODE WITH ERROR CHECKING REEEEEEEEEEEE
                                 <br/>
                                 (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻
                             </Box>
+                        </Typography>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Typography gutterBottom>
+                                Thank you for coming to my TED talk.
                         </Typography>
                     </Grid>
                 </Grid>
