@@ -1,13 +1,11 @@
-import { AppBar, Button, CssBaseline, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Button, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import Link from './Link';
 
 
-const useStyles = makeStyles({
-    title: { flexGrow: 1 }
-});
+const useStyles = makeStyles({ title: { flexGrow: 1 } });
 
 function HideOnScroll(props) {
     const { children } = props;
@@ -25,9 +23,7 @@ export default function Header(props) {
 
     return (
         <Fragment>
-            <CssBaseline />
             <HideOnScroll {...props}>
-               
                 <AppBar position="sticky">
                     <Toolbar>
                         <Link href="/" color="inherit">

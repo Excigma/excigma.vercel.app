@@ -1,7 +1,8 @@
 import { Box, Container, Grid, Typography } from '@material-ui/core';
 import React from 'react';
+import { subjects } from '../../config';
 
-export default function Home({subjects}) {
+export default function Home() {
     return (
         <Container>
             <Box my={10}>
@@ -37,13 +38,4 @@ export default function Home({subjects}) {
             </Box>
         </Container>
     );
-}
-
-
-export async function getStaticProps() {
-    const subjects = ['Business Studies','Computer Science', 'Economics', 'Physics'];
-
-    return {
-        props: { subjects },
-    };
 }

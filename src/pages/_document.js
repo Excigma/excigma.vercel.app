@@ -14,55 +14,15 @@ const getCache = () => {
 
     
 export default class MyDocument extends Document {
-    render() {
-        return (
-            <Html lang="en">
-                <Head />
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        );
-    }
-}
+    static async getInitialProps (ctx) {
+        const sheets = new ServerStyleSheets();
+        const originalRenderPage = ctx.renderPage;
 
-// `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
-    // Resolution order
-    //
-    // On the server:
-    // 1. app.getInitialProps
-    // 2. page.getInitialProps
-    // 3. document.getInitialProps
-    // 4. app.render
-    // 5. page.render
-    // 6. document.render
-    //
-    // On the server with error:
-    // 1. document.getInitialProps
-    // 2. app.render
-    // 3. page.render
-    // 4. document.render
-    //
-    // On the client
-    // 1. app.getInitialProps
-    // 2. page.getInitialProps
-    // 3. app.render
-    // 4. page.render
+        const cache = getCache();
+        const { extractCriticalToChunks } = createEmotionServer(cache);
 
-    // Render app and page and get the context of the page with collected side effects.
-    const sheets = new ServerStyleSheets();
-    const originalRenderPage = ctx.renderPage;
-
-    const cache = getCache();
-    const { extractCriticalToChunks } = createEmotionServer(cache);
-
-    ctx.renderPage = () =>
-        originalRenderPage({
+        ctx.renderPage = () => originalRenderPage({
             enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-            // Take precedence over the CacheProvider in our custom _app.js
             // eslint-disable-next-line react/display-name
             enhanceComponent: (Component) => (props) => (
                 <CacheProvider value={cache}>
@@ -71,24 +31,58 @@ MyDocument.getInitialProps = async (ctx) => {
             ),
         });
 
-    const initialProps = await Document.getInitialProps(ctx);
-    const emotionStyles = extractCriticalToChunks(initialProps.html);
-    const emotionStyleTags = emotionStyles.styles.map((style) => (
-        <style
-            data-emotion={`${style.key} ${style.ids.join(' ')}`}
-            key={style.key}
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: style.css }}
-        />
-    ));
+        const initialProps = await Document.getInitialProps(ctx);
+        const emotionStyles = extractCriticalToChunks(initialProps.html);
+        const emotionStyleTags = emotionStyles.styles.map((style) => (
+            <style
+                data-emotion={`${style.key} ${style.ids.join(' ')}`}
+                key={style.key}
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{ __html: style.css }}
+            />
+        ));
 
-    return {
-        ...initialProps,
-        // Styles fragment is rendered after the app and page rendering finish.
-        styles: [
-            ...React.Children.toArray(initialProps.styles),
-            sheets.getStyleElement(),
-            ...emotionStyleTags,
-        ],
-    };
-};
+        return {
+            ...initialProps,
+            styles: [
+                ...React.Children.toArray(initialProps.styles),
+                sheets.getStyleElement(),
+                ...emotionStyleTags,
+            ],
+        };
+    }
+
+    render() {
+        return (
+            <Html lang="en">
+                <Head >
+                    <meta charSet="utf-8" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                    <meta name="robots" content="noindex, nofollow" /> 
+
+                    <meta name="description" content="A storage of Excigma's class notes and some past paper questions - by topic." />
+                    <meta name="theme-color" content="#2f3136" />
+                    <meta name="subject" content="Notes"/>
+                    <meta name="author" content="Excigma" />
+                    
+                    <link rel="manifest" href="/manifest.json" />
+                    <link rel="shortcut icon" href="favicon.ico" />
+
+                    <link rel="apple-touch-icon" href="/icons/icon-72x72.png"></link>
+                
+                    <script async defer data-website-id="0b58b0f1-03c3-4420-aec0-d4ae8e4518c8" src="https://umami.up.railway.app/umami.js"></script>
+
+                    <meta name="og:type" content="website"/>
+                    <meta name="og:image" content="/icons/icon-48x48.png"/>
+                    <meta name="og:site_name" content="PastpaperArmyKnife + Notes"/>
+                    <meta name="og:description" content="A storage of Excigma's class notes and some past paper questions - by topic."/>
+                </Head>
+                
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
+    }
+}
