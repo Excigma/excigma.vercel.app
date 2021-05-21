@@ -30,10 +30,11 @@ export default function MyApp({ Component, pageProps }) {
     }, []);
         
     return (
-        <CacheProvider value={cache}>
+        <CacheProvider value={cache} fullWidth>
             <Head>
                 <title>{nicePath} - PastpaperArmyKnife</title>
-                <meta name="og:title" content={`${nicePath} - PastpaperArmyKnife`}/>
+                <meta name="og:title" content={`${nicePath} - PastpaperArmyKnife`} />
+                <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0"/>
             </Head>
 
             <ThemeProvider theme={theme}>

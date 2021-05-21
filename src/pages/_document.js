@@ -77,7 +77,7 @@ export default class MyDocument extends Document {
                     <meta name="og:site_name" content="PastpaperArmyKnife + Notes"/>
                     <meta name="og:description" content="A storage of Excigma's class notes and some past paper questions - by topic."/>
                 </Head>
-                
+
                 <body>
                     <Main />
                     <NextScript />
