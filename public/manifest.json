@@ -44,6 +44,16 @@
             "sizes": "192x192",
             "type": "image\/png",
             "density": "4.0"
+        },
+        {
+            "src": "\/icon.png",
+            "sizes": "2048x2048",
+            "type": "image\/png"
+        },
+        {
+            "src": "\/icon.svg",
+            "sizes": "all",
+            "type": "image\/svg"
         }
     ],
     "splash_pages": null
