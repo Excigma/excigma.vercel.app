@@ -1,6 +1,8 @@
-import { Breadcrumbs } from '@material-ui/core';
-import { useRouter } from 'next/router';
 import React from 'react';
+
+import { useRouter } from 'next/router';
+import { Breadcrumbs } from '@material-ui/core';
+
 import Link from './Link';
 
 export default function Crumbs () {
@@ -13,15 +15,13 @@ export default function Crumbs () {
         return { breadcrumb: path, href: '/' + linkPath.slice(0, i + 1).join('/') };
     });
 
-    console.log(paths);
-
     return (
         <Breadcrumbs separator="›" aria-label="breadcrumb">
-            <Link color="inherit" href="/">/</Link>
+            <Link key={1} color="inherit" href="/">/</Link>
             
             {paths.map((path, index) => (
-                <Link key={index} color="inherit" href={path.href}>
-                    {path.breadcrumb.replaceAll('_', ' ')}
+                <Link key={index + 1} color="inherit" href={path.href}>
+                    {path.breadcrumb ? path.breadcrumb.replaceAll('_', ' ') : 'home'}
                 </Link>
             ))}
         </Breadcrumbs>
