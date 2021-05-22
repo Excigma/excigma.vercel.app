@@ -21,7 +21,7 @@ export const cache = createCache({ key: 'css', prepend: true });
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
-    const name = router.pathname.substring(1).replaceAll('_', ' ').trim();
+    const name = router.pathname.substring(1).replace(/_/g, ' ').trim();
     const path = name || '/';
     const nicePath = path.charAt(0).toUpperCase() + path.slice(1);
 

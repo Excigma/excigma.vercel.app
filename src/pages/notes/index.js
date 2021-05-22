@@ -1,10 +1,12 @@
 import {  Button, Card, CardContent, CardActions, Grid, Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import React from 'react';
-import { subjects } from '../../config';
+import { subjects } from '../../subjects';
 import Alert from '@material-ui/core/Alert';
 import Stack from '@material-ui/core/Stack';
 import AlertTitle from '@material-ui/core/AlertTitle';
+
+const years = Object.keys(subjects);
 
 export default function Page() {
     return (
@@ -21,27 +23,37 @@ export default function Page() {
 
                     <Alert severity="info">
                         <AlertTitle>Disclaimer</AlertTitle>
-                            Some things here possibly work just well enough. Just. Please double check all information on this site is correct - even my notes. I will try to maintain a level of accuracy of the information provided here as I will use it to study myself; however this is NOT guaranteed. Please PLEASE double check.
-                    </Alert>                
+                            These notes are all written by myself or quoted from teachers. Whilst I am trying to keep a high standard and a certain level of accuracy as I will be using these notes to study myself, but note I do not have proofreaders - there may be mistakes. If in doubt PLEASE go ask someone more qualified than me. I am not a teacher.
+                    </Alert>
                 </Grid>
 
-                {subjects.map((subject, index) => (
-                    <Grid item xs={12} key={index} md={4}>
-                        <Card>
-                            <CardContent>
-                                <Typography variant="h5" component="h4">
-                                    {subject.replaceAll('_', ' ')}
-                                </Typography>
+                {years.map((year, i) => (
+                    <Grid item container xs={12} key={i} spacing={5}>
+                        <Grid item xs={12}>
+                            <Typography variant="h4" component="h3">
+                                {year}
+                            </Typography>
+                        </Grid>
 
-                                <Typography>
-                                        Some notes for {subject.replaceAll('_', ' ')}
-                                </Typography>
-                            </CardContent>
+                        {subjects[year].map((subject, j) => (
+                            <Grid item xs={12} key={j} md={4}>
+                                <Card>
+                                    <CardContent>
+                                        <Typography variant="h5" component="h4">
+                                            {subject.replace(/_/g, ' ')}
+                                        </Typography>
 
-                            <CardActions>
-                                <Button variant="contained" color="primary" href={'/notes/2021/' + subject} component={Link} style={{ color: 'white' }}>Notes</Button>
-                            </CardActions>
-                        </Card>
+                                        <Typography>
+                                            Some notes for {subject.replace(/_/g, ' ')}
+                                        </Typography>
+                                    </CardContent>
+
+                                    <CardActions>
+                                        <Button variant="contained" color="primary" href={'/notes/2021/' + subject} component={Link} style={{ color: 'white' }}>Notes</Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        ))}
                     </Grid>
                 ))}
 

@@ -36,7 +36,7 @@ export default function Home() {
                     </Typography>
 
                     <Typography>
-                            This is a website where I will write my notes and put other thingos that I make here.
+                            This is a website where I will write my notes and put other thingos that I make here. <strike>I need a rounded favicon bruh</strike>
                     </Typography>
                 </Grid>
 

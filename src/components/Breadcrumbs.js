@@ -27,7 +27,7 @@ export default function Crumbs () {
             
             {paths.map((path, index) => (
                 <Link key={index + 1} href={path.href}>
-                    {path.breadcrumb ? path.breadcrumb.replaceAll('_', ' ') : 'home'}
+                    {path.breadcrumb ? path.breadcrumb.replace(/_/g, ' ') : 'home'}
                 </Link>
             ))}
         </Breadcrumbs>
