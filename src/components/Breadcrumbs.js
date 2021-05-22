@@ -1,6 +1,6 @@
 import { Breadcrumbs } from '@material-ui/core';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from './Link';
 
 export default function Crumbs () {

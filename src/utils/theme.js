@@ -1,13 +1,13 @@
 import { createTheme } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
 
-const theme = createTheme({
+const theme = mode => createTheme({
     typography: {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
         fontSize: 16,
     },
     palette: {
-        mode: 'dark',
+        mode: mode === 'dark' ? 'dark' :  'light',
         primary: {
             main: blue['900'],
         },
@@ -22,7 +22,5 @@ const theme = createTheme({
         }
     }
 });
-    
 
 export default theme;
-    

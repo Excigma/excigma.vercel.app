@@ -1,11 +1,11 @@
-import { AppBar, Button, Divider, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import React from 'react';
 import Image from 'next/image';
 import Link from './Link';
-import { useRouter } from 'next/router';
-import Breadcrumbs from './Breadcrumbs';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
+import DarkMode from '@material-ui/icons/DarkMode';
+import LightMode from '@material-ui/icons/LightMode';
 import Stack from '@material-ui/core/Stack';
+import { useTheme } from 'components/ThemeProvider';
 
 function HideOnScroll(props) {
     const { children } = props;
@@ -18,8 +18,12 @@ function HideOnScroll(props) {
     );
 }
 
-export default function Header(props) {
 
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+export default function Header(props) {
+    const themeState = useTheme();
+    
     return (
         <>
             <HideOnScroll {...props}>
@@ -32,19 +36,16 @@ export default function Header(props) {
                         </Link>
 
                         <Typography variant="h6" style={{ flexGrow: 1 }}>
-                            <Link href="/" style={{ color: 'white' }}>PastpaperArmyKnife</Link>
+                            <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>PastpaperArmyKnife</Link>
                         </Typography>
 
                         <Stack spacing={1} direction="row">
-                            <Button href="/404" component={Link} style={{ color: 'white' }}>404</Button>
+                            <Button href="/404" component={Link} display={{ xs: 'none', md: 'block' }} style={{ color: 'white' }}>404</Button>
 
                             <Button href="/subjects" component={Link} style={{ color: 'white' }}>Subjects</Button>
 
-                            <Button href="/subjects" component={Link} variant="contained" style={{ color: 'white' }}>
-                                <Brightness4Icon />
-                            </Button>
+                            <Checkbox {...label} style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onClick={() => themeState.toggle()} defaultChecked={themeState.dark}/>
                         </Stack>
-                        
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>

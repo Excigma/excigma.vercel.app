@@ -7,7 +7,7 @@ import HourglassFullIcon from '@material-ui/icons/HourglassFull';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 import HelpIcon from '@material-ui/icons/Help';
-import { Box, Fade } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import Link from 'components/Link.js';
 import { Grid, Typography,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
@@ -33,7 +33,7 @@ export default function Home() {
                     </Typography>
                 </Grid>
                     
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <HelpIcon fontSize="small" /> About
                     </Typography>
@@ -43,7 +43,7 @@ export default function Home() {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <FormatListBulletedIcon fontSize="small" /> Subjects
                     </Typography>
@@ -53,7 +53,7 @@ export default function Home() {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <HourglassFullIcon fontSize="small" /> How it works
                     </Typography>
@@ -87,7 +87,7 @@ export default function Home() {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <HelpIcon fontSize="small" /> When + Why
                     </Typography>
@@ -101,7 +101,7 @@ export default function Home() {
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <ChatBubbleIcon fontSize="small" /> Unless statistics no one cares about
                     </Typography>
@@ -138,7 +138,7 @@ export default function Home() {
                     </TableContainer>
                 </Grid>
                     
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <ChatBubbleIcon fontSize="small" /> "Testimonials" (Maybe)
                     </Typography>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -7,11 +7,11 @@ import 'styles/globals.css';
 import Header from 'components/Header.js';
 import Footer from 'components/Footer.js';
 
-import { ThemeProvider } from '@material-ui/core/styles';
+// import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from 'components/ThemeProvider';
 import { CacheProvider } from '@emotion/react';
-
 import createCache from '@emotion/cache';
-import theme from 'utils/theme.js';
+import getTheme from 'utils/theme.js';
 import { Box, Container, CssBaseline } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 
@@ -29,7 +29,8 @@ export default function MyApp({ Component, pageProps }) {
         const jssStyles = document.querySelector('#jss-server-side');
         if (jssStyles) jssStyles.parentElement.removeChild(jssStyles);
     }, []);
-  
+
+    
     return (
         <CacheProvider value={cache} fullWidth>
             <Head>
@@ -38,7 +39,7 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0"/>
             </Head>
 
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={getTheme()}>
                 <CssBaseline />
 
                 <Header />
