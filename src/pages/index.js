@@ -107,7 +107,7 @@ export default function Home() {
                     </Typography>
 
                     <TableContainer>
-                        <Table aria-label="simple table">
+                        <Table>
                             <TableBody>
                                 <TableRow>
                                     <TableCell>Time spent writing and running the code</TableCell>
@@ -158,6 +158,56 @@ export default function Home() {
                     <Blockquote>
                             You aren't making yourself look less insane btw
                     </Blockquote>
+                </Grid>
+
+                <Grid item xs={12}>
+                    <TableContainer>
+                        <Table>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell><Link href="https://papacambridge.com/home/index.html">PapaCambridge</Link> and <Link href="https://xtremepape.rs">XtremePapers</Link></TableCell>
+                                    <TableCell>Providing CAIE past papers</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://railway.app">Railway</Link>, <Link href="https://vercel.com">Vercel</Link>, <Link href="https://github.com">Github</Link> and <Link href="https://www.docker.com">Docker</Link></TableCell>
+                                    <TableCell>Used to host this website in 2 minutes or less - as easy as <code>git push origin master</code></TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://nodejs.org">Node.js</Link>, <Link href="https://golang.org">Golang</Link>, <Link href="https://www.python.org">Python</Link> and <Link href="https://docs.microsoft.com/en-us/dotnet/visual-basic"><strike>Visual Basic</strike></Link></TableCell>
+                                    <TableCell>Used to write all the scripts that powers this site and more. Both of the former have simple syntax and allowed me to <strike>waste my holidays</strike> write this page in little time. The latter was a pain, and still is a pain.</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://github.com/microsoft/playwright">Playwright</Link>, <Link href="https://www.mozilla.org/en-US/firefox">Mozilla Firefox</Link> and <Link href="https://github.com/mozilla/pdf.js">PDF.js</Link></TableCell>
+                                    <TableCell>Used to automate Firefox to render PDFs and detect location of text to guess the topic of questions and crop screenshots relatively decently</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://www.fastify.io">Fastify</Link>, <Link href="https://ejs.co/">EJS</Link>, <Link href="https://nextjs.com">Next.js</Link>, and <Link href="https://reactjs.com">React</Link></TableCell>
+                                    <TableCell>Speedy NodeJS server backend and templating engine, used to host this website, serve the images and the PDFs</TableCell>
+                                </TableRow>
+
+                                <TableRow>
+                                    <TableCell><Link href="https://github.com/opencv/opencv-python">OpenCV Python</Link></TableCell>
+                                    <TableCell>Used to remove empty horizontal rows of white-spaces in screenshots, and compress the PNGs to reduce the file sizes massively</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://github.com/helperdiscord/petitio">Petitio</Link> and <Link href="https://github.com/cheeriojs/cheerio">Cheerio</Link></TableCell>
+                                    <TableCell>Extremely fast HTTP library and a simple HTML querying library, used in NodeJS script to download and parse pages, and also to download PDFs</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://github.com/Dogfalo/materialize">Materialize.css</Link>, <Link href="https://material-ui.com">Material-UI</Link> and <Link href="https://github.com/feathericons/feather">Feather Icons</Link></TableCell>
+                                    <TableCell>All of the eye candy on this website is thanks to them</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://visualstudio.microsoft.com">Visual Studio</Link> and <Link href="https://code.visualstudio.com">Visual Studio Code</Link></TableCell>
+                                    <TableCell>IDE and Code editor used to program the Backend, Frontend of the website, and the Visual Basic.NET client.</TableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <TableCell><Link href="https://www.figma.com">Figma</Link></TableCell>
+                                    <TableCell>Used to design the icon of this website in 5 minutes or less</TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
                 </Grid>
             </Grid>
         </>

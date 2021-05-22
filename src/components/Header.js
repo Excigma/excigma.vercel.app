@@ -1,5 +1,5 @@
-import { AppBar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import React from 'react';
+import { AppBar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Image from 'next/image';
 import Link from './Link';
 import DarkMode from '@material-ui/icons/DarkMode';
@@ -17,9 +17,6 @@ function HideOnScroll(props) {
         </Slide>
     );
 }
-
-
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export default function Header(props) {
     const themeState = useTheme();
@@ -40,11 +37,9 @@ export default function Header(props) {
                         </Typography>
 
                         <Stack spacing={1} direction="row">
-                            <Button href="/404" component={Link} display={{ xs: 'none', md: 'block' }} style={{ color: 'white' }}>404</Button>
-
                             <Button href="/subjects" component={Link} style={{ color: 'white' }}>Subjects</Button>
 
-                            <Checkbox {...label} style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onClick={() => themeState.toggle()} defaultChecked={themeState.dark}/>
+                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark}/>
                         </Stack>
                     </Toolbar>
                 </AppBar>
