@@ -7,7 +7,7 @@ const theme = mode => createTheme({
         fontSize: 16,
     },
     palette: {
-        mode: mode === 'dark' ? 'dark' :  'light',
+        mode: mode === 'dark' ? 'dark' : 'light',
         primary: {
             main: blue['900'],
         },
@@ -19,6 +19,9 @@ const theme = mode => createTheme({
     components: {
         MuiCard: {
             styleOverrides: { root: { padding: '1em' } },
+        },
+        MuiGrid: {
+            styleOverrides: { root: { padding: '10px 10px 10px 10px' } },
         }
     }
 });

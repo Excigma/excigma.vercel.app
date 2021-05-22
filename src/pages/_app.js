@@ -11,7 +11,6 @@ import Footer from 'components/Footer.js';
 import { ThemeProvider } from 'components/ThemeProvider';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import getTheme from 'utils/theme.js';
 import { Box, Container, CssBaseline } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 
@@ -38,12 +37,12 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0"/>
             </Head>
 
-            <ThemeProvider theme={getTheme()}>
+            <ThemeProvider>
                 <CssBaseline />
 
                 <Header />
 
-                <Box my={20}>
+                <Box my={17.5}>
                     <Container>
                         <Breadcrumbs />
                         <br/>

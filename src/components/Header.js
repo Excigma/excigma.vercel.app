@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Avatar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Avatar, Button, Checkbox, Divider, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Image from 'next/image';
 import Link from './Link';
 import DarkMode from '@material-ui/icons/DarkMode';
@@ -20,7 +20,7 @@ function HideOnScroll(props) {
 
 export default function Header(props) {
     const themeState = useTheme();
-    
+
     return (
         <>
             <HideOnScroll {...props}>
@@ -40,7 +40,7 @@ export default function Header(props) {
                             <Button href="/projects" component={Link} style={{ color: 'white' }}>Projects</Button>
                             <Button href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
 
-                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark}/>
+                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} />
                         </Stack>
                     </Toolbar>
                 </AppBar>
