@@ -33,10 +33,11 @@ export default function Header(props) {
                         </Link>
 
                         <Typography variant="h6" style={{ flexGrow: 1 }}>
-                            <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>Excigma's Notes</Link>
+                            <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>Excigma</Link>
                         </Typography>
 
                         <Stack spacing={1} direction="row">
+                            <Button href="/projects" component={Link} style={{ color: 'white' }}>Projects</Button>
                             <Button href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
 
                             <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark}/>

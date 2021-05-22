@@ -1,9 +1,7 @@
 import React from 'react';
 
 import StorageIcon from '@material-ui/icons/Storage';
-import WarningIcon from '@material-ui/icons/Warning';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
-import HourglassFullIcon from '@material-ui/icons/HourglassFull';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 import HelpIcon from '@material-ui/icons/Help';
@@ -12,8 +10,7 @@ import Link from 'components/Link.js';
 import { Grid, Typography,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
 
-
-export default function Home() {    
+export default function Home() {
     return (
         <>
             <Grid container spacing={5}>
@@ -25,7 +22,7 @@ export default function Home() {
                     </Typography>
                
                     <Typography variant="h5" component="h3" gutterBottom>
-                        <StorageIcon fontSize="small" /> A storage of Excigma's class notes and some other small projects.
+                        <StorageIcon fontSize="small" /> A gallery of Excigma's projects, notes and other things he tinkers with.
                     </Typography>
                      
                     <Typography>
@@ -39,17 +36,7 @@ export default function Home() {
                     </Typography>
 
                     <Typography>
-                            This is a website where I will write my notes and put other thingos that I will make here.
-                    </Typography>
-                </Grid>
-
-                <Grid item xs={12} md={6}>
-                    <Typography variant="h5" component="h4">
-                        <FormatListBulletedIcon fontSize="small" /> Subjects with Notes
-                    </Typography>
-
-                    <Typography>
-                            I'm too lazy for now. :@:@:@:@!
+                            This is a website where I will write my notes and put other thingos that I make here.
                     </Typography>
                 </Grid>
 
@@ -94,7 +81,7 @@ export default function Home() {
                     
                 <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
-                        <ChatBubbleIcon fontSize="small" /> "Testimonials" (Maybe)
+                        <ChatBubbleIcon fontSize="small" /> What other people have said to/about me
                     </Typography>
 
                     <Blockquote>
@@ -140,7 +127,7 @@ export default function Home() {
                                 </TableRow>
                                 <TableRow>
                                     <TableCell><Link href="https://www.figma.com">Figma</Link></TableCell>
-                                    <TableCell>Used by <Link src="https://github.com/Diced">@dicedtomato</Link> to recreate my profile picture as a SVG</TableCell>
+                                    <TableCell>Used by <Link href="https://github.com/Diced">@dicedtomato</Link> to recreate my profile picture as a SVG</TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>

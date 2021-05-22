@@ -60,15 +60,15 @@ export default class MyDocument extends Document {
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <meta name="robots" content="noindex, nofollow" /> 
 
-                    <meta name="description" content="A storage of Excigma's class notes and some past paper questions - by topic." />
+                    <meta name="description" content="A gallery of Excigma's projects, notes and other things he tinkers with." />
                     <meta name="theme-color" content="#2f3136" />
-                    <meta name="subject" content="Notes"/>
+                    <meta name="subject" content="Blog"/>
                     <meta name="author" content="Excigma" />
                     
                     <meta name="og:type" content="website"/>
                     <meta name="og:image" content="/apple-icon-72x72.png"/>
-                    <meta name="og:site_name" content="Excigma's Notes"/>
-                    <meta name="og:description" content="A storage of Excigma's class notes for all subjects."/>
+                    <meta name="og:site_name" content="Excigma's Page"/>
+                    <meta name="og:description" content="A gallery of Excigma's projects, notes and other things he tinkers with."/>
                     
                     <link rel="shortcut icon" href="favicon.ico" />
 

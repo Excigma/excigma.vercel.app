@@ -19,15 +19,10 @@ export default function Page() {
                         This is where you'd choose a subject and get more things like notes and past papers.
                     </Typography>
 
-                    <Stack spacing={1}>
-                        <Alert severity="warning">
-                            <AlertTitle>Info</AlertTitle>
-                            Currently, getting the pastpapers to work again is low priority for myself. It takes a whole lot of time to get it to work, and is difficult and not important to do right now.</Alert>
-
-                        <Alert severity="info">
-                            <AlertTitle>Disclaimer</AlertTitle>
-                            Some things here possibly work just well enough. Just. Please double check all information on this site is correct - even my notes. I will try to maintain a level of accuracy of the information provided here as I will use it to study myself; however this is NOT guaranteed. Please PLEASE double check.</Alert>
-                    </Stack>
+                    <Alert severity="info">
+                        <AlertTitle>Disclaimer</AlertTitle>
+                            Some things here possibly work just well enough. Just. Please double check all information on this site is correct - even my notes. I will try to maintain a level of accuracy of the information provided here as I will use it to study myself; however this is NOT guaranteed. Please PLEASE double check.
+                    </Alert>                
                 </Grid>
 
                 {subjects.map((subject, index) => (
@@ -39,13 +34,12 @@ export default function Page() {
                                 </Typography>
 
                                 <Typography>
-                                        Some notes and pastpapers (not yet) for {subject.replaceAll('_', ' ')}
+                                        Some notes for {subject.replaceAll('_', ' ')}
                                 </Typography>
                             </CardContent>
 
                             <CardActions>
-                                <Button variant="contained" color="primary" href={'/notes/subjects/' + subject} component={Link} style={{ color: 'white' }}>Notes</Button>
-                                <Button href={'/notes/subjects/' + encodeURIComponent(subject)} component={Link} disabled>Pastpapers: Coming soon</Button>
+                                <Button variant="contained" color="primary" href={'/notes/2021/' + subject} component={Link} style={{ color: 'white' }}>Notes</Button>
                             </CardActions>
                         </Card>
                     </Grid>
@@ -65,7 +59,6 @@ export default function Page() {
 
                         <CardActions>
                             <Button variant="contained" color="primary" href="/notes" component={Link} style={{ color: 'white' }} disabled>Notes</Button>
-                            <Button href="/notes" component={Link} style={{ color: 'white' }} disabled>Pastpapers</Button>
                         </CardActions>
                     </Card>
                 </Grid> 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -21,7 +21,7 @@ export const cache = createCache({ key: 'css', prepend: true });
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
-    const name = router.pathname.substring(1).replace(/_/g, ' ').trim();
+    const name = router.pathname.substring(1).replaceAll('_', ' ').trim();
     const path = name || '/';
     const nicePath = path.charAt(0).toUpperCase() + path.slice(1);
 
@@ -33,8 +33,8 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <CacheProvider value={cache} fullWidth>
             <Head>
-                <title>{nicePath} - xΣ's Notes</title>
-                <meta name="og:title" content={`${nicePath} - xΣ's Notes`} />
+                <title>{nicePath} - xΣ's Page</title>
+                <meta name="og:title" content={`${nicePath} - xΣ's Page`} />
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0"/>
             </Head>
 

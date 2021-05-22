@@ -9,7 +9,7 @@ export default function Footer() {
                 <Box my={5}>
                     <Container>
                         <Typography variant="h6" component="p" align="center">
-                            Excigma's Notes
+                            Excigma's Website
                         </Typography>
 
                         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
