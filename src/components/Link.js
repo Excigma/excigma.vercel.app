@@ -5,6 +5,9 @@ import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
+import getTheme from 'utils/theme.js';
+import { Button } from '@material-ui/core';
+
 const NextComposed = React.forwardRef(function NextComposed(props, ref) {
     const { as, href, ...other } = props;
 
@@ -15,8 +18,6 @@ const NextComposed = React.forwardRef(function NextComposed(props, ref) {
     );
 });
 
-// A styled version of the Next.js Link component:
-// https://nextjs.org/docs/#with-link
 function Link(props) {
     const {
         href,
@@ -27,6 +28,12 @@ function Link(props) {
         ...other
     } = props;
 
+    if (!href) {
+        return (
+            <MuiLink ref={innerRef} className={classNameProps} component="button" variant="body2" style={{ color: getTheme().palette.secondary.main }}  {...other} />
+        );
+    }
+
     const router = useRouter();
     const pathname = typeof href === 'string' ? href : href.pathname;
     const className = clsx(classNameProps, {
@@ -34,11 +41,13 @@ function Link(props) {
     });
 
     if (naked) {
-        return <NextComposed className={className} ref={innerRef} href={href} style={{ color: '#63ade5' }} {...other} />;
+        return (
+            <NextComposed className={className} ref={innerRef} href={href} style={{ color: getTheme().palette.secondary.main }} {...other} />
+        );
     }
 
     return (
-        <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} style={{ color: '#63ade5' }} {...other} />
+        <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} style={{ color: getTheme().palette.secondary.main }} {...other} />
     );
 }
 

@@ -1,9 +1,13 @@
 import React from 'react';
-import { Box, Checkbox, Container, Typography } from '@material-ui/core';
+import { Box, Button, Checkbox, Container, Stack, Typography } from '@material-ui/core';
 import Link from './Link';
 import { useTheme } from 'components/ThemeProvider';
 import DarkMode from '@material-ui/icons/DarkMode';
 import LightMode from '@material-ui/icons/LightMode';
+
+function scrollToTop() {
+    if (document.body) document.body.scrollIntoView({ behavior: 'smooth' });
+}
 
 export default function Footer() {
     const themeState = useTheme();
@@ -17,12 +21,9 @@ export default function Footer() {
                             Excigma's Website
                         </Typography>
 
-                        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
-
-                            Made by Excigma during 2021 to assist notekeeping and study. <Link href="#top">Scroll to top.</Link>
+                        <Typography variant="subtitle1" color="textSecondary" component="p" align="center">
+                            Made by Excigma during 2021 to assist notekeeping and study. <Link onClick={scrollToTop}>Scroll to top.</Link>
                         </Typography>
-
                     </Container>
                 </Box>
             </footer>

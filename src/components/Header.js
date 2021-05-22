@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Avatar, Button, Checkbox, Divider, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Avatar, Button, Checkbox, Divider, Fab, IconButton, Slide, Toolbar, Typography, useScrollTrigger, Zoom } from '@material-ui/core';
 import Image from 'next/image';
 import Link from './Link';
 import DarkMode from '@material-ui/icons/DarkMode';
@@ -7,12 +7,13 @@ import LightMode from '@material-ui/icons/LightMode';
 import Stack from '@material-ui/core/Stack';
 import { useTheme } from 'components/ThemeProvider';
 
+
 function HideOnScroll(props) {
     const { children } = props;
     const trigger = useScrollTrigger();
 
     return (
-        <Slide appear={false} direction="down" in={!trigger}>
+        <Slide appear={false} in={!trigger} {...props}>
             {children}
         </Slide>
     );
@@ -23,7 +24,7 @@ export default function Header(props) {
 
     return (
         <>
-            <HideOnScroll {...props}>
+            <HideOnScroll direction="down" {...props}>
                 <AppBar>
                     <Toolbar>
                         <Link href="/" color="inherit">

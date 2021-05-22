@@ -13,6 +13,7 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { Box, Container, CssBaseline } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
+import ScrollToTop from 'components/ScrollToTop';
 
 
 export const cache = createCache({ key: 'css', prepend: true });
@@ -34,7 +35,7 @@ export default function MyApp({ Component, pageProps }) {
             <Head>
                 <title>{nicePath} - xΣ's Page</title>
                 <meta name="og:title" content={`${nicePath} - xΣ's Page`} />
-                <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0"/>
+                <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
             </Head>
 
             <ThemeProvider>
@@ -42,14 +43,14 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Header />
 
-                <Box my={17.5}>
+                <Box my={15}>
                     <Container>
                         <Breadcrumbs />
-                        <br/>
+                        <br />
                         <Component {...pageProps} />
                     </Container>
                 </Box>
-
+                <ScrollToTop />
                 <Footer />
             </ThemeProvider>
         </CacheProvider >

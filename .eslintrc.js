@@ -16,7 +16,8 @@ module.exports = {
         'sourceType': 'module'
     },
     'plugins': [
-        'react'
+        'react',
+        'mui-unused-classes'
     ],
     'rules': {
         'indent': [

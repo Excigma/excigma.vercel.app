@@ -32,6 +32,7 @@
     },
     "devDependencies": {
         "eslint": "^7.26.0",
+        "eslint-plugin-mui-unused-classes": "^1.0.3",
         "eslint-plugin-react": "^7.23.2"
     }
 }

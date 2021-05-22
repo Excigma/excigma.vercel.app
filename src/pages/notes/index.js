@@ -46,7 +46,7 @@ export default function Page() {
                                     </Typography>
 
                                     <Typography>
-                                        Some notes for {subject.replace(/_/g, ' ')}
+                                        Excigma's notes for {subject.replace(/_/g, ' ')} written during {year}
                                     </Typography>
                                 </CardContent>
 

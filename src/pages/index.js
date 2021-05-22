@@ -124,7 +124,7 @@ export default function Home() {
                         </TableRow>
                         <TableRow>
                             <TableCell><Link href="https://www.figma.com">Figma</Link></TableCell>
-                            <TableCell>Used by <Link href="https://github.com/Diced">@dicedtomato</Link> to recreate my profile picture as a SVG</TableCell>
+                            <TableCell>Used by <Link href="https://github.com/diced">@dicedtomato</Link> to recreate my profile picture as a SVG</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
