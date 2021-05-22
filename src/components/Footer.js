@@ -1,10 +1,10 @@
 import { Box, Container, Typography } from '@material-ui/core';
-import React, { Fragment } from 'react';
+import React from 'react';
 import Link from './Link';
 
 export default function Footer() {
     return (
-        <Fragment>
+        <>
             <footer>
                 <Box my={5}>
                     <Container>
@@ -18,6 +18,6 @@ export default function Footer() {
                     </Container>
                 </Box>
             </footer>
-        </Fragment>
+        </>
     );
 }
