@@ -18,7 +18,8 @@ export default function Footer() {
                         </Typography>
 
                         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} />
+                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
+
                             Made by Excigma during 2021 to assist notekeeping and study. <Link href="#top">Scroll to top.</Link>
                         </Typography>
 
