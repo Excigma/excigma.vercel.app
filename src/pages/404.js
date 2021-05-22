@@ -6,10 +6,10 @@ import React from 'react';
 
 export default function ErrorPage() {
     return (
-        <Container>
+        <>
             <Grid container spacing={5}>
                 <Grid item xs={12}>
-                    <Typography variant="h2" gutterBottom>
+                    <Typography variant="h2">
                         <Box fontWeight="fontWeightMedium">
                                 404 - Page not found
                         </Box>
@@ -17,7 +17,7 @@ export default function ErrorPage() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography gutterBottom>
+                    <Typography>
                         <Box fontWeight="fontWeightMedium">
                                 Well then. I could not find this page anywhere; I don't know how you got here. Nevertheless, you probably want to <Link href="/"><b>Goto</b> home</Link>
                         </Box>
@@ -25,13 +25,13 @@ export default function ErrorPage() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography gutterBottom>
+                    <Typography>
                         <Box fontWeight="fontWeightMedium">
                                 Maybe I'll add an easter egg some day when I can be bothered ¯\_(ツ)_/¯ just for the fun-sies
                         </Box>
                     </Typography>
                 </Grid>
             </Grid>
-        </Container>
+        </>
     );
 }

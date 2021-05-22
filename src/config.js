@@ -1,3 +1,3 @@
 module.exports = {
-    subjects: ['9609 - Business Studies','9608 - Computer Science', '9708 - Economics', '9702 - Physics']
+    subjects: ['9609_-_Business_Studies','9608_-_Computer_Science', '9708_-_Economics', '9702_-_Physics']
 };

@@ -6,6 +6,6 @@ body {
   line-height: 1.5em;
 }
 
-.MuiSvgIcon-root {
+.MuiSvgIcon-fontSizeSmall {
   transform: translateY(5px);
 }

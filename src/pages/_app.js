@@ -12,7 +12,8 @@ import { CacheProvider } from '@emotion/react';
 
 import createCache from '@emotion/cache';
 import theme from 'utils/theme.js';
-import { Box, CssBaseline } from '@material-ui/core';
+import { Box, Container, CssBaseline } from '@material-ui/core';
+import Breadcrumbs from 'components/Breadcrumbs';
 
 
 export const cache = createCache({ key: 'css', prepend: true });
@@ -41,9 +42,13 @@ export default function MyApp({ Component, pageProps }) {
                 <CssBaseline />
 
                 <Header />
-                
+
                 <Box my={20}>
-                    <Component {...pageProps} />
+                    <Container>
+                        <Breadcrumbs />
+                        <br/>
+                        <Component {...pageProps} />
+                    </Container>
                 </Box>
 
                 <Footer />

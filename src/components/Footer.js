@@ -12,7 +12,7 @@ export default function Footer() {
                             PastpaperArmyKnife
                         </Typography>
 
-                        <Typography variant="subtitle1" align="center" color="textSecondary" component="p" gutterBottom>
+                        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
                         Made by Excigma during 2021 to assist study. <Link href="#top">Scroll to top.</Link>
                         </Typography>
                     </Container>

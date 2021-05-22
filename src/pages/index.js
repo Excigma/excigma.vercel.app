@@ -7,70 +7,62 @@ import HourglassFullIcon from '@material-ui/icons/HourglassFull';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 import HelpIcon from '@material-ui/icons/Help';
-import { Box } from '@material-ui/core';
+import { Box, Fade } from '@material-ui/core';
 import Link from 'components/Link.js';
-import { Grid, Typography, Container, Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
+import { Grid, Typography,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
 
 
 export default function Home() {    
     return (
-        <Container>
+        <>
             <Grid container spacing={5}>
                 <Grid item xs={12}>
                     <Typography variant="h2" gutterBottom>
                         <Box fontWeight="fontWeightMedium">
-                        Welcome here.
+                                Welcome here.
                         </Box>
                     </Typography>
                
                     <Typography variant="h5" component="h3" gutterBottom>
                         <StorageIcon fontSize="small" /> A storage of Excigma's class notes and some past paper questions - by topic.
                     </Typography>
-                        
-                    <br />
-                        
-                    <Typography gutterBottom>
-                        <WarningIcon fontSize="small"/> Disclaimer: Some things here possibly work just well enough. Just. Please double check all information on this site is correct - even my notes. I will try to maintain a level of accuracy of the information provided here as I will use it to study myself; however this is NOT guaranteed. Please PLEASE double check.
-                    </Typography>
-
-                    <br />
-                        
-                    <Typography gutterBottom>
-                    K, I've now read that and I wanna <Link href="/subjects">go to the subjects page</Link>
+                     
+                    <Typography>
+                        Most likely you wanna <Link href="/subjects">go to the subjects page</Link>
                     </Typography>
                 </Grid>
                     
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h5" component="h4" gutterBottom>
+                    <Typography variant="h5" component="h4">
                         <HelpIcon fontSize="small" /> About
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                             This is a website where I will write my notes, and also an automated tool will sort past paper questions by topic to allow you to simply search by topic and get the mark scheme
                     </Typography>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h5" component="h4" gutterBottom>
+                    <Typography variant="h5" component="h4">
                         <FormatListBulletedIcon fontSize="small" /> Subjects
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                             I'm too lazy for now. :@:@:@:@!
                     </Typography>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h5" component="h4" gutterBottom>
+                    <Typography variant="h5" component="h4">
                         <HourglassFullIcon fontSize="small" /> How it works
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                            A <Link href="https://nodejs.org/en/">Node.js</Link> is used to scrap papers from <Link href="https://papacambridge.com/home/index.html">PapaCambridge</Link>, and downloaded
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                         <Link href="https://github.com/microsoft/playwright">Playwright</Link> is then used to automate multiple <Link href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</Link> instances in parallel to render and parse the PDFs using  <Link href="https://github.com/mozilla/pdf.js">PDF.js</Link>
                     </Typography>
 
@@ -82,35 +74,35 @@ export default function Home() {
                         <li>Using the above, to extract the text between two questions to guess the topic it is from</li>
                     </ol>
                         
-                    <Typography gutterBottom>
+                    <Typography>
                             The screenshots were cropped and saved according to the values returned from <Link href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</Link>, and as so may be inaccurate, but generally it has turned out well
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                             Screenshots are grouped by topics, which is written into a database to be read from later (jk, it's just a JSON)
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                             A <Link href="https://www.python.org/">Python</Link> script using <Link href="https://github.com/opencv/opencv-python">OpenCV</Link> is then used to remove unnecessary whitespace in between pages and working space in questions to make the image smaller
                     </Typography>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h5" component="h4" gutterBottom>
+                    <Typography variant="h5" component="h4">
                         <HelpIcon fontSize="small" /> When + Why
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                             Whilst this really did start as a challenge, and also a project in the holidays of 2021 before the mid year exams which then became the group project for Computer Science, it become clear that this could be useful as a study tool when exams started.
                     </Typography>
 
-                    <Typography gutterBottom>
+                    <Typography>
                             I decided to continue to project and expand it to also include notes, which I usually lack motivation to write.
                     </Typography>
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h5" component="h4" gutterBottom>
+                    <Typography variant="h5" component="h4">
                         <ChatBubbleIcon fontSize="small" /> Unless statistics no one cares about
                     </Typography>
 
@@ -147,27 +139,27 @@ export default function Home() {
                 </Grid>
                     
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="h5" component="h4" gutterBottom>
+                    <Typography variant="h5" component="h4">
                         <ChatBubbleIcon fontSize="small" /> "Testimonials" (Maybe)
                     </Typography>
 
-                    <Blockquote gutterBottom>
+                    <Blockquote>
                             You're gonna waste 100 hours to write a stupid script to screenshot it instead of doing it yourself in less time
                     </Blockquote>
 
-                    <Blockquote gutterBottom>
+                    <Blockquote>
                             Get a life lol
                     </Blockquote>
 
-                    <Blockquote gutterBottom>
+                    <Blockquote>
                             Have a sleep and get back to it somewhat not dead in the morning
                     </Blockquote>
                         
-                    <Blockquote gutterBottom>
+                    <Blockquote>
                             You aren't making yourself look less insane btw
                     </Blockquote>
                 </Grid>
             </Grid>
-        </Container>
+        </>
     );
 }

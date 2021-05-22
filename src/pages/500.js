@@ -6,10 +6,10 @@ import React from 'react';
 
 export default function ErrorPage() {
     return (
-        <Container>
+        <>
             <Grid container spacing={5}>
                 <Grid item xs={12}>
-                    <Typography variant="h2" gutterBottom>
+                    <Typography variant="h2">
                         <Box fontWeight="fontWeightMedium">
                                 500 - Internal Server Error
                         </Box>
@@ -17,7 +17,7 @@ export default function ErrorPage() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography gutterBottom>
+                    <Typography>
                         <Box fontWeight="fontWeightMedium">
                                 (╯°□°）╯︵ ┻━┻. Well uhh you broke the server. Or maybe I did. We don't know how you got here. Nevertheless, right now probably want to <Link href="/"><b>Goto</b> home</Link>
                         </Box>
@@ -25,7 +25,7 @@ export default function ErrorPage() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography gutterBottom>
+                    <Typography>
                         <Box fontWeight="fontWeightMedium">
                                 WHY CAN I NOT WRITE GOOD CODE WITH ROBUST ERROR CHECKING REEEEEEEEEEEE
                             <br/>
@@ -35,11 +35,11 @@ export default function ErrorPage() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography gutterBottom>
+                    <Typography>
                                 Thank you for coming to my TED talk.
                     </Typography>
                 </Grid>
             </Grid>
-        </Container>
+        </>
     );
 }
