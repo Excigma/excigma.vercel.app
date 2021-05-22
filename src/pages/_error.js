@@ -1,47 +1,29 @@
-
-import { Grid, Typography, Container } from '@material-ui/core';
-import { Box } from '@material-ui/core';
-import Link from 'components/Link';
 import React from 'react';
 
-export default function ErrorPage() {    
+import Typography from '@material-ui/core/Typography';
+import Stack from '@material-ui/core/Stack';
+import Link from 'components/Link';
+
+export default function ErrorPage() {
     return (
-        <Container>
-            <Grid container spacing={7}>
-                <Grid item xs={12}>
-                    <Typography variant="h2">
-                        <Box fontWeight="fontWeightMedium">
-                                An unexpected error has occurred
-                        </Box>
-                    </Typography>
-                </Grid>
+        <Stack spacing={3}>
+            <Typography variant="h2" fontWeight="fontWeightMedium">
+                An unknown error has occurred
+            </Typography>
 
-                <Grid item xs={12}>
-                    <Typography>
-                        <Box fontWeight="fontWeightMedium">
-                                (╯°□°）╯︵ ┻━┻. Well uhh you broke the server. Or maybe I did. We don't know how you got here.
-                            <br />
-                                Nevertheless, right now probably want to <Link href="/"><b>Goto</b> home</Link>
-                        </Box>
-                    </Typography>
-                </Grid>
+            <Typography fontWeight="fontWeightMedium">
+                (╯°□°）╯︵ ┻━┻. Well uhh you broke the server. Or maybe I did. We don't know how you got here. Nevertheless, right now probably want to <Link href="/"><b>Goto</b> home</Link>
+            </Typography>
 
-                <Grid item xs={12}>
-                    <Typography>
-                        <Box fontWeight="fontWeightMedium">
-                                WHY CAN I NOT WRITE ROBUST CODE WITH ERROR CHECKING REEEEEEEEEEEE
-                            <br/>
-                                (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻
-                        </Box>
-                    </Typography>
-                </Grid>
+            <Typography>
+                WHY CAN I NOT WRITE GOOD CODE WITH ROBUST ERROR CHECKING REEEEEEEEEEEE
+                <br />
+                (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻ (╯°□°）╯︵ ┻━┻
+            </Typography>
 
-                <Grid item xs={12}>
-                    <Typography>
-                                Thank you for coming to my TED talk.
-                    </Typography>
-                </Grid>
-            </Grid>
-        </Container>
+            <Typography>
+                Thank you for coming to my TED talk.
+            </Typography>
+        </Stack>
     );
 }

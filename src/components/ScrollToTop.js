@@ -3,13 +3,15 @@ import React from 'react';
 import { Fab, Slide, useScrollTrigger, Zoom } from '@material-ui/core';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
-
 function scrollToTop() {
     if (document.body) document.body.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function ScrollToTop(props) {
-    const trigger = useScrollTrigger();
+    const trigger = useScrollTrigger({
+        disableHysteresis: true,
+        threshold: 200
+    });
 
     return (
         <Zoom in={trigger}>

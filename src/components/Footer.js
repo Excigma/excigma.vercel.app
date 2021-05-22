@@ -10,8 +10,6 @@ function scrollToTop() {
 }
 
 export default function Footer() {
-    const themeState = useTheme();
-
     return (
         <>
             <footer>
@@ -22,8 +20,10 @@ export default function Footer() {
                         </Typography>
 
                         <Typography variant="subtitle1" color="textSecondary" component="p" align="center">
-                            Made by Excigma during 2021 to assist notekeeping and study. <Link onClick={scrollToTop}>Scroll to top.</Link>
+                            Made by Excigma during 2021 to assist notekeeping and study. 
                         </Typography>
+
+                        <Link onClick={scrollToTop} align="center">Scroll to top.</Link>
                     </Container>
                 </Box>
             </footer>

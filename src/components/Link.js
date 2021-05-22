@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
 import getTheme from 'utils/theme.js';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 
 const NextComposed = React.forwardRef(function NextComposed(props, ref) {
     const { as, href, ...other } = props;
@@ -30,7 +30,7 @@ function Link(props) {
 
     if (!href) {
         return (
-            <MuiLink ref={innerRef} className={classNameProps} component="button" variant="body2" style={{ color: getTheme().palette.secondary.main }}  {...other} />
+            <MuiLink component={Typography} {...props} style={{ color: getTheme().palette.secondary.main }} />
         );
     }
 

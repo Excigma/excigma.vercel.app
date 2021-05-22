@@ -23,30 +23,27 @@ export default function Header(props) {
     const themeState = useTheme();
 
     return (
-        <>
-            <HideOnScroll direction="down" {...props}>
-                <AppBar>
-                    <Toolbar>
-                        <Link href="/" color="inherit">
-                            <IconButton edge="start">
-                                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
-                            </IconButton>
-                        </Link>
+        <HideOnScroll direction="down" {...props}>
+            <AppBar>
+                <Toolbar>
+                    <Link href="/" color="inherit">
+                        <IconButton edge="start">
+                            <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                        </IconButton>
+                    </Link>
 
-                        <Typography variant="h6" style={{ flexGrow: 1 }}>
-                            <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>Excigma</Link>
-                        </Typography>
+                    <Typography variant="h6">
+                        <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>Excigma</Link>
+                    </Typography>
 
-                        <Stack spacing={1} direction="row">
-                            <Button href="/projects" component={Link} style={{ color: 'white' }}>Projects</Button>
-                            <Button href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
+                    <Stack spacing={1} direction="row">
+                        <Button href="/projects" component={Link} style={{ color: 'white' }}>Projects</Button>
+                        <Button href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
 
-
-                            <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
-                        </Stack>
-                    </Toolbar>
-                </AppBar>
-            </HideOnScroll>
-        </>
+                        <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
+                    </Stack>
+                </Toolbar>
+            </AppBar>
+        </HideOnScroll>
     );
 }

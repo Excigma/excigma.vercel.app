@@ -43,13 +43,14 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Header />
 
-                <Box my={15}>
+                <Box my={17.5}>
                     <Container>
                         <Breadcrumbs />
-                        <br />
+                        
                         <Component {...pageProps} />
                     </Container>
                 </Box>
+
                 <ScrollToTop />
                 <Footer />
             </ThemeProvider>

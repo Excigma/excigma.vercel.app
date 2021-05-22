@@ -1,14 +1,13 @@
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import React, { Dispatch, ReactNode, SetStateAction } from 'react';
+import React from 'react';
 import theme from 'utils/theme';
 
-const defaultContextData = {
+const ThemeContext = React.createContext({
     dark: false,
     toggle: () => {},
-};
+});
 
-const ThemeContext = React.createContext(defaultContextData);
 const useTheme = () => React.useContext(ThemeContext);
 
 const useEffectDarkMode = () => {
@@ -28,12 +27,6 @@ const ThemeProvider = ({ children }) => {
     const [themeState, setThemeState] = useEffectDarkMode();
 
     if (!themeState.hasThemeLoaded) {
-    /*
-      If the theme is not yet loaded we don't want to render
-      this is just a workaround to avoid having the app rendering
-      in light mode by default and then switch to dark mode while
-      getting the theme state from localStorage
-    */
         return <div />;
     }
 
@@ -47,12 +40,7 @@ const ThemeProvider = ({ children }) => {
 
     return (
         <MuiThemeProvider theme={currentTheme}>
-            <ThemeContext.Provider
-                value={{
-                    dark: themeState.dark,
-                    toggle,
-                }}
-            >
+            <ThemeContext.Provider value={{ dark: themeState.dark, toggle }}>
                 {children}
             </ThemeContext.Provider>
         </MuiThemeProvider>
