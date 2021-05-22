@@ -1,4 +1,4 @@
-import {  Button, Card, CardContent, CardActions, Grid, Typography, Fade } from '@material-ui/core';
+import {  Button, Card, CardContent, CardActions, Grid, Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import React from 'react';
 import { subjects } from '../../config';
@@ -44,8 +44,8 @@ export default function Page() {
                             </CardContent>
 
                             <CardActions>
-                                <Button variant="contained" color="primary" href={'/subjects/' + subject} component={Link} style={{ color: 'white' }}>Notes</Button>
-                                <Button href={'/subjects/' + encodeURIComponent(subject)} component={Link} disabled>Pastpapers: Coming soon</Button>
+                                <Button variant="contained" color="primary" href={'/notes/subjects/' + subject} component={Link} style={{ color: 'white' }}>Notes</Button>
+                                <Button href={'/notes/subjects/' + encodeURIComponent(subject)} component={Link} disabled>Pastpapers: Coming soon</Button>
                             </CardActions>
                         </Card>
                     </Grid>
@@ -64,8 +64,8 @@ export default function Page() {
                         </CardContent>
 
                         <CardActions>
-                            <Button variant="contained" color="primary" href="/subjects" component={Link} style={{ color: 'white' }} disabled>Notes</Button>
-                            <Button href="/subjects" component={Link} style={{ color: 'white' }} disabled>Pastpapers</Button>
+                            <Button variant="contained" color="primary" href="/notes" component={Link} style={{ color: 'white' }} disabled>Notes</Button>
+                            <Button href="/notes" component={Link} style={{ color: 'white' }} disabled>Pastpapers</Button>
                         </CardActions>
                     </Card>
                 </Grid> 

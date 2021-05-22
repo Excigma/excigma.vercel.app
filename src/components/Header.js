@@ -37,7 +37,7 @@ export default function Header(props) {
                         </Typography>
 
                         <Stack spacing={1} direction="row">
-                            <Button href="/subjects" component={Link} style={{ color: 'white' }}>Subjects</Button>
+                            <Button href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
 
                             <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark}/>
                         </Stack>
