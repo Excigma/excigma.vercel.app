@@ -7,7 +7,7 @@ import HourglassFullIcon from '@material-ui/icons/HourglassFull';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 import HelpIcon from '@material-ui/icons/Help';
-import { Box } from '@material-ui/core';
+import { Avatar, Box } from '@material-ui/core';
 import Link from 'components/Link.js';
 import { Grid, Typography,  Table, TableBody, TableCell, TableContainer,  TableRow } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
@@ -20,7 +20,7 @@ export default function Home() {
                 <Grid item xs={12}>
                     <Typography variant="h2" gutterBottom>
                         <Box fontWeight="fontWeightMedium">
-                                Welcome here.
+                           Welcome here.
                         </Box>
                     </Typography>
                

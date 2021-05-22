@@ -30,12 +30,11 @@ export default function MyApp({ Component, pageProps }) {
         if (jssStyles) jssStyles.parentElement.removeChild(jssStyles);
     }, []);
 
-    
     return (
         <CacheProvider value={cache} fullWidth>
             <Head>
-                <title>{nicePath} - PastpaperArmyKnife</title>
-                <meta name="og:title" content={`${nicePath} - PastpaperArmyKnife`} />
+                <title>{nicePath} - xΣ's Notes</title>
+                <meta name="og:title" content={`${nicePath} - xΣ's Notes`} />
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0"/>
             </Head>
 

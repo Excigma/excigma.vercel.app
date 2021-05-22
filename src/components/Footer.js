@@ -9,11 +9,11 @@ export default function Footer() {
                 <Box my={5}>
                     <Container>
                         <Typography variant="h6" component="p" align="center">
-                            PastpaperArmyKnife
+                            Excigma's Notes
                         </Typography>
 
                         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                        Made by Excigma during 2021 to assist study. <Link href="#top">Scroll to top.</Link>
+                        Made by Excigma during 2021 to assist notekeeping and study. <Link href="#top">Scroll to top.</Link>
                         </Typography>
                     </Container>
                 </Box>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Avatar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Image from 'next/image';
 import Link from './Link';
 import DarkMode from '@material-ui/icons/DarkMode';
@@ -28,12 +28,12 @@ export default function Header(props) {
                     <Toolbar>
                         <Link href="/" color="inherit">
                             <IconButton edge="start">
-                                <Image src="/icons/icon-48x48.png" alt="Product icon" width="30" height="30" />
+                                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
                             </IconButton>
                         </Link>
 
                         <Typography variant="h6" style={{ flexGrow: 1 }}>
-                            <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>PastpaperArmyKnife</Link>
+                            <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>Excigma's Notes</Link>
                         </Typography>
 
                         <Stack spacing={1} direction="row">
