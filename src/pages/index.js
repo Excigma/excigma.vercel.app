@@ -1,4 +1,4 @@
-import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
+import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import React from 'react';
 
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
@@ -95,11 +95,15 @@ export default function Home() {
                 </Grid>
             </Grid>
 
+            
+            <Typography variant="h5" component="h4">
+                <ChatBubbleIcon fontSize="small" /> Cool programs, libraries and services used to make this website
+            </Typography>
             <TableContainer>
                 <Table>
                     <TableBody>
                         <TableRow>
-                            <TableCell><Link href="https://vercel.com">Vercel</Link> and <Link href="https://github.com">Github</Link></TableCell>
+                            <TableCell><Link href="https://vercel.com">Vercel</Link> + <Link href="https://github.com">Github</Link></TableCell>
                             <TableCell>Used to host this website in 2 minutes or less - as easy as <code>git push origin master</code></TableCell>
                         </TableRow>
                         <TableRow>
@@ -107,7 +111,7 @@ export default function Home() {
                             <TableCell>Used to write all the scripts that powers this site and more. Both of the former have simple syntax and allowed me to <strike>waste my holidays</strike> write this page in little time. The latter was a pain, and still is a pain.</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell><Link href="https://nextjs.com">Next.js</Link>, and <Link href="https://reactjs.com">React</Link></TableCell>
+                            <TableCell><Link href="https://nextjs.com">Next.js</Link> + <Link href="https://reactjs.com">React</Link></TableCell>
                             <TableCell>Speedy NodeJS server backend and hybrid static and server side rendering engine, used to host this website</TableCell>
                         </TableRow>
                         <TableRow>

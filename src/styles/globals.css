@@ -9,3 +9,7 @@ body {
 .MuiSvgIcon-fontSizeSmall {
   transform: translateY(2px);
 }
+
+pre {
+  padding: 1em;
+}
