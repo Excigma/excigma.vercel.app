@@ -30,7 +30,7 @@ function Link(props) {
 
     if (!href) {
         return (
-            <MuiLink component={Typography} {...props} style={{ color: getTheme().palette.secondary.main }} />
+            <MuiLink component={Typography} className={classNameProps} style={{ color: getTheme().palette.secondary.main }} {...other} />
         );
     }
 

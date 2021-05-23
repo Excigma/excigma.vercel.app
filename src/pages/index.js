@@ -23,7 +23,7 @@ export default function Home() {
                 It's most likely you wanna <Link href="/notes">go to my notes</Link>
             </Typography>
 
-            <Stack spacing={2} direction="row">
+            <Grid container>
                 <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <HelpIcon fontSize="small" /> About
@@ -47,9 +47,6 @@ export default function Home() {
                         I decided to continue to project and expand it to also include notes, which I usually lack motivation to write. This site will force me to write notes to a standard that I am willing to share with others
                     </Typography>
                 </Grid>
-            </Stack>
-
-            <Stack spacing={2} direction="row">
                 <Grid item xs={12} md={6}>
                     <Typography variant="h5" component="h4">
                         <ChatBubbleIcon fontSize="small" /> Unless statistics no one cares about
@@ -96,7 +93,7 @@ export default function Home() {
                         You aren't making yourself look less insane btw
                     </Blockquote>
                 </Grid>
-            </Stack>
+            </Grid>
 
             <TableContainer>
                 <Table>
