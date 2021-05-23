@@ -1,0 +1,73 @@
+import { Alert, AlertTitle, Button, Stack, Typography } from '@material-ui/core';
+import { promises as fs } from 'fs';
+import { useRouter } from 'next/router';
+import path from 'path';
+import React from 'react';
+
+import Codeblock from 'components/Codeblock';
+import Link from 'components/Link';
+import TopicsList from 'components/TopicsList';
+
+export default function ComputerScience({ topics }) {
+    return (
+        <Stack spacing={3}>
+            <Typography variant="h2" fontWeight="fontWeightMedium">
+                Welcome to Computer Science
+            </Typography>
+
+            
+            <Typography>
+                oMG pleASE Fix my prInter i know you've goto school to leanrt dis
+            </Typography>
+
+            <Alert severity="error">
+                <AlertTitle>Warning</AlertTitle>
+                This is pretty much me testing stuff. Just pushed early while things are not done to show people
+            </Alert>
+
+            <Typography>
+                bruh what is this button
+            </Typography>
+
+            <TopicsList topics={topics} />
+
+            <Button variant="contained" color="primary" href="https://www.cambridgeinternational.org/Images/502960-2021-syllabus.pdf" component={Link} style={{ color: 'white' }}>Syllabus</Button>
+
+            <Typography fontWeight="fontWeightMedium">
+                This page exists to test components that will be used frequently in this subject
+            </Typography>
+
+            <Typography>
+                lol why are you even here test test test.
+            </Typography>
+
+            <Codeblock language="visual-basic">
+                {`
+Function Main()
+    Console.Writeline("L@:@:@:@::@") 'bruh
+End Function
+
+Function lorem_ipsum(ByVal sit_amet As Integer) As String
+    Dim Test = {}
+    ' :@:@:@:
+    Call Other_function()
+    Return bruh ' Not even defined ¯\\_(ツ)_/¯
+End Function
+                `}
+            </Codeblock>
+        </Stack>
+    );
+}
+
+
+
+export async function getStaticProps() {
+    const topics = (await fs.readdir(path.join(process.cwd(), 'src', 'pages', 'notes', '2021', '9608_-_Computer_Science')))
+        .map(topic => topic.replace('.js', '').replace(/_/, ' '));
+
+    return {
+        props: {
+            topics
+        },
+    };
+}

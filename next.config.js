@@ -11,4 +11,14 @@ module.exports = withPWA({
         webpack5: true,
     },
     reactStrictMode: true,
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.fallback = {
+                fs: false,
+                path: false
+            };
+        }
+
+        return config;
+    }
 });

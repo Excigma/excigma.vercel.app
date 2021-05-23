@@ -4,9 +4,9 @@ import { useRouter } from 'next/router';
 import React from 'react';
 
 export default function Crumbs() {
-    const router = useRouter();
+    const { pathname } = useRouter();
 
-    const linkPath = router.asPath === '/' ? [] : router.asPath.split('/');
+    const linkPath = pathname === '/' ? [] : pathname.split('/');
 
     if (linkPath.length) linkPath.shift();
     
