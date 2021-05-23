@@ -4,18 +4,7 @@ import Codeblock from 'components/Codeblock';
 // thisis so bad
 // ehlp
 export default function ComputerScience() {
-    const OJYJYOJYO = `
-Function Main()
-    Console.Writeline("L@:@:@:@::@") 'bruh'
-End Function
 
-Function JYJOYJY(ByVal dskhjfkjdsafi As Integer) As String
-    Dim sdkflasdf = {}
-    ' :@:@:@:
-    Call bruh()
-    return bruh ' not even valid joy
-End Function
-    `.trim();
     
     return (
         <Stack spacing={3}>
@@ -24,11 +13,26 @@ End Function
             </Typography>
 
             <Typography fontWeight="fontWeightMedium">
-                test test test
+                This page exists to test components that will be used frequently in this subject
+            </Typography>
+
+            <Typography>
+                lol why are you even here test test test.
             </Typography>
 
             <Codeblock language="visual-basic">
-                {OJYJYOJYO}
+                {`
+Function Main()
+    Console.Writeline("L@:@:@:@::@") 'bruh
+End Function
+
+Function JYJOYJY(ByVal dskhjfkjdsafi As Integer) As String
+    Dim sdkflasdf = {}
+    ' :@:@:@:
+    Call bruh()
+    return bruh ' not even valid joy
+End Function
+                `}
             </Codeblock>
         </Stack>
     );

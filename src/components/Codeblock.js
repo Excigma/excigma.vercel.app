@@ -10,9 +10,15 @@ SyntaxHighlighter.registerLanguage('visual-basic', vb);
 
 const FONT = 'Inconsolata, Monaco, Consolas, "Ubuntu Mono", "Courier New", Courier, monospace';
 
-export default function Codeblock(props) {
+export default function Codeblock({children, ...other}) {
     const { dark } = useTheme();
 
+    console.log(children);
     // 🥛 <-- Eye bleach
-    return <SyntaxHighlighter style={{...(dark ? darkTheme : lightTheme), ...{fontFamily: FONT }}}  {...props} />;
+    return (
+        <SyntaxHighlighter style={{ ...(dark ? darkTheme : lightTheme), ...{ fontFamily: FONT } }}  {...other} >
+           
+            {children.trim()}
+        </SyntaxHighlighter>
+    );
 }
