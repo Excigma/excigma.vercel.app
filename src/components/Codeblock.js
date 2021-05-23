@@ -3,6 +3,7 @@ import React from 'react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 import vb from 'react-syntax-highlighter/dist/cjs/languages/prism/visual-basic';
+
 import darkTheme from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 import lightTheme from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
 
@@ -13,11 +14,9 @@ const FONT = 'Inconsolata, Monaco, Consolas, "Ubuntu Mono", "Courier New", Couri
 export default function Codeblock({children, ...other}) {
     const { dark } = useTheme();
 
-    console.log(children);
     // 🥛 <-- Eye bleach
     return (
         <SyntaxHighlighter style={{ ...(dark ? darkTheme : lightTheme), ...{ fontFamily: FONT } }}  {...other} >
-           
             {children.trim()}
         </SyntaxHighlighter>
     );
