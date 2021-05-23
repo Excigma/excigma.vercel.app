@@ -19,7 +19,7 @@ function HideOnScroll(props) {
 }
 
 export default function Header(props) {
-    const themeState = useTheme();
+    const { toggle, dark } = useTheme();
 
     return (
         <HideOnScroll direction="down" {...props}>
@@ -39,7 +39,7 @@ export default function Header(props) {
                         <Button href="/projects" component={Link} style={{ color: 'white' }}>Projects</Button>
                         <Button href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
 
-                        <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => themeState.toggle()} checked={themeState.dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
+                        <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => toggle()} checked={dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
                     </Stack>
                 </Toolbar>
             </AppBar>

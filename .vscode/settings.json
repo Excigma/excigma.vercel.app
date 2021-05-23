@@ -2,6 +2,8 @@
     "todo-tree.tree.scanMode": "open files",
     "cSpell.words": [
         "Cantarell",
+        "Consolas",
+        "Inconsolata",
         "Neue",
         "Pastpaper",
         "Pastpapers",
@@ -13,6 +15,7 @@
         "browserslist",
         "clsx",
         "dicedtomato",
+        "monospace",
         "noindex",
         "sies",
         "sitename"

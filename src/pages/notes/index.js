@@ -5,7 +5,7 @@ import React from 'react';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 
-import { subjects } from '../../subjects';
+import { subjects } from '../../data';
 
 const years = Object.keys(subjects);
 

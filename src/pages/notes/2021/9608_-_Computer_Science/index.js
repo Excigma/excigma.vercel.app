@@ -1,20 +1,9 @@
 import { Stack, Typography } from '@material-ui/core';
 import React from 'react';
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-
-import vb from 'react-syntax-highlighter/dist/cjs/languages/prism/visual-basic';
-import codeDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
-import codeLight from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
-
-import { useTheme } from 'components/ThemeProvider';
-
-SyntaxHighlighter.registerLanguage('visual-basic', vb);
-
+import Codeblock from 'components/Codeblock';
 // thisis so bad
 // ehlp
 export default function ComputerScience() {
-    const themeState = useTheme();
-
     const OJYJYOJYO = `
 Function Main()
     Console.Writeline("L@:@:@:@::@") 'bruh'
@@ -27,6 +16,7 @@ Function JYJOYJY(ByVal dskhjfkjdsafi As Integer) As String
     return bruh ' not even valid joy
 End Function
     `.trim();
+    
     return (
         <Stack spacing={3}>
             <Typography variant="h2" fontWeight="fontWeightMedium">
@@ -37,10 +27,9 @@ End Function
                 test test test
             </Typography>
 
-
-            <SyntaxHighlighter language="visual-basic" style={themeState.dark ? codeDark : codeLight}>
+            <Codeblock language="visual-basic">
                 {OJYJYOJYO}
-            </SyntaxHighlighter>
+            </Codeblock>
         </Stack>
     );
 }
