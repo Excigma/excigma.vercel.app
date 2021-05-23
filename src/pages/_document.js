@@ -1,9 +1,10 @@
-import * as React from 'react';
-import { CacheProvider } from '@emotion/react';
-import createCache from '@emotion/cache';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/styles';
 import createEmotionServer from '@emotion/server/create-instance';
+import { ServerStyleSheets } from '@material-ui/styles';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import React from 'react';
+
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
 
 const getCache = () => {
     const cache = createCache({ key: 'css', prepend: true });

@@ -1,9 +1,7 @@
-import React from 'react';
-
-import { useRouter } from 'next/router';
 import { Avatar, Breadcrumbs } from '@material-ui/core';
-
-import Link from './Link';
+import Link from 'components/Link';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 export default function Crumbs() {
     const router = useRouter();

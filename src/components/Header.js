@@ -1,12 +1,11 @@
+import { AppBar, Avatar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger, Stack } from '@material-ui/core';
+import { useTheme } from 'components/ThemeProvider';
 import React from 'react';
-import { AppBar, Avatar, Button, Checkbox, Divider, Fab, IconButton, Slide, Toolbar, Typography, useScrollTrigger, Zoom } from '@material-ui/core';
-import Image from 'next/image';
-import Link from './Link';
+
 import DarkMode from '@material-ui/icons/DarkMode';
 import LightMode from '@material-ui/icons/LightMode';
-import Stack from '@material-ui/core/Stack';
-import { useTheme } from 'components/ThemeProvider';
 
+import Link from 'components/Link';
 
 function HideOnScroll(props) {
     const { children } = props;

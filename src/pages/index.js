@@ -1,13 +1,12 @@
+import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
 import React from 'react';
 
-import StorageIcon from '@material-ui/icons/Storage';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-
 import HelpIcon from '@material-ui/icons/Help';
-import Link from 'components/Link.js';
-import { Grid, Typography, Table, TableBody, TableCell, TableContainer, TableRow, Divider } from '@material-ui/core';
+import StorageIcon from '@material-ui/icons/Storage';
+
 import Blockquote from 'components/Blockquote.js';
-import Stack from '@material-ui/core/Stack';
+import Link from 'components/Link.js';
 
 export default function Home() {
     return (

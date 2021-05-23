@@ -1,9 +1,7 @@
+import { Box, Container, Typography } from '@material-ui/core';
 import React from 'react';
-import { Box, Button, Checkbox, Container, Stack, Typography } from '@material-ui/core';
-import Link from './Link';
-import { useTheme } from 'components/ThemeProvider';
-import DarkMode from '@material-ui/icons/DarkMode';
-import LightMode from '@material-ui/icons/LightMode';
+
+import Link from 'components/Link';
 
 function scrollToTop() {
     if (document.body) document.body.scrollIntoView({ behavior: 'smooth' });

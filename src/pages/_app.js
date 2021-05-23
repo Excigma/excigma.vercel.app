@@ -1,20 +1,18 @@
+import { Box, Container, CssBaseline } from '@material-ui/core';
 import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-
 import 'styles/globals.css';
 
-import Header from 'components/Header.js';
-import Footer from 'components/Footer.js';
-
-// import { ThemeProvider } from '@material-ui/core/styles';
-import { ThemeProvider } from 'components/ThemeProvider';
-import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import { Box, Container, CssBaseline } from '@material-ui/core';
-import Breadcrumbs from 'components/Breadcrumbs';
-import ScrollToTop from 'components/ScrollToTop';
+import { CacheProvider } from '@emotion/react';
 
+import Breadcrumbs from 'components/Breadcrumbs';
+import Footer from 'components/Footer.js';
+import Header from 'components/Header.js';
+import ScrollToTop from 'components/ScrollToTop';
+import { ThemeProvider } from 'components/ThemeProvider';
+
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 export const cache = createCache({ key: 'css', prepend: true });
 
