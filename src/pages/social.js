@@ -4,6 +4,8 @@ import React from 'react';
 export default function Home() {
     return (
         <>
+            {/* use stack :@:@:@:@: */}
+            
             <Grid container spacing={5}>
                 <Grid item xs={12}>
                     <Typography variant="h2" gutterBottom>
@@ -19,7 +21,7 @@ export default function Home() {
                     </Typography>
 
                     <Typography>
-                        <code>Excigma#0337</code>
+                      Excigma#0337 (Friend Requests are disabled)
                     </Typography>
                 </Grid>
             </Grid>

@@ -1,9 +1,9 @@
-import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
+import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
 import React from 'react';
 
-import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-import HelpIcon from '@material-ui/icons/Help';
-import StorageIcon from '@material-ui/icons/Storage';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubbleOutlined';
+import HelpIcon from '@material-ui/icons/HelpOutlined';
+import StorageIcon from '@material-ui/icons/StorageOutlined';
 
 import Blockquote from 'components/Blockquote.js';
 import Link from 'components/Link.js';

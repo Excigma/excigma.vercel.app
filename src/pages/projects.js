@@ -19,7 +19,11 @@ export default function Home() {
                     </Typography>
 
                     <Typography>
-                            Yea, literally nothing I made years ago have survived until this day. :crying_face_with_tear:
+                        Yea, literally nothing else I made since 2013 have survived until this day. :crying_face_with_tear:
+                    </Typography>
+                    
+                    <Typography>
+                            Many projects just ended up not being useful, either superseded by better existing software or just became not useful
                     </Typography>
                 </Grid>
             </Grid>

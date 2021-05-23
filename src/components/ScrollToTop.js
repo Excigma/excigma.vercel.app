@@ -1,6 +1,6 @@
 
 import { Fab, Slide, useScrollTrigger, Zoom } from '@material-ui/core';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowUpwardIcon from '@material-ui/icons/ExpandLess';
 import React from 'react';
 
 function scrollToTop() {
