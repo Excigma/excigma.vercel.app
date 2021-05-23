@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 
     const name = router.pathname.substring(1).replace(/_/g, ' ').trim();
     const path = name || '/';
-    const nicePath = path.charAt(0).toUpperCase() + path.slice(1);
+    // const nicePath = path.charAt(0).toUpperCase() + path.slice(1);
 
     React.useEffect(() => {
         const jssStyles = document.querySelector('#jss-server-side');
@@ -31,8 +31,8 @@ export default function MyApp({ Component, pageProps }) {
     return (
         <CacheProvider value={cache} fullWidth>
             <Head>
-                <title>{nicePath} - xΣ's Page</title>
-                <meta name="og:title" content={`${nicePath} - xΣ's Page`} />
+                <title>{path} - xΣ's Page</title>
+                <meta name="og:title" content={`${path} - xΣ's Page`} />
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
             </Head>
 

@@ -6,11 +6,15 @@ import vb from 'react-syntax-highlighter/dist/cjs/languages/prism/visual-basic';
 import codeDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 import codeLight from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
 
+import { useTheme } from 'components/ThemeProvider';
+
 SyntaxHighlighter.registerLanguage('visual-basic', vb);
 
 // thisis so bad
 // ehlp
-export default function ErrorPage() {
+export default function ComputerScience() {
+    const themeState = useTheme();
+
     const OJYJYOJYO = `
 Function Main()
     Console.Writeline("L@:@:@:@::@") 'bruh'
@@ -34,10 +38,7 @@ End Function
             </Typography>
 
 
-            <SyntaxHighlighter language="visual-basic" style={codeDark}>
-                {OJYJYOJYO}
-            </SyntaxHighlighter>
-            <SyntaxHighlighter language="visual-basic" style={codeLight}>
+            <SyntaxHighlighter language="visual-basic" style={themeState.dark ? codeDark : codeLight}>
                 {OJYJYOJYO}
             </SyntaxHighlighter>
         </Stack>
