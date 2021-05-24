@@ -28,7 +28,7 @@ export default function MyApp({ Component, pageProps }) {
         <CacheProvider value={cache} fullWidth>
             <Head>
                 <title>{path} - xΣ's Page</title>
-                <meta name="og:title" content={`${path} - xΣ's Page`} />
+                <meta name="og:title" content={`${path} - xΣ's Webpage`} />
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
             </Head>
 
