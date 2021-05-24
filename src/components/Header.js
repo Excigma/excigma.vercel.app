@@ -1,6 +1,6 @@
-import { AppBar, Avatar, Button, Checkbox, IconButton, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
-import DarkMode from '@material-ui/icons/DarkModeOutlined';
-import LightMode from '@material-ui/icons/LightModeOutlined';
+import { AppBar, Avatar, Button, IconButton, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import Brightness4OutlinedIcon from '@material-ui/icons/Brightness4Outlined';
+import Brightness7OutlinedIcon from '@material-ui/icons/Brightness7Outlined';
 import Link from 'components/Link';
 import { useTheme } from 'components/ThemeProvider';
 import * as React from 'react';
@@ -36,11 +36,19 @@ export default function Header(props) {
                     </Typography>
 
                     <Stack spacing={1} direction="row">
-                        <Button variant="outline" href="/social" component={Link} style={{ color: 'white' }}>Social</Button>
-                        <Button variant="outline" href="/projects" component={Link} style={{ color: 'white' }}>Projects</Button>
-                        <Button variant="outline" href="/notes" component={Link} style={{ color: 'white' }}>Notes</Button>
+                        <Button variant="outline" href="/social" component={Link} color="white">
+                            Social
+                        </Button>
+                        <Button variant="outline" href="/projects" component={Link} color="white">
+                            Projects
+                        </Button>
+                        <Button variant="outline" href="/notes" component={Link} color="white">
+                            Notes
+                        </Button>
 
-                        <Checkbox style={{ color: 'white' }} icon={<DarkMode />} checkedIcon={<LightMode />} onChange={() => toggle()} checked={dark} inputProps={{ 'aria-label': 'Toggle dark mode' }} />
+                        <IconButton onClick={toggle} style={{ color: 'white' }}>
+                            {dark ? <Brightness7OutlinedIcon /> : <Brightness4OutlinedIcon />}
+                        </IconButton>
                     </Stack>
                 </Toolbar>
             </AppBar>

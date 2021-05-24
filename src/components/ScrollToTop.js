@@ -16,11 +16,7 @@ export default function ScrollToTop(props) {
     return (
         <Zoom in={trigger}>
             <Slide direction="left" in={trigger}>
-                <Fab style={{
-                    position: 'fixed',
-                    bottom: '25px',
-                    right: '25px',
-                }} color='primary' {...props} onClick={scrollToTop}>
+                <Fab onClick={scrollToTop} {...props} >
                     <ArrowUpwardIcon color='white' />
                 </Fab>
             </Slide>

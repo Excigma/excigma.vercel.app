@@ -15,6 +15,7 @@ const useEffectDarkMode = () => {
         dark: false,
         hasThemeLoaded: false,
     });
+
     React.useEffect(() => {
         const lsDark = localStorage.getItem('dark') === 'true';
         setThemeState({ ...themeState, dark: lsDark, hasThemeLoaded: true });
@@ -26,11 +27,9 @@ const useEffectDarkMode = () => {
 const ThemeProvider = ({ children }) => {
     const [themeState, setThemeState] = useEffectDarkMode();
 
-    if (!themeState.hasThemeLoaded) {
-        return <div />;
-    }
+    if (!themeState.hasThemeLoaded) return <div />;
 
-    const currentTheme = themeState.dark ? theme('dark') : theme('light');
+    const currentTheme = theme(themeState.dark);
 
     const toggle = () => {
         const dark = !themeState.dark;

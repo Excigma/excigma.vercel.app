@@ -16,9 +16,8 @@ export const cache = createCache({ key: 'css', prepend: true });
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
-    const name = router.pathname.substring(1).replace(/_/g, ' ').trim();
-    const path = name || '/';
-    // const nicePath = path.charAt(0).toUpperCase() + path.slice(1);
+    const name = router.pathname.substring(1).replace(/_/g, ' ').trim() || '/';
+    const path = name === '/' ? name : name.split('/').pop().charAt(0).toUpperCase().concat(name.slice(1));
 
     React.useEffect(() => {
         const jssStyles = document.querySelector('#jss-server-side');

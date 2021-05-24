@@ -7,7 +7,6 @@ export default function ComputerScience() {
             <Typography variant="h2" fontWeight="fontWeightMedium">
                 Nothing yet :)
             </Typography>
-
         </Stack>
     );
 }

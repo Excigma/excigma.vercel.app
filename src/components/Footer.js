@@ -18,7 +18,7 @@ export default function Footer() {
                         Made by Excigma during 2021 to assist notekeeping and study.
                     </Typography>
 
-                    <Button variant="outlined" size="small" onClick={scrollToTop}>
+                    <Button variant="outlined" size="small" color="secondary" onClick={scrollToTop}>
                         Scroll to top
                     </Button>
                 </Stack>
