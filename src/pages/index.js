@@ -30,7 +30,7 @@ export default function Home() {
                     </Typography>
 
                     <Typography>
-                        This is a website where I will write my notes and put other thingos that I make here. I need a rounded favicon bruh
+                        This is a webpage where I will write my notes and put other thingos that I make here. I need a rounded favicon bruh
                     </Typography>
                 </Grid>
 
@@ -108,7 +108,7 @@ export default function Home() {
                     <TableBody>
                         <TableRow>
                             <TableCell><Link href="https://vercel.com">Vercel</Link> + <Link href="https://github.com">Github</Link></TableCell>
-                            <TableCell>Used to host this website in 2 minutes or less - as easy as <code>git push origin master</code></TableCell>
+                            <TableCell>Used to host this webpage in 2 minutes or less - as easy as <code>git push origin master</code></TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell><Link href="https://nodejs.org">Node.js</Link></TableCell>
@@ -116,15 +116,15 @@ export default function Home() {
                         </TableRow>
                         <TableRow>
                             <TableCell><Link href="https://nextjs.com">Next.js</Link> + <Link href="https://reactjs.com">React</Link></TableCell>
-                            <TableCell>Speedy NodeJS server backend and hybrid static and server side rendering engine, used to host this website</TableCell>
+                            <TableCell>Speedy NodeJS server backend and hybrid static and server side rendering engine, used to host this webpage</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell><Link href="https://material-ui.com">Material-UI</Link></TableCell>
-                            <TableCell>All of the eye candy on this website is thanks to them</TableCell>
+                            <TableCell>All of the eye candy on this webpage is thanks to them</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell><Link href="https://code.visualstudio.com">Visual Studio Code</Link></TableCell>
-                            <TableCell>IDE and Code editor used to program the Backend and Frontend of the website</TableCell>
+                            <TableCell>IDE and Code editor used to program the Backend and Frontend of the webpage</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell><Link href="https://www.figma.com">Figma</Link></TableCell>
