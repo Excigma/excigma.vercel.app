@@ -1,4 +1,4 @@
-import { Avatar, Breadcrumbs } from '@material-ui/core';
+import { Breadcrumbs } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';

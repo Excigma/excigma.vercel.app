@@ -22,7 +22,6 @@ export default function DirectoryList({ directoryTree }) {
                             key={j}
                             button
                             component={Link}
-                            style={{ color: 'white' }}
                             href={`${pathname}/${directoryName}/${page}`}
                         >
                             <ListItemText primary={page.replace(/_/g, ' ')} />
