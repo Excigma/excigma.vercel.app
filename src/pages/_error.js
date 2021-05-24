@@ -1,8 +1,8 @@
-import Link from 'components/Link';
-import React from 'react';
-
 import Stack from '@material-ui/core/Stack';
 import Typography from '@material-ui/core/Typography';
+import Link from 'components/Link';
+import * as React from 'react';
+
 
 export default function ErrorPage() {
     return (

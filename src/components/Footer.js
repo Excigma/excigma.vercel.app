@@ -1,6 +1,5 @@
-import { Box, Container, Typography } from '@material-ui/core';
-import Link from 'components/Link';
-import React from 'react';
+import { Box, Button, Stack, Typography } from '@material-ui/core';
+import * as React from 'react';
 
 function scrollToTop() {
     if (document.body) document.body.scrollIntoView({ behavior: 'smooth' });
@@ -10,17 +9,19 @@ export default function Footer() {
     return (
         <footer>
             <Box my={5}>
-                <Container>
-                    <Typography variant="h6" component="p" align="center">
+                <Stack spacing={1} alignItems="center">
+                    <Typography variant="h6" component="p">
                         Excigma's Website
                     </Typography>
 
-                    <Typography variant="subtitle1" color="textSecondary" component="p" align="center">
+                    <Typography variant="subtitle1" color="textSecondary" component="p">
                         Made by Excigma during 2021 to assist notekeeping and study.
                     </Typography>
 
-                    <Link onClick={scrollToTop} align="center">Scroll to top.</Link>
-                </Container>
+                    <Button variant="outlined" size="small" onClick={scrollToTop}>
+                        Scroll to top
+                    </Button>
+                </Stack>
             </Box>
         </footer>
     );

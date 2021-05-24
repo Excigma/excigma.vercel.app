@@ -1,7 +1,5 @@
-import { Button, Stack, Typography } from '@material-ui/core';
-import React from 'react';
-import Codeblock from 'components/Codeblock';
-import Link from 'components/Link';
+import { Stack, Typography } from '@material-ui/core';
+import * as React from 'react';
 
 export default function ComputerScience() {
     return (

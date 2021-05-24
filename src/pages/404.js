@@ -1,6 +1,6 @@
 import { Stack, Typography } from '@material-ui/core';
 import Link from 'components/Link';
-import React from 'react';
+import * as React from 'react';
 
 export default function ErrorPage() {
     return (

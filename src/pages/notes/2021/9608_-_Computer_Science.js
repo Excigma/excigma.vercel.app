@@ -1,11 +1,11 @@
 import { Alert, AlertTitle, Button, Stack, Typography } from '@material-ui/core';
-import React from 'react';
-
 import Codeblock from 'components/Codeblock';
-import Link from 'components/Link';
-
 import DirectoryList from 'components/DirectoryList';
+import Link from 'components/Link';
+import * as React from 'react';
 import getChildren from 'utils/getChildren';
+
+
 
 export default function Page({ directoryTree }) {
     return (
@@ -14,7 +14,7 @@ export default function Page({ directoryTree }) {
                 Welcome to Computer Science
             </Typography>
 
-            
+
             <Typography>
                 oMG pleASE Fix my prInter i know you've goto school to leanrt dis
             </Typography>
@@ -28,7 +28,7 @@ export default function Page({ directoryTree }) {
                 bruh what is this button
             </Typography>
 
-            <Button variant="contained" color="primary" href="https://www.cambridgeinternational.org/Images/502960-2021-syllabus.pdf" component={Link} style={{ color: 'white' }}>Syllabus</Button>
+            <Button variant="contained" href="https://www.cambridgeinternational.org/Images/502960-2021-syllabus.pdf" component={Link} style={{ color: 'white' }}>Syllabus</Button>
 
             <Typography fontWeight="fontWeightMedium">
                 This page exists to test components that will be used frequently in this subject
@@ -53,7 +53,7 @@ End Function
                 `}
             </Codeblock>
 
-            <DirectoryList directoryTree={directoryTree}/>
+            <DirectoryList directoryTree={directoryTree} />
         </Stack>
     );
 }

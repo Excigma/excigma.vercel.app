@@ -1,5 +1,5 @@
-import { createTheme } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
+import { createTheme } from '@material-ui/core/styles';
 
 const theme = mode => createTheme({
     typography: {
@@ -12,7 +12,7 @@ const theme = mode => createTheme({
             main: blue['900'],
         },
         secondary: {
-            main: blue['400'],
+            main: blue['500'],
         },
         contrastThreshold: 5
     },
@@ -22,6 +22,11 @@ const theme = mode => createTheme({
         },
         MuiGrid: {
             styleOverrides: { root: { padding: '10px 10px 10px 10px' } },
+        },
+        MuiLink: {
+            defaultProps: {
+                color: 'secondary',
+            }
         }
     }
 });

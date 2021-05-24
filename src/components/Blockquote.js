@@ -1,5 +1,5 @@
 import { Typography } from '@material-ui/core';
-import React from 'react';
+import * as React from 'react';
 import getTheme from 'utils/theme.js';
 
 // TODO: Fix color

@@ -1,20 +1,19 @@
 import { Breadcrumbs } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';
-import React from 'react';
-
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import * as React from 'react';
 
 export default function Crumbs() {
     const { pathname } = useRouter();
     const { breakpoints } = useTheme();
-    
+
     const linkPath = pathname === '/' ? [] : pathname.split('/');
 
     if (linkPath.length) linkPath.shift();
-    
+
     const paths = linkPath.map((path, i) => {
         return { breadcrumb: path, href: '/' + linkPath.slice(0, i + 1).join('/') };
     });

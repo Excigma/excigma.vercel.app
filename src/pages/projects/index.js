@@ -1,10 +1,10 @@
 
 import { Button, Card, CardActions, CardContent, Grid, Stack, Typography } from '@material-ui/core';
-import Link from 'components/Link';
-import React from 'react';
-
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
+import Link from 'components/Link';
+import * as React from 'react';
+
 
 
 export default function Page() {
@@ -45,7 +45,7 @@ export default function Page() {
                         </CardContent>
 
                         <CardActions>
-                            <Button variant="contained" color="primary" href="/" component={Link} style={{ color: 'white' }}>:c</Button>
+                            <Button variant="contained" href="/" component={Link} style={{ color: 'white' }}>:c</Button>
                         </CardActions>
                     </Card>
                 </Grid>

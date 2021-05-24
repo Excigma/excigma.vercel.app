@@ -1,8 +1,8 @@
-import { Button, List, ListItem, ListItemText, ListSubheader, Typography } from '@material-ui/core';
+import { Button, List, ListItem, ListItemText, Typography } from '@material-ui/core';
 import Link from 'components/Link';
-import { useRouter } from 'next/router';
 import { useTheme } from 'components/ThemeProvider';
-import React from 'react';
+import { useRouter } from 'next/router';
+import * as React from 'react';
 
 export default function DirectoryList({ directoryTree }) {
     const { pathname } = useRouter();
@@ -30,7 +30,7 @@ export default function DirectoryList({ directoryTree }) {
                         >
                             <ListItemText primary={page.replace(/_/g, ' ')} />
 
-                            <Button variant="contained" color="primary">Notes</Button>
+                            <Button variant="contained">Notes</Button>
                         </ListItem>
                     ))}
                 </List>

@@ -1,10 +1,10 @@
 import { Stack, Typography } from '@material-ui/core';
-import DirectoryList from 'components/DirectoryList';
-import React from 'react';
-import getChildren from 'utils/getChildren';
-
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
+import DirectoryList from 'components/DirectoryList';
+import * as React from 'react';
+import getChildren from 'utils/getChildren';
+
 
 export default function Page({ directoryTree }) {
     return (
@@ -27,7 +27,7 @@ export default function Page({ directoryTree }) {
                 Many notes are not up to date with the things we have been taught
             </Alert>
 
-            <DirectoryList directoryTree={directoryTree}/>
+            <DirectoryList directoryTree={directoryTree} />
         </Stack>
     );
 }

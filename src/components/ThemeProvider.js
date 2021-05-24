@@ -1,11 +1,11 @@
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import React from 'react';
+import * as React from 'react';
 import theme from 'utils/theme';
 
 const ThemeContext = React.createContext({
     dark: false,
-    toggle: () => {},
+    toggle: () => { },
 });
 
 const useTheme = () => React.useContext(ThemeContext);

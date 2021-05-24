@@ -1,11 +1,11 @@
-import { AppBar, Avatar, Button, Checkbox, IconButton, Slide, Toolbar, Typography, useScrollTrigger, Stack } from '@material-ui/core';
-import { useTheme } from 'components/ThemeProvider';
-import React from 'react';
-
+import { AppBar, Avatar, Button, Checkbox, IconButton, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import DarkMode from '@material-ui/icons/DarkModeOutlined';
 import LightMode from '@material-ui/icons/LightModeOutlined';
-
 import Link from 'components/Link';
+import { useTheme } from 'components/ThemeProvider';
+import * as React from 'react';
+
+
 
 function HideOnScroll(props) {
     const { children } = props;
@@ -25,7 +25,7 @@ export default function Header(props) {
         <HideOnScroll direction="down" {...props}>
             <AppBar>
                 <Toolbar>
-                    <Link href="/" color="inherit">
+                    <Link href="/" color="white">
                         <IconButton edge="start">
                             <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
                         </IconButton>
