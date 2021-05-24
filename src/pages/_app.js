@@ -43,7 +43,7 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Box my={17.5}>
                     <Container>
-                        <Breadcrumbs />
+                        <Breadcrumbs gutterBottom/>
                         
                         <Component {...pageProps} />
                     </Container>

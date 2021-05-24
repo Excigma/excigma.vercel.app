@@ -1,11 +1,16 @@
 import { Avatar, Breadcrumbs } from '@material-ui/core';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 export default function Crumbs() {
     const { pathname } = useRouter();
-
+    const { breakpoints } = useTheme();
+    
     const linkPath = pathname === '/' ? [] : pathname.split('/');
 
     if (linkPath.length) linkPath.shift();
@@ -15,13 +20,9 @@ export default function Crumbs() {
     });
 
     return (
-        <Breadcrumbs separator="›" aria-label="breadcrumb">
+        <Breadcrumbs maxItems={useMediaQuery(breakpoints.up('md')) ? 8 : 3} separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
             <Link href="/">
-                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: '1em', height: '1em' }} />
-            </Link>
-
-            <Link href="/">
-                root
+                Home
             </Link>
 
             {paths.map((path, index) => (
