@@ -9,13 +9,13 @@ export default function theme(isDark = true) {
         palette: {
             mode: isDark ? 'dark' : 'light',
             grey: {
-                main: isDark ? grey[900] : grey[100]
+                main: isDark ? grey[900] : blue[600]
             },
             primary: {
                 main: isDark ? blue[900] : blue[500]
             },
             secondary: {
-                main: !isDark ? blue[800] : blue[400]
+                main: !isDark ? blue[700] : blue[400]
             },
         },
         components: {

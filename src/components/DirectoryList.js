@@ -1,4 +1,4 @@
-import { Button, List, ListItem, ListItemText, Typography } from '@material-ui/core';
+import { List, ListItem, ListItemText, Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import { useTheme } from 'components/ThemeProvider';
 import { useRouter } from 'next/router';
@@ -29,8 +29,6 @@ export default function DirectoryList({ directoryTree }) {
                             href={`${pathname}/${directoryName}/${page}`}
                         >
                             <ListItemText primary={page.replace(/_/g, ' ')} />
-
-                            <Button variant="contained">Notes</Button>
                         </ListItem>
                     ))}
                 </List>
