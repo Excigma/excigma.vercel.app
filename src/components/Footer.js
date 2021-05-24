@@ -10,15 +10,15 @@ export default function Footer() {
         <footer>
             <Box my={5}>
                 <Stack spacing={1} alignItems="center">
-                    <Typography variant="h6" component="p">
+                    <Typography variant="h6" component="p" align="center">
                         Excigma's Webpage
                     </Typography>
 
-                    <Typography variant="subtitle1" color="textSecondary" component="p">
+                    <Typography variant="subtitle1" color="textSecondary" component="p" align="center">
                         Made by Excigma during 2021 to assist notekeeping and study.
                     </Typography>
 
-                    <Button variant="outlined" size="small" color="secondary" onClick={scrollToTop}>
+                    <Button variant="outlined" size="small" color="secondary" onClick={scrollToTop} align="center">
                         Scroll to top
                     </Button>
                 </Stack>
