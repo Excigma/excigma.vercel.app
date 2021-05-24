@@ -23,18 +23,18 @@ export default function Header(props) {
         <HideOnScroll direction="down" {...props}>
             <AppBar>
                 <Toolbar>
-                    <Link href="/" color="white">
+                    <Link href="/">
                         <IconButton edge="start">
                             <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
                         </IconButton>
                     </Link>
 
-                    <Typography variant="h6" style={{ flexGrow: 1 }}>
-                        <Link href="/" style={{ color: 'white' }} display={{ xs: 'none', md: 'block' }}>Excigma</Link>
+                    <Typography variant="h6" style={{ flexGrow: 1, color: dark ? 'white' : 'black' }}>
+                        <Link href="/" display={{ xs: 'none', md: 'block' }} color="inherit">Excigma</Link>
                     </Typography>
 
                     <Stack spacing={1} direction="row">
-                        <Button variant="outline" href="/social" component={Link} color="white">
+                        <Button variant="outline" href="/social" component={Link} >
                             Social
                         </Button>
                         <Button variant="outline" href="/projects" component={Link} color="white">
@@ -44,7 +44,7 @@ export default function Header(props) {
                             Notes
                         </Button>
 
-                        <IconButton onClick={toggle} style={{ color: 'white' }}>
+                        <IconButton onClick={toggle}>
                             {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
                         </IconButton>
                     </Stack>
