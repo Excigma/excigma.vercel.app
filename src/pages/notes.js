@@ -1,12 +1,10 @@
-import { Button, List, ListItem, ListItemText, ListSubheader, Stack, Typography } from '@material-ui/core';
-import Link from 'components/Link';
+import { Stack, Typography } from '@material-ui/core';
+import DirectoryList from 'components/DirectoryList';
 import React from 'react';
+import getChildren from 'utils/getChildren';
 
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
-
-import DirectoryList from 'components/DirectoryList';
-import getChildren from 'utils/getChildren';
 
 export default function Page({ directoryTree }) {
     return (

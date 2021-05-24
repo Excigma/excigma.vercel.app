@@ -17,11 +17,17 @@ export default function DirectoryList({ directoryTree }) {
                         </Typography>
                     }>
 
-                    {directoryFiles.map((page, i) => (
-                        <ListItem key={i} button  href={`${pathname}/${directoryName}/${page}`} component={Link} >
+                    {directoryFiles.map((page, j) => (
+                        <ListItem
+                            key={j}
+                            button
+                            component={Link}
+                            style={{ color: 'white' }}
+                            href={`${pathname}/${directoryName}/${page}`}
+                        >
                             <ListItemText primary={page.replace(/_/g, ' ')} />
 
-                            <Button variant="contained" color="primary" style={{ color: 'white' }}>Notes</Button>
+                            <Button variant="contained" color="primary">Notes</Button>
                         </ListItem>
                     ))}
                 </List>

@@ -11,6 +11,20 @@ module.exports = withPWA({
         webpack5: true,
     },
     reactStrictMode: true,
+    redirects: ()=> {
+        return [
+            {
+                source: '/notes/:year',
+                destination: '/notes',
+                permanent: true,
+            },
+            {
+                source: '/notes/:year/:subject/:paper',
+                destination: '/notes/:year/:subject',
+                permanent: true,
+            },
+        ];
+    },
     webpack: (config, { isServer }) => {
         if (!isServer) {
             config.resolve.fallback = {
