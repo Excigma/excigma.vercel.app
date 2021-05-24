@@ -18,10 +18,10 @@ export default function DirectoryList({ directoryTree }) {
                     }>
 
                     {directoryFiles.map((page, i) => (
-                        <ListItem key={i} button>
+                        <ListItem key={i} button  href={`${pathname}/${directoryName}/${page}`} component={Link} >
                             <ListItemText primary={page.replace(/_/g, ' ')} />
 
-                            <Button variant="contained" color="primary" href={`${pathname}/${directoryName}/${page}`} component={Link} style={{ color: 'white' }}>Notes</Button>
+                            <Button variant="contained" color="primary" style={{ color: 'white' }}>Notes</Button>
                         </ListItem>
                     ))}
                 </List>

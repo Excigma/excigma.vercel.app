@@ -7,7 +7,7 @@ import Link from 'components/Link';
 import DirectoryList from 'components/DirectoryList';
 import getChildren from 'utils/getChildren';
 
-export default function ComputerScience({ directoryTree }) {
+export default function Page({ directoryTree }) {
     return (
         <Stack spacing={3}>
             <Typography variant="h2" fontWeight="fontWeightMedium">
