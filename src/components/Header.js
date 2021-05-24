@@ -1,11 +1,9 @@
 import { AppBar, Avatar, Button, IconButton, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
-import Brightness4OutlinedIcon from '@material-ui/icons/Brightness4Outlined';
-import Brightness7OutlinedIcon from '@material-ui/icons/Brightness7Outlined';
+import BrightnessLowIcon from '@material-ui/icons/BrightnessLow';
+import LightModeIcon from '@material-ui/icons/LightMode';
 import Link from 'components/Link';
 import { useTheme } from 'components/ThemeProvider';
 import * as React from 'react';
-
-
 
 function HideOnScroll(props) {
     const { children } = props;
@@ -47,7 +45,7 @@ export default function Header(props) {
                         </Button>
 
                         <IconButton onClick={toggle} style={{ color: 'white' }}>
-                            {dark ? <Brightness7OutlinedIcon /> : <Brightness4OutlinedIcon />}
+                            {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
                         </IconButton>
                     </Stack>
                 </Toolbar>
