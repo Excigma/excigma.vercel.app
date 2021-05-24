@@ -1,14 +1,13 @@
 import { Alert, AlertTitle, Button, Stack, Typography } from '@material-ui/core';
-import { promises as fs } from 'fs';
-import { useRouter } from 'next/router';
-import path from 'path';
 import React from 'react';
 
 import Codeblock from 'components/Codeblock';
 import Link from 'components/Link';
-import TopicsList from 'components/TopicsList';
 
-export default function ComputerScience({ topics }) {
+import DirectoryList from 'components/DirectoryList';
+import getChildren from 'utils/getChildren';
+
+export default function ComputerScience({ directoryTree }) {
     return (
         <Stack spacing={3}>
             <Typography variant="h2" fontWeight="fontWeightMedium">
@@ -28,8 +27,6 @@ export default function ComputerScience({ topics }) {
             <Typography>
                 bruh what is this button
             </Typography>
-
-            <TopicsList topics={topics} />
 
             <Button variant="contained" color="primary" href="https://www.cambridgeinternational.org/Images/502960-2021-syllabus.pdf" component={Link} style={{ color: 'white' }}>Syllabus</Button>
 
@@ -55,19 +52,15 @@ Function lorem_ipsum(ByVal sit_amet As Integer) As String
 End Function
                 `}
             </Codeblock>
+
+            <DirectoryList directoryTree={directoryTree}/>
         </Stack>
     );
 }
 
 
-
 export async function getStaticProps() {
-    const topics = (await fs.readdir(path.join(process.cwd(), 'src', 'pages', 'notes', '2021', '9608_-_Computer_Science')))
-        .map(topic => topic.replace('.js', '').replace(/_/, ' '));
+    const directoryTree = await getChildren(__filename);
 
-    return {
-        props: {
-            topics
-        },
-    };
+    return { props: { directoryTree } };
 }
