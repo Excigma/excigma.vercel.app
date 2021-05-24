@@ -11,7 +11,7 @@ export default function Footer() {
             <Box my={5}>
                 <Stack spacing={1} alignItems="center">
                     <Typography variant="h6" component="p">
-                        Excigma's Website
+                        Excigma's Webpage
                     </Typography>
 
                     <Typography variant="subtitle1" color="textSecondary" component="p">
