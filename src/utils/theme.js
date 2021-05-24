@@ -9,7 +9,7 @@ export default function theme(isDark = true) {
         palette: {
             mode: isDark ? 'dark' : 'light',
             grey: {
-                main: isDark ? grey[900] : blue[600]
+                main: isDark ? grey[900] : blue[700]
             },
             primary: {
                 main: isDark ? blue[900] : blue[500]

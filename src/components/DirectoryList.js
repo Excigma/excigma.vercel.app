@@ -11,27 +11,24 @@ export default function DirectoryList({ directoryTree }) {
     return (
         <>
             {Object.entries(directoryTree).map(([directoryName, directoryFiles], i) => (
-                <List
-                    key={i}
-                    aria-labelledby="nested-list-subheader"
-                    subheader={
-                        <Typography variant="h4" id="nested-list-subheader" gutterBottom>
-                            {directoryName.replace(/_/g, ' ')}
-                        </Typography>
-                    }>
+                <>
+                    <Typography variant="h4" id={`nested-list-subheader-${i}`} gutterBottom>
+                        {directoryName.replace(/_/g, ' ')}
+                    </Typography>
 
-                    {directoryFiles.map((page, j) => (
-                        <ListItem
-                            key={j}
-                            button
-                            component={Link}
-                            style={{ color: dark ? 'white' : 'black' }}
-                            href={`${pathname}/${directoryName}/${page}`}
-                        >
-                            <ListItemText primary={page.replace(/_/g, ' ')} />
-                        </ListItem>
-                    ))}
-                </List>
+                    <List key={i} aria-labelledby={`nested-list-subheader-${i}`}>
+                        {directoryFiles.map((page, j) => (
+                            <ListItem
+                                key={j}
+                                button
+                                component={Link}
+                                style={{ color: dark ? 'white' : 'black' }}
+                                href={`${pathname}/${directoryName}/${page}`}>
+                                <ListItemText primary={page.replace(/_/g, ' ')} />
+                            </ListItem>
+                        ))}
+                    </List>
+                </>
             ))}
         </>
     );

@@ -46,7 +46,7 @@ export default function Header(props) {
                             Notes
                         </Button>
 
-                        <IconButton onClick={toggle} style={{ color: 'white' }}>
+                        <IconButton aria-label="Toggle theme" onClick={toggle} style={{ color: 'white' }}>
                             {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
                         </IconButton>
                     </Stack>
