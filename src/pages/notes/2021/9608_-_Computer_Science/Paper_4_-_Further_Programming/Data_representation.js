@@ -6,7 +6,7 @@ export default function ComputerScience() {
     return (
         <Stack spacing={3}>
             <Subheading>
-                :@:@::@@::@@::!
+                Abstract data types, and other stuff
             </Subheading>
         </Stack>
     );

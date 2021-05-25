@@ -10,7 +10,7 @@ import * as React from 'react';
 export default function Home() {
     return (
         <>
-            <Typography variant="h4" fontWeight="fontWeightMedium" textOverflow="ellipsis">
+            <Typography variant="h4" fontWeight="fontWeightMedium" component="p" textOverflow="ellipsis">
                 Welcome here.
             </Typography>
 
