@@ -1,21 +1,17 @@
-import { Stack, Typography } from '@material-ui/core';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import DirectoryList from 'components/DirectoryList';
+import Subheading from 'components/Subheading';
 import * as React from 'react';
 import getChildren from 'utils/getChildren';
 
 
 export default function Page({ directoryTree }) {
     return (
-        <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium">
-                Subjects.
-            </Typography>
-
-            <Typography variant="h5" component="h3">
+        <>
+            <Subheading>
                 This is where you'd choose a subject and get more things like notes and past papers.
-            </Typography>
+            </Subheading>
 
             <Alert severity="warning">
                 <AlertTitle>Disclaimer</AlertTitle>
@@ -28,7 +24,7 @@ export default function Page({ directoryTree }) {
             </Alert>
 
             <DirectoryList directoryTree={directoryTree} />
-        </Stack>
+        </>
     );
 }
 

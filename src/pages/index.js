@@ -1,23 +1,22 @@
-import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
+import { Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubbleOutlined';
 import HelpIcon from '@material-ui/icons/HelpOutlined';
 import StorageIcon from '@material-ui/icons/StorageOutlined';
 import Blockquote from 'components/Blockquote.js';
 import Link from 'components/Link.js';
+import Subheading from 'components/Subheading';
 import * as React from 'react';
-
-
 
 export default function Home() {
     return (
-        <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium" textOverflow="ellipsis">
+        <>
+            <Typography variant="h4" fontWeight="fontWeightMedium" textOverflow="ellipsis">
                 Welcome here.
             </Typography>
 
-            <Typography variant="h5" component="h3">
+            <Subheading>
                 <StorageIcon fontSize="small" /> A gallery of Excigma's projects, notes and other things he tinkers with.
-            </Typography>
+            </Subheading>
 
             <Typography>
                 It's most likely you wanna <Link href="/notes">go to my notes</Link>
@@ -133,6 +132,6 @@ export default function Home() {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </Stack >
+        </>
     );
 }

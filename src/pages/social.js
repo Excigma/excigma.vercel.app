@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import * as React from 'react';
 
 export default function Home() {
@@ -7,15 +7,7 @@ export default function Home() {
             {/* use stack :@:@:@:@: */}
 
             <Grid container spacing={5}>
-                <Grid item xs={12}>
-                    <Typography variant="h2" gutterBottom>
-                        <Box fontWeight="fontWeightMedium">
-                            Socials.
-                        </Box>
-                    </Typography>
-                </Grid>
-
-                <Grid item xs={12}>
+                <Grid item xs={6}>
                     <Typography variant="h5" component="h4">
                         Discord
                     </Typography>

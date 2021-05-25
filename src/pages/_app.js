@@ -1,9 +1,10 @@
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
-import { Box, Container, CssBaseline } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
+import Heading from 'components/Heading';
 import ScrollToTop from 'components/ScrollToTop';
 import { ThemeProvider } from 'components/ThemeProvider';
 import Head from 'next/head';
@@ -16,8 +17,8 @@ export const cache = createCache({ key: 'css', prepend: true });
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
-    const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || '/';
-    const path = name === '/' ? name : name.charAt(0).toUpperCase().concat(name.slice(1));
+    const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || 'Home';
+    const path = name === 'Home' ? name : name.charAt(0).toUpperCase().concat(name.slice(1));
 
     React.useEffect(() => {
         const jssStyles = document.querySelector('#jss-server-side');
@@ -39,13 +40,18 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Box my={17.5}>
                     <Container>
-                        <Breadcrumbs gutterBottom />
+                        <Breadcrumbs />
 
-                        <Component {...pageProps} />
+                        <Stack spacing={3}>
+                            <Heading>{path}</Heading>
+
+                            <Component {...pageProps} />
+                        </Stack>
                     </Container>
                 </Box>
 
                 <ScrollToTop />
+
                 <Footer />
             </ThemeProvider>
         </CacheProvider >

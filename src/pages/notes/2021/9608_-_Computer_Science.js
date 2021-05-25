@@ -1,7 +1,8 @@
-import { Alert, AlertTitle, Button, Stack, Typography } from '@material-ui/core';
+import { Alert, AlertTitle, Button, Typography } from '@material-ui/core';
 import Codeblock from 'components/Codeblock';
 import DirectoryList from 'components/DirectoryList';
 import Link from 'components/Link';
+import Subheading from 'components/Subheading';
 import * as React from 'react';
 import getChildren from 'utils/getChildren';
 
@@ -9,15 +10,10 @@ import getChildren from 'utils/getChildren';
 
 export default function Page({ directoryTree }) {
     return (
-        <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium">
-                Welcome to Computer Science
-            </Typography>
-
-
-            <Typography>
+        <>
+            <Subheading>
                 oMG pleASE Fix my prInter i know you've goto school to leanrt dis
-            </Typography>
+            </Subheading>
 
             <Alert severity="error">
                 <AlertTitle>Warning</AlertTitle>
@@ -54,7 +50,7 @@ End Function
             </Codeblock>
 
             <DirectoryList directoryTree={directoryTree} />
-        </Stack>
+        </>
     );
 }
 
