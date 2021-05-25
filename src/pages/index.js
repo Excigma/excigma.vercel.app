@@ -11,7 +11,7 @@ import * as React from 'react';
 export default function Home() {
     return (
         <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium">
+            <Typography variant="h2" fontWeight="fontWeightMedium" textOverflow="ellipsis">
                 Welcome here.
             </Typography>
 

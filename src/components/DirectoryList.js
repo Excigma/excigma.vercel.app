@@ -1,12 +1,10 @@
 import { List, ListItem, ListItemText, Paper, Typography } from '@material-ui/core';
 import Link from 'components/Link';
-import { useTheme } from 'components/ThemeProvider';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 
 export default function DirectoryList({ directoryTree }) {
     const { pathname } = useRouter();
-    const { dark } = useTheme();
 
     return (
         <>

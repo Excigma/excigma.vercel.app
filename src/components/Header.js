@@ -92,7 +92,7 @@ export default function Header(props) {
                 open={state['left']}
                 onClose={toggleDrawer('left', false)}
                 onOpen={toggleDrawer('left', true)}
-                disableBackdropTransition
+                disableBackdropTransition={true}
                 sx={{ width: '10em' }}
             >
                 <List onClick={toggleDrawer('left', false)} style={{ width: 250 }}>

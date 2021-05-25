@@ -4,7 +4,10 @@ import * as React from 'react';
 export default function ComputerScience() {
     return (
         <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium">
+            <Typography variant="h2" fontWeight="fontWeightMedium" sx={{
+                textOverflow: 'ellipsis',
+                overflow: 'hidden'
+            }}>
                 Data Representation
             </Typography>
 
