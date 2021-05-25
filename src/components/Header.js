@@ -38,7 +38,6 @@ export default function Header(props) {
 
     return (
         <>
-
             <SwipeableDrawer
                 anchor="left"
                 open={state['left']}

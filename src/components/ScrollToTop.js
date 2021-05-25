@@ -16,7 +16,7 @@ export default function ScrollToTop(props) {
     return (
         <Zoom in={trigger}>
             <Slide direction="left" in={trigger}>
-                <Fab onClick={scrollToTop} {...props} >
+                <Fab aria-label="Scroll to top" onClick={scrollToTop} {...props} >
                     <ArrowUpwardIcon color='white' />
                 </Fab>
             </Slide>
