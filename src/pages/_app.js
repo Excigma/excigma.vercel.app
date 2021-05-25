@@ -1,10 +1,9 @@
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
-import { Box, Container, CssBaseline, Stack } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
-import Heading from 'components/Heading';
 import ScrollToTop from 'components/ScrollToTop';
 import { ThemeProvider } from 'components/ThemeProvider';
 import Head from 'next/head';
@@ -43,7 +42,17 @@ export default function MyApp({ Component, pageProps }) {
                         <Breadcrumbs />
 
                         <Stack spacing={3}>
-                            <Heading>{path}</Heading>
+                            <Typography
+                                variant="h2"
+                                fontWeight="fontWeightMedium"
+                                sx={{
+                                    textOverflow: 'ellipsis',
+                                    overflow: 'clip',
+                                    overflowClipMargin: '1em'
+                                }}>
+                                {path}
+
+                            </Typography>
 
                             <Component {...pageProps} />
                         </Stack>

@@ -3,15 +3,6 @@ import * as React from 'react';
 
 export default function Heading(props) {
     return (
-        <Typography
-            variant="h2"
-            fontWeight="fontWeightMedium"
-            sx={{
-                textOverflow: 'ellipsis',
-                overflow: 'clip',
-                overflowClipMargin: '1em'
-            }}
-            {...props}
-        />
+        <Typography variant="h5" component="h3" {...props} />
     );
 }
