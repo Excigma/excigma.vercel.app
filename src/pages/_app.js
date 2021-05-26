@@ -9,7 +9,7 @@ import { ThemeProvider } from 'components/ThemeProvider';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import 'styles/globals.css';
+import { globalStyles } from 'styles/global.js';
 
 export const cache = createCache({ key: 'css', prepend: true });
 
@@ -30,6 +30,7 @@ export default function MyApp({ Component, pageProps }) {
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+                {globalStyles}
             </Head>
 
             <ThemeProvider>

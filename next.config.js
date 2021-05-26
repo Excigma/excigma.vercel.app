@@ -5,7 +5,11 @@ const runtimeCaching = require('next-pwa/cache');
 module.exports = withPWA({
     poweredByHeader: false,
     reactStrictMode: true,
-    pwa: { dest: 'public', runtimeCaching },
+    pwa: {
+        dest: 'public',
+        dynamicStartUrl: false,
+        runtimeCaching
+    },
     future: { webpack5: true, },
     redirects: () => {
         return [{

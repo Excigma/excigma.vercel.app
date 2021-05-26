@@ -92,17 +92,19 @@ export default class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#2f3136" />
                     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link rel="preconnect" href="https://umami.up.railway.app" />
 
                     <link rel="manifest" href="/manifest.json" />
-
-                    <script async defer data-website-id="0b58b0f1-03c3-4420-aec0-d4ae8e4518c8" src="https://umami.up.railway.app/umami.js"></script>
-
                 </Head>
 
                 <body>
                     <Main />
                     <NextScript />
                 </body>
+
+                <script async defer data-website-id="0b58b0f1-03c3-4420-aec0-d4ae8e4518c8" src="https://umami.up.railway.app/umami.js"></script>
+                <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
             </Html>
         );
     }

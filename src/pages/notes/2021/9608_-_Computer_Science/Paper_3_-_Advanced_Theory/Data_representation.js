@@ -38,7 +38,7 @@ MyCat.Name = "Lorem Ipsum"
 
 ' You can additionally also have an array of a structure type
 Dim Cats(99) As Cat
-Cats(i).Name = "abcd"
+Cats(1).Name = "abcd"
                 `}
             </Codeblock>
 
@@ -48,21 +48,17 @@ Cats(i).Name = "abcd"
 
             <Codeblock language="basic">
                 {`
-' Defining your own datatype
-Structure Cat
-    Dim Name As String
-	Dim Birthdate As Date
-	Dim Breed As String
-End Structure
+TYPE Cat
+	DECLARE Name : STRING
+	DECLARE Birthdate : DATE
+	DECLARE Breed : STRING
+ENDTYPE
 
-' You can use the student structure here
-' You the syntax for declaration is just like any other datatype
-Dim MyCat As Cat
-MyCat.Name = "Lorem Ipsum"
+DECLARE MyCat : Cat
+MyCat.name <- "Lorem Ipsum"
 
-' You can additionally also have an array of a structure type
-Dim Cats(99) As Cat
-Cats(i).Name = "abcd"
+DECLARE Cats : ARRAY[1 : 100] OF Cat
+Cats[1].Name <- "abcd"
                 `}
             </Codeblock>
 
