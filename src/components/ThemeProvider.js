@@ -28,8 +28,8 @@ const useEffectDarkMode = () => {
 const ThemeProvider = ({ children }) => {
     const [themeState, setThemeState] = useEffectDarkMode();
 
-    // This breaks SSG
-    if (!themeState.hasThemeLoaded) return <div />;
+    // FIX: This breaks SSG
+    // if (!themeState.hasThemeLoaded) return <div />;
 
     const currentTheme = themeState.dark ? darkTheme : lightTheme;
 

@@ -1,5 +1,3 @@
-import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
 import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
@@ -11,22 +9,14 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
 
-
-export const cache = createCache({ key: 'css', prepend: true });
-
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || 'Home';
     const path = name === 'Home' ? name : name.charAt(0).toUpperCase().concat(name.slice(1));
 
-    React.useEffect(() => {
-        const jssStyles = document.querySelector('#jss-server-side');
-        if (jssStyles) jssStyles.parentElement.removeChild(jssStyles);
-    }, []);
-
     return (
-        <CacheProvider value={cache}>
+        <>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
@@ -65,6 +55,6 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Footer />
             </ThemeProvider>
-        </CacheProvider>
+        </>
     );
 }
