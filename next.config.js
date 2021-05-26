@@ -4,37 +4,26 @@ const runtimeCaching = require('next-pwa/cache');
 
 module.exports = withPWA({
     poweredByHeader: false,
-    pwa: {
-        dest: 'public',
-        runtimeCaching
-    },
-    future: {
-        webpack5: true,
-    },
     reactStrictMode: true,
-    rewrites: () => {
+    pwa: { dest: 'public', runtimeCaching },
+    future: { webpack5: true, },
+    redirects: () => {
         return [{
             source: '/notes/:year',
-            destination: '/notes'
+            destination: '/notes',
+            permanent: true,
         },
         {
             source: '/notes/:year/:subject/:paper',
-            destination: '/notes/:year/:subject'
+            destination: '/notes/:year/:subject',
+            permanent: true,
         }];
     },
-    exportPathMap: () => {
-        return {
-            '/notes/:year': { page: '/notes' },
-            '/notes/:year/:subject/:paper': { page: '/notes/:year/:subject' }
-        };
-    },
     webpack: (config, { isServer }) => {
-        if (!isServer) {
-            config.resolve.fallback = {
-                fs: false,
-                path: false
-            };
-        }
+        if (!isServer) config.resolve.fallback = {
+            fs: false,
+            path: false
+        };
 
         return config;
     }
