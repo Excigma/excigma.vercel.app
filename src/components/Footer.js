@@ -2,7 +2,7 @@ import { Box, Button, Stack, Typography } from '@material-ui/core';
 import * as React from 'react';
 
 function scrollToTop() {
-    if (document.body) document.body.scrollIntoView({ behavior: 'smooth' });
+    if (document.documentElement) document.documentElement.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function Footer() {
