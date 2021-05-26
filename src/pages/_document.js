@@ -1,13 +1,5 @@
-import createCache from '@emotion/cache';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import * as React from 'react';
-
-const getCache = () => {
-    const cache = createCache({ key: 'css', prepend: true });
-    cache.compat = true;
-
-    return cache;
-};
 
 export default class MyDocument extends Document {
     render() {

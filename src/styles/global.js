@@ -1,8 +1,7 @@
 import { css, Global } from '@emotion/react';
 import * as React from 'react';
 
-export const globalStyles = (<Global
-  styles={css`
+export const globalStyles = (<Global styles={css`
 html, body {
   overflow-x: hidden !important;
 }
@@ -18,5 +17,4 @@ body {
 pre {
   padding: 1em;
 }
-`}
-/>);
+`} />);

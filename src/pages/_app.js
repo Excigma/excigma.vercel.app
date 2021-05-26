@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
 
+
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
@@ -23,7 +24,6 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
                 {globalStyles}
             </Head>
-
 
             <ThemeProvider>
                 <CssBaseline />
