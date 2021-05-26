@@ -12,27 +12,11 @@ module.exports = withPWA({
         webpack5: true,
     },
     reactStrictMode: true,
-    rewrites: () => {
-        return [{
-            source: '/notes/:year',
-            destination: '/notes'
-        },
-        {
-            source: '/notes/:year/:subject/:paper',
-            destination: '/notes/:year/:subject'
-        }];
-    },
-    redirects: () => {
-        return [{
-            source: '/notes/:year',
-            destination: '/notes',
-            permanent: true,
-        },
-        {
-            source: '/notes/:year/:subject/:paper',
-            destination: '/notes/:year/:subject',
-            permanent: true,
-        }];
+    exportPathMap: () => {
+        return {
+            '/notes/:year': { page: '/notes' },
+            '/notes/:year/:subject/:paper': { page: '/notes/:year/:subject' }
+        };
     },
     webpack: (config, { isServer }) => {
         if (!isServer) {

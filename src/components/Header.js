@@ -9,6 +9,7 @@ import Link from 'components/Link';
 import { useTheme } from 'components/ThemeProvider';
 import * as React from 'react';
 
+
 function HideOnScroll(props) {
     const { children } = props;
     const trigger = useScrollTrigger();
@@ -27,7 +28,6 @@ export default function Header(props) {
         left: false
     });
 
-
     const toggleDrawer = (anchor, open) => (event) => {
         if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
@@ -38,6 +38,55 @@ export default function Header(props) {
 
     return (
         <>
+            <HideOnScroll direction="down" {...props}>
+                <AppBar>
+                    <Toolbar>
+                        <Box display={{ xs: 'block', md: 'none' }}>
+                            <IconButton
+                                aria-label="menu"
+                                onClick={toggleDrawer('left', true)}
+                                style={{ color: 'white' }}
+                                hidden={{ xs: 'block', md: 'none' }}>
+                                <MenuIcon />
+                            </IconButton>
+
+                        </Box>
+
+                        <Link href="/">
+                            <IconButton  >
+                                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                            </IconButton>
+                        </Link>
+
+                        <Typography variant="h6" style={{ flexGrow: 1 }}>
+                            <Link href="/" style={{ color: 'white' }}>
+                                Excigma
+                            </Link>
+                        </Typography>
+
+                        <Stack
+                            spacing={1}
+                            direction="row"
+                            color="white"
+                            display={{ xs: 'none', md: 'block' }}>
+                            <Button variant="outline" href="/social" component={Link}>
+                                Social
+                            </Button>
+                            <Button variant="outline" href="/projects" component={Link}>
+                                Projects
+                            </Button>
+                            <Button variant="outline" href="/notes" component={Link}>
+                                Notes
+                            </Button>
+
+                            <IconButton aria-label="Toggle theme" onClick={toggle} style={{ color: 'white' }}>
+                                {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
+                            </IconButton>
+                        </Stack>
+                    </Toolbar>
+                </AppBar>
+            </HideOnScroll>
+
             <SwipeableDrawer
                 anchor="left"
                 open={state['left']}
@@ -92,55 +141,6 @@ export default function Header(props) {
                     </ListItem>
                 </List>
             </SwipeableDrawer>
-
-            <HideOnScroll direction="down" {...props}>
-                <AppBar>
-                    <Toolbar>
-                        <Box display={{ xs: 'block', md: 'none' }}>
-                            <IconButton
-                                aria-label="menu"
-                                onClick={toggleDrawer('left', true)}
-                                style={{ color: 'white' }}
-                                hidden={{ xs: 'block', md: 'none' }}>
-                                <MenuIcon />
-                            </IconButton>
-
-                        </Box>
-
-                        <Link href="/">
-                            <IconButton  >
-                                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
-                            </IconButton>
-                        </Link>
-
-                        <Typography variant="h6" style={{ flexGrow: 1 }}>
-                            <Link href="/" style={{ color: 'white' }}>
-                                Excigma
-                            </Link>
-                        </Typography>
-
-                        <Stack
-                            spacing={1}
-                            direction="row"
-                            color="white"
-                            display={{ xs: 'none', md: 'block' }}>
-                            <Button variant="outline" href="/social" component={Link}>
-                                Social
-                            </Button>
-                            <Button variant="outline" href="/projects" component={Link}>
-                                Projects
-                            </Button>
-                            <Button variant="outline" href="/notes" component={Link}>
-                                Notes
-                            </Button>
-
-                            <IconButton aria-label="Toggle theme" onClick={toggle} style={{ color: 'white' }}>
-                                {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
-                            </IconButton>
-                        </Stack>
-                    </Toolbar>
-                </AppBar>
-            </HideOnScroll>
         </>
     );
 }
