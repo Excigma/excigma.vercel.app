@@ -5,8 +5,6 @@ import AlertTitle from '@material-ui/core/AlertTitle';
 import Link from 'components/Link';
 import * as React from 'react';
 
-
-
 export default function Page() {
     return (
         <>

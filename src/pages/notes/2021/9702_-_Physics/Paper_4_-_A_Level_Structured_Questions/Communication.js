@@ -3,14 +3,23 @@ import Heading from 'components/Heading';
 import Info from 'components/Info';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
+import { Line, LineChart, XAxis, YAxis } from 'recharts';
 
-export default function ComputerScience() {
+export default function Page() {
+    const data = [
+        { uv: 1, amt: 0 },
+        { uv: 3, amt: 25 },
+        { uv: 1, amt: 50 },
+        { uv: 3, amt: 75 },
+        { uv: 1, amt: 100 },
+        { uv: 3, amt: 125 }
+    ];
+
     return (
         <>
             <Heading>
                 Most modern communication techniques use waves
             </Heading>
-
 
             <Subheading>
                 Modulation
@@ -52,6 +61,12 @@ export default function ComputerScience() {
             <Subheading>
                 Frequency Modulation
             </Subheading>
+
+            <LineChart width={500} height={300} data={data}>
+                <XAxis />
+                <YAxis />
+                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+            </LineChart>
 
             <Typography>
                 Todo
