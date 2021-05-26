@@ -92,7 +92,6 @@ export default class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#2f3136" />
                     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
-                    <meta name="google-site-verification" content="KVSFdTtk9GDi1mB_Z-4XxnYP3XMAE2I0xD1iVAHrecA" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link rel="preconnect" href="https://umami.up.railway.app" />
 
