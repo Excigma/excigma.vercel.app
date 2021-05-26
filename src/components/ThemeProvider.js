@@ -12,30 +12,36 @@ const ThemeContext = React.createContext({
 const useTheme = () => React.useContext(ThemeContext);
 
 const useEffectDarkMode = () => {
-    const [themeState, setThemeState] = React.useState(false);
+    const [themeState, setThemeState] = React.useState({
+        dark: false,
+        hasThemeLoaded: false,
+    });
 
     React.useEffect(() => {
         const lsDark = localStorage.getItem('dark') === 'true';
-        setThemeState(lsDark);
+        setThemeState({ ...themeState, dark: lsDark, hasThemeLoaded: true });
     }, []);
 
     return [themeState, setThemeState];
 };
 
-const ThemeProvider = ({ children, ...props }) => {
+const ThemeProvider = ({ children }) => {
     const [themeState, setThemeState] = useEffectDarkMode();
 
-    const currentTheme = themeState ? darkTheme : lightTheme;
+    // This breaks SSG
+    if (!themeState.hasThemeLoaded) return <div />;
+
+    const currentTheme = themeState.dark ? darkTheme : lightTheme;
 
     const toggle = () => {
-        const dark = !themeState;
+        const dark = !themeState.dark;
         localStorage.setItem('dark', JSON.stringify(dark));
-        setThemeState(dark);
+        setThemeState({ ...themeState, dark });
     };
 
     return (
-        <MuiThemeProvider theme={currentTheme} {...props}>
-            <ThemeContext.Provider value={{ dark: themeState, toggle }}>
+        <MuiThemeProvider theme={currentTheme}>
+            <ThemeContext.Provider value={{ dark: themeState.dark, toggle }}>
                 {children}
             </ThemeContext.Provider>
         </MuiThemeProvider>
