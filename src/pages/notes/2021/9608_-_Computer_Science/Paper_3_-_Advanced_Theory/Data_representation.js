@@ -4,7 +4,7 @@ import Heading from 'components/Heading';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
-export default function ComputerScience() {
+export default function Page() {
     return (
         <>
             <Heading>
@@ -22,7 +22,7 @@ export default function ComputerScience() {
             <Typography>
                 In VB, they are called <code>Structure</code>s
             </Typography>
-            <Codeblock language="vb">
+            <Codeblock language="visual-basic">
                 {`
 ' Defining your own datatype
 Structure Cat
@@ -46,7 +46,7 @@ Cats(1).Name = "abcd"
                 In Psuedocode, they are called <code>Record</code>s
             </Typography>
 
-            <Codeblock language="basic">
+            <Codeblock language="psuedocode">
                 {`
 TYPE Cat
 	DECLARE Name : STRING

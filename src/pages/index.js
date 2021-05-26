@@ -7,7 +7,7 @@ import Link from 'components/Link.js';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
-export default function Home() {
+export default function Page() {
     return (
         <>
             <Typography variant="h4" fontWeight="fontWeightMedium" component="p" textOverflow="ellipsis">

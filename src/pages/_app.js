@@ -1,5 +1,3 @@
-import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
 import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
@@ -10,8 +8,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
-
-export const cache = createCache({ key: 'css', prepend: true });
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -25,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
     }, []);
 
     return (
-        <CacheProvider value={cache} fullWidth>
+        <ThemeProvider>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
@@ -33,37 +29,35 @@ export default function MyApp({ Component, pageProps }) {
                 {globalStyles}
             </Head>
 
-            <ThemeProvider>
-                <CssBaseline />
+            <CssBaseline />
 
-                <Header />
+            <Header />
 
-                <Box my={17.5}>
-                    <Container>
-                        <Breadcrumbs />
+            <Box my={17.5}>
+                <Container>
+                    <Breadcrumbs />
 
-                        <Stack spacing={3}>
-                            <Typography
-                                variant="h2"
-                                fontWeight="fontWeightMedium"
-                                sx={{
-                                    textOverflow: 'ellipsis',
-                                    overflow: 'clip',
-                                    overflowClipMargin: '1em'
-                                }}>
-                                {path}
+                    <Stack spacing={3}>
+                        <Typography
+                            variant="h2"
+                            fontWeight="fontWeightMedium"
+                            sx={{
+                                textOverflow: 'ellipsis',
+                                overflow: 'clip',
+                                overflowClipMargin: '1em'
+                            }}>
+                            {path}
 
-                            </Typography>
+                        </Typography>
 
-                            <Component {...pageProps} />
-                        </Stack>
-                    </Container>
-                </Box>
+                        <Component {...pageProps} />
+                    </Stack>
+                </Container>
+            </Box>
 
-                <ScrollToTop />
+            <ScrollToTop />
 
-                <Footer />
-            </ThemeProvider>
-        </CacheProvider >
+            <Footer />
+        </ThemeProvider>
     );
 }

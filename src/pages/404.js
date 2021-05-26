@@ -2,7 +2,7 @@ import { Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import * as React from 'react';
 
-export default function ErrorPage() {
+export default function Page() {
     return (
         <>
             <Typography fontWeight="fontWeightMedium">
