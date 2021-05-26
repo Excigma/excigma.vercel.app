@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core';
 import Info from 'components/Info';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
@@ -12,11 +13,27 @@ export default function Page() {
 
             <Info>
                 Aggregate demand: Total demand for an economy at a given price level over time
-                AD = C + I + G
+                AD = C + I + G + X - M
                 C: Consumption
                 I: Investment (Firms purchasing capital goods)
                 G: Government spending (Roads, Housing etc)
+                X: Exports (exports to elsewhere, tourism)
+                M: Imports
             </Info>
+
+            <Typography>
+                C + I = Private sector
+                G = Public sector
+                X + M = Foreign / International sector
+            </Typography>
+
+            <Typography>
+                Why is the AD curve downward sloping?
+                Price level increase
+                - Real income decrease
+                - Wealth effect, inflation
+                - Substitution of domestic goods away from international goods
+            </Typography>
         </>
     );
 }

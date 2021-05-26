@@ -12,6 +12,16 @@ module.exports = withPWA({
         webpack5: true,
     },
     reactStrictMode: true,
+    rewrites: () => {
+        return [{
+            source: '/notes/:year',
+            destination: '/notes'
+        },
+        {
+            source: '/notes/:year/:subject/:paper',
+            destination: '/notes/:year/:subject'
+        }];
+    },
     exportPathMap: () => {
         return {
             '/notes/:year': { page: '/notes' },
