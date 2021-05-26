@@ -15,7 +15,8 @@
 # production
 /build
 
-# service workers
+# Next-PWA files
+public/fallback-.js*
 public/workbox-*.js*
 public/sw.js*
 
