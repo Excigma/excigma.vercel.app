@@ -7,7 +7,7 @@
 /.next/
 
 # Next-PWA files
-public/fallback-.js*
+public/fallback-*.js*
 public/workbox-*.js*
 public/sw.js*
 
