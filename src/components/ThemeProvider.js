@@ -1,11 +1,10 @@
 
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import * as React from 'react';
 import darkTheme from 'themes/dark';
 import lightTheme from 'themes/light';
 
 const ThemeContext = React.createContext({
-    dark: false,
+    dark: true,
     toggle: () => { },
 });
 
@@ -13,12 +12,12 @@ const useTheme = () => React.useContext(ThemeContext);
 
 const useEffectDarkMode = () => {
     const [themeState, setThemeState] = React.useState({
-        dark: false,
+        dark: true,
         hasThemeLoaded: false,
     });
 
     React.useEffect(() => {
-        const lsDark = localStorage.getItem('dark') === 'true';
+        const lsDark = localStorage.getItem('dark') !== 'false';
         setThemeState({ ...themeState, dark: lsDark, hasThemeLoaded: true });
     }, []);
 
@@ -29,7 +28,7 @@ const ThemeProvider = ({ children }) => {
     const [themeState, setThemeState] = useEffectDarkMode();
 
     // FIX: This breaks SSG
-    if (!themeState.hasThemeLoaded) return <div />;
+    // if (!themeState.hasThemeLoaded) return <div />;
 
     const currentTheme = themeState.dark ? darkTheme : lightTheme;
 
@@ -41,9 +40,7 @@ const ThemeProvider = ({ children }) => {
 
     return (
         <MuiThemeProvider theme={currentTheme}>
-            <ThemeContext.Provider value={{ dark: themeState.dark, toggle }}>
-                {children}
-            </ThemeContext.Provider>
+            {children}
         </MuiThemeProvider>
     );
 };

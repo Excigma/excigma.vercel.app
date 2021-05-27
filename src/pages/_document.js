@@ -39,10 +39,10 @@ export default class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#2f3136" />
                     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
 
+                    <link rel="manifest" href="/manifest.json" />
+
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link rel="preconnect" href="https://umami.up.railway.app" />
-
-                    <link rel="manifest" href="/manifest.json" />
                 </Head>
 
                 <body>
@@ -51,10 +51,22 @@ export default class MyDocument extends Document {
                 </body>
 
                 <script async defer data-website-id="0b58b0f1-03c3-4420-aec0-d4ae8e4518c8" src="https://umami.up.railway.app/umami.js"></script>
-                <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
+
+                <link
+                    rel="preload"
+                    href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+                    as="style"
+                    onLoad="this.onload=null;this.rel='stylesheet'" />
+                <link
+                    rel="preload"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
+                    as="style"
+                    onLoad="this.onload=null;this.rel='stylesheet'" />
 
                 <noscript>
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" />
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet"
+                    />
                 </noscript>
             </Html>
         );

@@ -1,8 +1,11 @@
-import { List, ListItem, ListItemText, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
-import Info from 'components/Info';
+import { default as Information } from 'components/Information';
 import Subheading from 'components/Subheading';
+import UnorderedList from 'components/UnorderedList';
+import UnorderedListItem from 'components/UnorderedListItem';
 import * as React from 'react';
+import { InlineMath } from 'react-katex';
 import { Line, LineChart, XAxis, YAxis } from 'recharts';
 
 export default function Page() {
@@ -28,27 +31,23 @@ export default function Page() {
             <Typography>
                 There are two types of modulation:
             </Typography>
-            <List>
-                <ListItem>
-                    <ListItemText>
-                        A.M: Amplitude  modulation
-                    </ListItemText>
-                </ListItem>
 
-                <ListItem>
-                    <ListItemText>
-                        F.M: Frequency  modulation
-                    </ListItemText>
-                </ListItem>
-            </List>
+            <UnorderedList>
+                <UnorderedListItem>
+                    A.M: Amplitude  modulation
+                </UnorderedListItem>
+                <UnorderedListItem>
+                    F.M: Frequency  modulation
+                </UnorderedListItem>
+            </UnorderedList>
 
             <Typography>
                 Both types of modulation uses a "Carrier Wave"
             </Typography>
 
-            <Info title="Definition">
+            <Information title="Definition">
                 Carrier wave is a high frequency Electromagnetic wave modulated in either frequency or amplitude to transfer a signal
-            </Info>
+            </Information>
 
             <Subheading>
                 Amplitude Modulation
@@ -72,17 +71,17 @@ export default function Page() {
                 Todo
             </Typography>
 
-            <Info title="Definition">
+            <Information title="Definition">
                 In amplitude modulation (AM), the carrier wave has constant frequency. The amplitude of the carrier wave is made to vary. These variations are in sync with the displacement of the information signal
-            </Info>
+            </Information>
 
-            <Info title="Definition">
+            <Information title="Definition">
                 In frequency modulation (FM), the amplitude of the carrier wave remains constant. The frequency of the carrier wave is made to very in sync with the displacement of this information signal
-            </Info>
+            </Information>
 
-            <Info title="Definition">
+            <Information title="Definition">
                 The bandwidth is the range of frequency occupied amplitude modulated waveform
-            </Info>
+            </Information>
 
             <TableContainer>
                 <Table>
@@ -141,7 +140,6 @@ export default function Page() {
                 </Table>
             </TableContainer>
 
-
             <Subheading>
                 Frequency Modulation
             </Subheading>
@@ -161,9 +159,101 @@ export default function Page() {
             <Typography>
                 Digital Signals consist of highs and lows with no intermediate value.
                 Because of this, even if the signal becomes noisy during transit, amplifiers in the middle are able to recreate the exact waveform and remove the data
-
             </Typography>
 
+
+            <Typography>
+                Advantages of digital signals
+            </Typography>
+
+            <UnorderedList>
+                <UnorderedListItem>
+                    Signal can be regenerated and noise eliminated
+                </UnorderedListItem>
+                <UnorderedListItem>
+                    Extra data can be added to check for errors
+                </UnorderedListItem>
+                <UnorderedListItem>
+                    Multiplexing: Digital from a large number of different sources can share the same path
+                </UnorderedListItem>
+                <UnorderedListItem>
+                    Digital circuit are more reliable/cheaper to produce
+                </UnorderedListItem>
+                <UnorderedListItem>
+                    Data can be encrypted for security
+                </UnorderedListItem>
+            </UnorderedList>
+
+            <Subheading>
+                Binary number representation
+            </Subheading>
+
+            <Typography>
+                Binary is a base-2 scale
+            </Typography>
+
+            <TableContainer>
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Denary (Base 10)</TableCell>
+                            <TableCell>Binary (Base 2)</TableCell>
+                            <TableCell>Hexadecimal (Base 16)</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell>1</TableCell>
+                            <TableCell>0001</TableCell>
+                            <TableCell>01</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>2</TableCell>
+                            <TableCell>0010</TableCell>
+                            <TableCell>02</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>3</TableCell>
+                            <TableCell>0011</TableCell>
+                            <TableCell>03</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>4</TableCell>
+                            <TableCell>0100</TableCell>
+                            <TableCell>04</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </TableContainer>
+
+
+            <Subheading>
+                Converting Analogue to digital
+            </Subheading>
+
+            <Information title="Definition">
+                Sampling - Take analogue signal and "sample" it's voltage at regular intervals called "sampling rate"
+            </Information>
+
+            <Typography>
+                e.g. if sampling rate is 10 Hz, then 10 samples per second are taken and interval between samples is 0.1s
+            </Typography>
+
+            <Typography>
+                The maximum sampling rate required is only twice the highest frequency present in the signal.
+            </Typography>
+
+            <Typography>
+                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<InlineMath>20,000 * 2 = 40,000</InlineMath>)
+            </Typography>
+
+            <Typography>
+                These sample (instantaneous voltages) are converted into a binary number representing their value. How accurate this depends on depends on the number of bits.
+            </Typography>
+
+            <Information severity="error" title="ADCs can <b>ONLY</b> 'round' down">
+                Just drop the decimal completely. ADCs DO <b>NOT</b> ROUND UP.
+            </Information>
         </>
     );
 }

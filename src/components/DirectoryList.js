@@ -9,12 +9,12 @@ export default function DirectoryList({ directoryTree }) {
     return (
         <>
             {Object.entries(directoryTree).map(([directoryName, directoryFiles], i) => (
-                <>
+                <React.Fragment key={i}>
                     <Typography variant="h4" id={`nested-list-subheader-${i}`} gutterBottom>
                         {directoryName.replace(/_/g, ' ')}
                     </Typography>
 
-                    <List component={Paper} key={i} aria-labelledby={`nested-list-subheader-${i}`}>
+                    <List component={Paper} aria-labelledby={`nested-list-subheader-${i}`}>
                         {directoryFiles.map((page, j) => (
                             <ListItem
                                 key={j}
@@ -26,7 +26,7 @@ export default function DirectoryList({ directoryTree }) {
                             </ListItem>
                         ))}
                     </List>
-                </>
+                </React.Fragment>
             ))}
         </>
     );

@@ -1,13 +1,14 @@
-import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack, ThemeProvider, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
 import ScrollToTop from 'components/ScrollToTop';
-import { ThemeProvider } from 'components/ThemeProvider';
+import 'katex/dist/katex.min.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
+
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -32,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
                     <Container>
                         <Breadcrumbs />
 
-                        <Stack spacing={3}>
+                        <Stack>
                             <Typography
                                 variant="h2"
                                 fontWeight="fontWeightMedium"

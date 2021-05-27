@@ -19,6 +19,9 @@ const baseTheme = {
         },
         MuiAppBar: {
             defaultProps: { color: 'grey' }
+        },
+        MuiStack: {
+            defaultProps: { spacing: 3 }
         }
     }
 };

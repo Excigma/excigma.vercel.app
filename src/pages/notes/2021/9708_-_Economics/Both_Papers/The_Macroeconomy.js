@@ -1,5 +1,5 @@
 import { Typography } from '@material-ui/core';
-import Info from 'components/Info';
+import Information from 'components/Information';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
@@ -11,7 +11,7 @@ export default function Page() {
                 Supply analysis
             </Subheading>
 
-            <Info>
+            <Information>
                 Aggregate demand: Total demand for an economy at a given price level over time
                 AD = C + I + G + X - M
                 C: Consumption
@@ -19,7 +19,7 @@ export default function Page() {
                 G: Government spending (Roads, Housing etc)
                 X: Exports (exports to elsewhere, tourism)
                 M: Imports
-            </Info>
+            </Information>
 
             <Typography>
                 C + I = Private sector
