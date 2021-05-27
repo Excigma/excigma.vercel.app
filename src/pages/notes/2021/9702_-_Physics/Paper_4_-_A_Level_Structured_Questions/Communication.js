@@ -62,7 +62,7 @@ export default function Page() {
                 Frequency Modulation
             </Subheading>
 
-            <LineChart width={300} height={400} data={data}>
+            <LineChart width={350} height={400} data={data}>
                 <XAxis />
                 <YAxis />
                 <Line type="monotone" dataKey="uv" stroke="#8884d8" />
