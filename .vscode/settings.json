@@ -1,6 +1,7 @@
 {
     "todo-tree.tree.scanMode": "open files",
     "cSpell.words": [
+        "Basetype",
         "Birthdate",
         "Cantarell",
         "Consolas",
@@ -26,6 +27,7 @@
         "organisation",
         "postbuild",
         "prismjs",
+        "psuedocode",
         "sies",
         "sitename"
     ]

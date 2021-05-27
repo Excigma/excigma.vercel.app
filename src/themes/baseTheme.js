@@ -1,6 +1,4 @@
-// TODO: Add default theme for light and dark to inherit from
-
-const defaultTheme = {
+const baseTheme = {
     typography: {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
         fontSize: 16,
@@ -24,5 +22,4 @@ const defaultTheme = {
         }
     }
 };
-
-export default defaultTheme;
+export default baseTheme;

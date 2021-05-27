@@ -48,6 +48,14 @@ Cats(1).Name = "abcd"
 
             <Codeblock language="psuedocode">
                 {`
+TYPE <Typename>
+	DECLARE <Identifier> : <Datatype>
+	DECLARE <Identifier> : <Datatype>
+	// <etc>...
+ENDTYPE
+
+' Example
+
 TYPE Cat
 	DECLARE Name : STRING
 	DECLARE Birthdate : DATE
@@ -63,12 +71,46 @@ Cats[1].Name <- "abcd"
             </Codeblock>
 
             <Subheading>
-                3.1.2 File organisation and access
+                Sets
             </Subheading>
 
+            <Codeblock language="psuedocode">
+                {`
+TYPE <CustomTypeName> = SET OF <Basetype>
+DEFINE <Identifier>(<Value1>, <Value2>, <Value3>, <etc ...>) : <CustomTypeName>
+
+// Example
+
+TYPE Letters = SET OF CHAR
+DEFINE Vowels("a", "e", "i", "o", "u") : <CustomTypeName>
+                `}
+            </Codeblock>
+
+
             <Subheading>
-                3.1.3 Real numbers and normalised floating-point representation
+                Enums
             </Subheading>
+
+            <Codeblock language="psuedocode">
+                {`
+TYPE
+	<CustomTypeName> = (<Value1>, <Value2>, <Value3>, <etc ...>)
+	// <etc>...
+ENDTYPE
+
+// Example
+
+TYPE
+	TDaysOfWeek = (Monday, Tuesday, Wednesday, Thursday, Friday)
+	TCompassPoints = (North, East, South, West)
+ENDTYPE
+
+DECLARE Direction : TCompassPoints
+DECLARE DayOfWeek : TDaysOfWeek
+
+Direction <- East
+            `}
+            </Codeblock>
         </>
     );
 }

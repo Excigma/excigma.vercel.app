@@ -1,15 +1,15 @@
-import Stack from '@material-ui/core/Stack';
 import Typography from '@material-ui/core/Typography';
 import Link from 'components/Link';
+import Subheading from 'components/Subheading';
 import * as React from 'react';
 
 
 export default function ErrorPage() {
     return (
-        <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium">
+        <>
+            <Subheading>
                 An unknown error has occurred
-            </Typography>
+            </Subheading>
 
             <Typography fontWeight="fontWeightMedium">
                 (╯°□°）╯︵ ┻━┻. Well uhh you broke the server. Or maybe I did. We don't know how you got here. Nevertheless, right now probably want to <Link href="/"><b>Goto</b> home</Link>
@@ -24,6 +24,6 @@ export default function ErrorPage() {
             <Typography>
                 Thank you for coming to my TED talk.
             </Typography>
-        </Stack>
+        </>
     );
 }

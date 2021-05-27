@@ -1,17 +1,16 @@
-import { Stack, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import Link from 'components/Link';
+import Subheading from 'components/Subheading';
 import * as React from 'react';
 
-export default function ErrorPage() {
+export default function Page() {
     return (
-        <Stack spacing={3}>
-            <Typography variant="h2" fontWeight="fontWeightMedium">
-                You're offline
-            </Typography>
-
-            <Typography fontWeight="fontWeightMedium">
+        <>
+            <Subheading>
                 Maybe try reconnecting to the internet, in the meantime you can <Link href="/"><b>Goto</b> home</Link>
-            </Typography>
-        </Stack>
+            </Subheading>
+
+            <Typography>..or maybe the server is just dead right now</Typography>
+        </>
     );
 }

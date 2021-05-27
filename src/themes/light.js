@@ -1,9 +1,9 @@
 import { blue } from '@material-ui/core/colors';
 import { createTheme } from '@material-ui/core/styles';
-import defaultTheme from './default';
+import baseTheme from './baseTheme';
 
 const theme = createTheme({
-    ...defaultTheme,
+    ...baseTheme,
     palette: {
         mode: 'light',
         grey: {

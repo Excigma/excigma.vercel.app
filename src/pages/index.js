@@ -10,9 +10,9 @@ import * as React from 'react';
 export default function Page() {
     return (
         <>
-            <Typography variant="h4" fontWeight="fontWeightMedium" component="p" textOverflow="ellipsis">
+            <Subheading>
                 Welcome here.
-            </Typography>
+            </Subheading>
 
             <Subheading>
                 <StorageIcon fontSize="small" /> A gallery of Excigma's projects, notes and other things he tinkers with.
