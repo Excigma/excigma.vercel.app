@@ -29,7 +29,7 @@ export default function Page() {
                     </Typography>
 
                     <Typography>
-                        This is a webpage where I will write my notes and put other thingos that I make here. I need a rounded favicon bruh
+                        This is a webpage where I will write my notes and put other thingos that I make here. I need a rounded favicon bruh.
                     </Typography>
                 </Grid>
 
