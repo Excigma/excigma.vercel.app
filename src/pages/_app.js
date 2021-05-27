@@ -10,7 +10,6 @@ import React from 'react';
 import { globalStyles } from 'styles/global.js';
 import darkTheme from 'themes/dark';
 
-
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
