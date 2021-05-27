@@ -54,7 +54,7 @@ export default function Header(props) {
 
                         <Link href="/">
                             <IconButton  >
-                                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                                <Avatar src="icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
                             </IconButton>
                         </Link>
 
@@ -99,7 +99,7 @@ export default function Header(props) {
                     <Link href="/" color="inherit">
                         <ListItem button>
                             <ListItemIcon>
-                                <Avatar src="/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                                <Avatar src="icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
                             </ListItemIcon>
                             <ListItemText primary="Excigma" />
                         </ListItem>
