@@ -24,9 +24,9 @@ export default function Page() {
 
             <Grid container>
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h5" component="h4">
+                    <Subheading>
                         <HelpIcon fontSize="small" /> About
-                    </Typography>
+                    </Subheading>
 
                     <Typography>
                         This is a webpage where I will write my notes and put other thingos that I make here. I need a rounded favicon bruh.
@@ -34,9 +34,9 @@ export default function Page() {
                 </Grid>
 
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h5" component="h4">
+                    <Subheading>
                         <HelpIcon fontSize="small" /> When + Why
-                    </Typography>
+                    </Subheading>
 
                     <Typography>
                         Whilst this really did start as a coding challenge, and also a project in the holidays of 2021 before the mid year exams which then became the group project for Computer Science, it become clear that this could be useful as a study tool when exams started.
@@ -47,9 +47,9 @@ export default function Page() {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h5" component="h4">
+                    <Subheading>
                         <ChatBubbleIcon fontSize="small" /> Unless statistics no one cares about
-                    </Typography>
+                    </Subheading>
 
                     <TableContainer>
                         <Table>
@@ -72,9 +72,9 @@ export default function Page() {
                 </Grid>
 
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h5" component="h4">
+                    <Subheading>
                         <ChatBubbleIcon fontSize="small" /> What other people have said to/about me
-                    </Typography>
+                    </Subheading>
 
                     <Blockquote>
                         You're gonna waste 100 hours to write a stupid script instead of doing it yourself in less time
@@ -99,9 +99,9 @@ export default function Page() {
             </Grid>
 
 
-            <Typography variant="h5" component="h4">
+            <Subheading>
                 <ChatBubbleIcon fontSize="small" /> Cool programs, libraries and services used to make this website
-            </Typography>
+            </Subheading>
             <TableContainer>
                 <Table>
                     <TableBody>

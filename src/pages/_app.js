@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
 
-
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 

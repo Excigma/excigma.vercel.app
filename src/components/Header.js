@@ -60,7 +60,7 @@ export default function Header(props) {
 
                         <Typography variant="h6" style={{ flexGrow: 1 }}>
                             <Link href="/" style={{ color: 'white' }}>
-                                Excigma
+                                    Excigma
                             </Link>
                         </Typography>
 
@@ -70,13 +70,13 @@ export default function Header(props) {
                             color="white"
                             display={{ xs: 'none', md: 'block' }}>
                             <Button variant="outline" href="/social" component={Link}>
-                                Social
+                                    Social
                             </Button>
                             <Button variant="outline" href="/projects" component={Link}>
-                                Projects
+                                    Projects
                             </Button>
                             <Button variant="outline" href="/notes" component={Link}>
-                                Notes
+                                    Notes
                             </Button>
 
                             <IconButton aria-label="Toggle theme" onClick={toggle} style={{ color: 'white' }}>
@@ -86,6 +86,7 @@ export default function Header(props) {
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>
+
 
             <SwipeableDrawer
                 anchor="left"
