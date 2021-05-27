@@ -2,11 +2,8 @@ import { AppBar, Avatar, Box, Button, IconButton, List, ListItem, Slide, Stack, 
 import Divider from '@material-ui/core/Divider';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import BrightnessLowIcon from '@material-ui/icons/BrightnessLow';
-import LightModeIcon from '@material-ui/icons/LightMode';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'components/Link';
-import { useTheme } from 'components/ThemeProvider';
 import * as React from 'react';
 
 
@@ -22,7 +19,6 @@ function HideOnScroll(props) {
 }
 
 export default function Header(props) {
-    const { toggle, dark } = useTheme();
 
     const [state, setState] = React.useState({
         left: false
@@ -60,7 +56,7 @@ export default function Header(props) {
 
                         <Typography variant="h6" style={{ flexGrow: 1 }}>
                             <Link href="/" style={{ color: 'white' }}>
-                                    Excigma
+                                Excigma
                             </Link>
                         </Typography>
 
@@ -70,18 +66,14 @@ export default function Header(props) {
                             color="white"
                             display={{ xs: 'none', md: 'block' }}>
                             <Button variant="outline" href="/social" component={Link}>
-                                    Social
+                                Social
                             </Button>
                             <Button variant="outline" href="/projects" component={Link}>
-                                    Projects
+                                Projects
                             </Button>
                             <Button variant="outline" href="/notes" component={Link}>
-                                    Notes
+                                Notes
                             </Button>
-
-                            <IconButton aria-label="Toggle theme" onClick={toggle} style={{ color: 'white' }}>
-                                {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
-                            </IconButton>
                         </Stack>
                     </Toolbar>
                 </AppBar>
@@ -127,19 +119,6 @@ export default function Header(props) {
                             <ListItemText primary="Notes" />
                         </ListItem>
                     </Link>
-                </List>
-
-                <Divider />
-
-                <List>
-                    <ListItem button onClick={toggle}>
-                        <ListItemIcon>
-                            <IconButton aria-label="Toggle theme" color="inherit" size="small">
-                                {dark ? <LightModeIcon /> : <BrightnessLowIcon />}
-                            </IconButton>
-                        </ListItemIcon>
-                        <ListItemText primary="Toggle Theme" />
-                    </ListItem>
                 </List>
             </SwipeableDrawer>
         </>

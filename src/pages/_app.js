@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
+import darkTheme from 'themes/dark';
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -25,7 +26,7 @@ export default function MyApp({ Component, pageProps }) {
                 {globalStyles}
             </Head>
 
-            <ThemeProvider>
+            <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
                 <Header />
 
