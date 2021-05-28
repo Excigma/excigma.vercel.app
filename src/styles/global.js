@@ -17,4 +17,9 @@ body {
 pre {
   padding: 1em;
 }
+
+.css-nu13me-Stack-root>:not(style)+:not(style) {
+    margin: 0;
+    margin-top: 24px;
+}
 `} />);
