@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack, ThemeProvider, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
+import darkTheme from 'themes/dark';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -15,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
     const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || 'Home';
     const path = name === 'Home' ? name : name.charAt(0).toUpperCase().concat(name.slice(1));
     return (
-        <>
+        <ThemeProvider theme={darkTheme}>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
@@ -40,7 +41,6 @@ export default function MyApp({ Component, pageProps }) {
                                 overflowClipMargin: '1em'
                             }}>
                             {path}
-
                         </Typography>
 
                         <Component {...pageProps} />
@@ -51,6 +51,6 @@ export default function MyApp({ Component, pageProps }) {
             <ScrollToTop />
 
             <Footer />
-        </>
+        </ThemeProvider>
     );
 }
