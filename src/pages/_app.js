@@ -1,4 +1,3 @@
-import createCache from '@emotion/cache';
 import { Box, Container, CssBaseline, Stack, ThemeProvider, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
@@ -10,8 +9,6 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
 import darkTheme from 'themes/dark';
-
-export const cache = createCache({ key: 'styling', prepend: true });
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
