@@ -18,6 +18,7 @@ pre {
   padding: 1em;
 }
 
+/* Prevent CSS layout shifting...? Emotion isn't inlining for some reason */
 .css-nu13me-Stack-root > * {
     margin: 0;
     margin-top: 24px !important;
