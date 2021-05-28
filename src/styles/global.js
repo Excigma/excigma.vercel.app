@@ -20,6 +20,6 @@ pre {
 
 .css-nu13me-Stack-root > * {
     margin: 0;
-    margin-top: 24px;
+    margin-top: 24px !important;
 }
 `} />);
