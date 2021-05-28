@@ -12,7 +12,7 @@ import React from 'react';
 import { globalStyles } from 'styles/global.js';
 import darkTheme from 'themes/dark';
 
-export const cache = createCache({ key: 'joy', prepend: true });
+export const cache = createCache({ key: 'styling', prepend: true });
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();

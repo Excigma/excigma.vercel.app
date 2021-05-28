@@ -6,7 +6,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 import * as React from 'react';
 
 const getCache = () => {
-    const cache = createCache({ key: 'custom', prepend: true });
+    const cache = createCache({ key: 'styling', prepend: true });
     cache.compat = true;
 
     return cache;
