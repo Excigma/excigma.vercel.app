@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemText, Paper, Typography } from '@material-ui/core';
+import { Divider, List, ListItem, ListItemText, Paper, Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
@@ -8,6 +8,8 @@ export default function DirectoryList({ directoryTree }) {
 
     return (
         <>
+            <Divider />
+
             {Object.entries(directoryTree).map(([directoryName, directoryFiles], i) => (
                 <React.Fragment key={i}>
                     <Typography variant="h4" id={`nested-list-subheader-${i}`} gutterBottom>

@@ -23,6 +23,11 @@ export default function Page({ directoryTree }) {
                 Many notes are not up to date with the things we have been taught
             </Alert>
 
+            <Alert severity="info">
+                <AlertTitle>Warning</AlertTitle>
+                Notes from previous years are typically not updated and will become outdated as the syllabus changes.
+            </Alert>
+
             <DirectoryList directoryTree={directoryTree} />
         </>
     );

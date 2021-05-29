@@ -18,13 +18,13 @@ export default function Page() {
                     Functions and procedures with suitable parameters
                 </UnorderedListItem>
                 <UnorderedListItem>
-                    Abstract datatypes (ADTs)
+                    Abstract datatypes (ADTs) (Stacks, queues, linked-lists binary trees, hash tables, dictionaries)
                 </UnorderedListItem>
                 <UnorderedListItem>
-                    Classes (OOP aka Object-oriented programming)
+                    Classes (OOP aka Object-oriented programming paradigm)
                 </UnorderedListItem>
                 <UnorderedListItem>
-                    Facts, rules (Declarative programming)
+                    Facts, rules (Declarative programming paradigm)
                 </UnorderedListItem>
             </UnorderedList>
 
