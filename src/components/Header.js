@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, Button, IconButton, List, ListItem, Slide, Stack, SwipeableDrawer, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Avatar, Box, Button, IconButton, List, ListItem, NoSsr, Slide, Stack, SwipeableDrawer, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -38,44 +38,45 @@ export default function Header(props) {
             <HideOnScroll direction="down" {...props}>
                 <AppBar>
                     <Toolbar>
-                        <Box display={{ xs: 'block', md: 'none' }}>
-                            <IconButton
-                                aria-label="menu"
-                                onClick={toggleDrawer('left', true)}
-                                style={{ color: 'white' }}
-                                hidden={{ xs: 'block', md: 'none' }}>
-                                <MenuIcon />
-                            </IconButton>
+                        <NoSsr>
+                            <Box display={{ xs: 'block', md: 'none' }}>
+                                <IconButton
+                                    aria-label="menu"
+                                    onClick={toggleDrawer('left', true)}
+                                    style={{ color: 'white' }}
+                                    hidden={{ xs: 'block', md: 'none' }}>
+                                    <MenuIcon />
+                                </IconButton>
+                            </Box>
 
-                        </Box>
-
-                        <Link href="/">
-                            <IconButton  >
-                                <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
-                            </IconButton>
-                        </Link>
-
-                        <Typography variant="h6" style={{ flexGrow: 1 }}>
-                            <Link href="/" style={{ color: 'white' }}>
-                                Excigma
+                            <Link href="/">
+                                <IconButton  >
+                                    <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                                </IconButton>
                             </Link>
-                        </Typography>
 
-                        <Stack
-                            spacing={1}
-                            direction="row"
-                            color="white"
-                            display={{ xs: 'none', md: 'block' }}>
-                            <Button variant="outline" href="/social" component={Link}>
-                                Social
-                            </Button>
-                            <Button variant="outline" href="/projects" component={Link}>
-                                Projects
-                            </Button>
-                            <Button variant="outline" href="/notes" component={Link}>
-                                Notes
-                            </Button>
-                        </Stack>
+                            <Typography variant="h6" style={{ flexGrow: 1 }}>
+                                <Link href="/" style={{ color: 'white' }}>
+                                    Excigma
+                                </Link>
+                            </Typography>
+
+                            <Stack
+                                spacing={1}
+                                direction="row"
+                                color="white"
+                                display={{ xs: 'none', md: 'block' }}>
+                                <Button variant="outline" href="/social" component={Link}>
+                                    Social
+                                </Button>
+                                <Button variant="outline" href="/projects" component={Link}>
+                                    Projects
+                                </Button>
+                                <Button variant="outline" href="/notes" component={Link}>
+                                    Notes
+                                </Button>
+                            </Stack>
+                        </NoSsr>
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>

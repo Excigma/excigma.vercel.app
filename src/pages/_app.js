@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, NoSsr, Stack, ThemeProvider, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack, ThemeProvider, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }) {
     const path = name.charAt(0).toUpperCase().concat(name.slice(1));
 
     return (
-        <NoSsr>
+        <>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
@@ -29,6 +29,7 @@ export default function MyApp({ Component, pageProps }) {
 
             <ThemeProvider theme={theme}>
                 <CssBaseline />
+
                 <Header />
 
                 <Box my={17.5}>
@@ -56,6 +57,6 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Footer />
             </ThemeProvider>
-        </NoSsr>
+        </>
     );
 }
