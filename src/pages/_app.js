@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, Stack, ThemeProvider, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, NoSsr, Stack, ThemeProvider, Typography } from '@material-ui/core';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
@@ -8,7 +8,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { globalStyles } from 'styles/global.js';
-import darkTheme from 'themes/dark';
+import theme from 'themes/dark';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -18,41 +18,44 @@ export default function MyApp({ Component, pageProps }) {
     const path = name.charAt(0).toUpperCase().concat(name.slice(1));
 
     return (
-        <ThemeProvider theme={darkTheme}>
+        <NoSsr>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
                 <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+
                 {globalStyles}
             </Head>
 
-            <CssBaseline />
-            <Header />
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <Header />
 
-            <Box my={17.5}>
-                <Container>
-                    <Breadcrumbs />
+                <Box my={17.5}>
+                    <Container>
+                        <Breadcrumbs />
 
-                    <Stack>
-                        <Typography
-                            variant="h2"
-                            fontWeight="fontWeightMedium"
-                            sx={{
-                                textOverflow: 'ellipsis',
-                                overflow: 'clip',
-                                overflowClipMargin: '1em'
-                            }}>
-                            {path}
-                        </Typography>
+                        <Stack>
+                            <Typography
+                                variant="h2"
+                                fontWeight="fontWeightMedium"
+                                sx={{
+                                    textOverflow: 'ellipsis',
+                                    overflow: 'clip',
+                                    overflowClipMargin: '1em'
+                                }}>
+                                {path}
+                            </Typography>
 
-                        <Component {...pageProps} />
-                    </Stack>
-                </Container>
-            </Box>
+                            <Component {...pageProps} />
+                        </Stack>
+                    </Container>
+                </Box>
 
-            <ScrollToTop />
+                <ScrollToTop />
 
-            <Footer />
-        </ThemeProvider>
+                <Footer />
+            </ThemeProvider>
+        </NoSsr>
     );
 }

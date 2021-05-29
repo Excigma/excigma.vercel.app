@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, Button, IconButton, List, ListItem, NoSsr, Slide, Stack, SwipeableDrawer, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Avatar, Box, Button, IconButton, List, ListItem, Slide, Stack, SwipeableDrawer, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -12,11 +12,10 @@ function HideOnScroll(props) {
     const trigger = useScrollTrigger();
 
     return (
-        <NoSsr>
-            <Slide appear={false} in={!trigger} {...props}>
-                {children}
-            </Slide>
-        </NoSsr>
+        <Slide appear={false} in={!trigger} {...props}>
+            {children}
+        </Slide>
+
     );
 }
 
