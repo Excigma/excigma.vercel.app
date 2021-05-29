@@ -12,8 +12,10 @@ export default function Page({ directoryTree }) {
     return (
         <>
             <Subheading>
-                oMG pleASE Fix my prInter i know you've goto school to leanrt dis
+                oMG pleASE Fix my prInter i know you've gotod school to leanrt dis
             </Subheading>
+
+            <DirectoryList directoryTree={directoryTree} />
 
             <Alert severity="error">
                 <AlertTitle>Warning</AlertTitle>
@@ -48,8 +50,6 @@ Function lorem_ipsum(ByVal sit_amet As Integer) As String
 End Function
                 `}
             </Codeblock>
-
-            <DirectoryList directoryTree={directoryTree} />
         </>
     );
 }
