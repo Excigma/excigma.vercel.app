@@ -13,6 +13,7 @@ import darkTheme from 'themes/dark';
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
+    // Maybe I should move this to a function
     const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || 'Home';
     const path = name.charAt(0).toUpperCase().concat(name.slice(1));
 
