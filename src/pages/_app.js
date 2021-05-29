@@ -14,7 +14,8 @@ export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || 'Home';
-    const path = name === 'Home' ? name : name.charAt(0).toUpperCase().concat(name.slice(1));
+    const path = name.charAt(0).toUpperCase().concat(name.slice(1));
+
     return (
         <ThemeProvider theme={darkTheme}>
             <Head>
