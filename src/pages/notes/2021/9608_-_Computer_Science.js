@@ -15,7 +15,7 @@ export default function Page({ directoryTree }) {
             </Subheading>
 
             <Typography>
-                Open the <Link href="https://www.cambridgeinternational.org/Images/502960-2021-syllabus.pdf">Syllabus</Link>
+                Open the <Link href="https://www.cambridgeinternational.org/Images/502960-2021-syllabus.pdf" rel="noreferrer" target="_blank">Syllabus</Link>
             </Typography>
 
             <DirectoryList directoryTree={directoryTree} />
