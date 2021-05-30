@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#2f3136" />
                     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
 
-                    <link rel="manifest" href="/manifest.json" />
+                    <link rel="manifest" href="/manifest.webmanifest" />
 
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link rel="preconnect" href="https://umami.up.railway.app" />
