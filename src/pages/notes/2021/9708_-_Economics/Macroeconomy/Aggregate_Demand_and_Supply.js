@@ -9,8 +9,12 @@ export default function Page() {
     return (
         <>
             <Subheading showJump>
-                Aggregate Demand
+                Aggregate Demand analysis
             </Subheading>
+
+            <Typography>
+                An increase or decrease in price level will cause a moving along wht curve, not  shift in the curve.
+            </Typography>
 
             <Information title="Aggregate demand">
                 Total demand for an economy at a given price level over time
