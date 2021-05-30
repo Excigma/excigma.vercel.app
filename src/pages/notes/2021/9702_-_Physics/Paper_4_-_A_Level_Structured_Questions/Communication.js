@@ -223,6 +223,12 @@ export default function Page() {
                 <Line connectNulls type="monotone" dataKey="Frequency modulated wave" stroke="#ff0066" isAnimationActive={false} strokeWidth={3} dot={null} />
             </LineChart>
 
+            <Subheading>Sidebands and bandwidth</Subheading>
+
+            <Typography>
+                TODO
+            </Typography>
+
             <Information title="Definition">
                 The bandwidth is the range of frequency occupied amplitude modulated waveform
             </Information>
@@ -284,8 +290,16 @@ export default function Page() {
                 </Table>
             </TableContainer>
 
+            <Information title="Definition">
+                Noise is random unwanted signal that interferes with and distorts a transmitted signal
+            </Information>
+
+            <Information title="Definition">
+                Attenuation (dB) is the progressive loss in power of the signal with time as it travels along a transmission path
+            </Information>
+
             <Subheading>
-                Frequency Modulation
+                Analog Signals
             </Subheading>
 
             <Typography>
@@ -297,12 +311,29 @@ export default function Page() {
             </Typography>
 
             <Subheading>
-                Frequency Modulation
+                Digital Signals
             </Subheading>
 
+            <LineChart width={350} height={100} data={[
+                { 'Signal wave': 0 }, { 'Signal wave': 1 },
+                { 'Signal wave': 1 }, { 'Signal wave': 0 },
+                { 'Signal wave': 1 }, { 'Signal wave': 0 },
+                { 'Signal wave': 1 }, { 'Signal wave': 0 },
+                { 'Signal wave': 0 }, { 'Signal wave': 1 },
+                { 'Signal wave': 0 }, { 'Signal wave': 1 },
+                { 'Signal wave': 0 }, { 'Signal wave': 0 },
+                { 'Signal wave': 1 }, { 'Signal wave': 0 },
+                { 'Signal wave': 0 }, { 'Signal wave': 1 },
+                { 'Signal wave': 0 }, { 'Signal wave': 1 },
+                { 'Signal wave': 0 }, { 'Signal wave': 0 },
+            ]}>
+                <Line connectNulls type="step" dataKey="Signal wave" isAnimationActive={false} strokeWidth={3} stroke="#d0b9e9" dot={null} />
+            </LineChart>
+
+
             <Typography>
-                Digital Signals consist of highs and lows with no intermediate value.
-                Because of this, even if the signal becomes noisy during transit, amplifiers in the middle are able to recreate the exact waveform and remove the data
+                Digital Signals consist of highs and lows (1's and 0's - discrete) with no intermediate value.
+                Because of this, even if the signal becomes noisy during transit, amplifiers in the middle are able to recreate the exact original waveform and remove the data
             </Typography>
 
             <Typography>
@@ -369,10 +400,14 @@ export default function Page() {
                 </Table>
             </TableContainer>
 
-
             <Subheading>
                 Converting Analogue to digital
             </Subheading>
+
+            <Typography>
+                In digital transmission, the analog signal (e.g voice) is converted to digital using an ADC (Analog to digital converter).
+                When received, the signal can be regenerated into it's analog form using an DAC (Digital to analog converter)
+            </Typography>
 
             <Information title="Definition">
                 Sampling - Take analogue signal and "sample" it's voltage at regular intervals called "sampling rate"
@@ -397,6 +432,15 @@ export default function Page() {
             <Information severity="error" title="ADCs can ONLY 'round' down">
                 Just drop the decimal completely. ADCs DO <b>NOT</b> ROUND UP.
             </Information>
+
+
+            <Typography>
+                Parallel to serial converter can be used to transmit bits one after another through a single wire, rather than having 8 wires to transmit 8 bits.
+            </Typography>
+
+            <Typography>
+                When received, a serial to parallel converter can be used to convert the signal back to it's original form.
+            </Typography>
         </>
     );
 }
