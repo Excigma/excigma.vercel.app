@@ -250,43 +250,43 @@ export default function Page() {
                             <TableCell>LW Radio</TableCell>
                             <TableCell>30 KHz - 300 Khz</TableCell>
                             <TableCell>10km - 1km</TableCell>
-                            <TableCell>Low freq (LF)</TableCell>
+                            <TableCell>Low frequency (LF)</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>MW Radio</TableCell>
                             <TableCell>300KHz - 3 MHz</TableCell>
                             <TableCell>1km - 100m</TableCell>
-                            <TableCell>Medium freq (MF)</TableCell>
+                            <TableCell>Medium frequency (MF)</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>Short-Wave (SW) radio</TableCell>
                             <TableCell>3 MHz - 30MHz</TableCell>
                             <TableCell>100m - 1m</TableCell>
-                            <TableCell>High freq (HF)</TableCell>
+                            <TableCell>High frequency (HF)</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>FM Radio</TableCell>
                             <TableCell>30 MHz - 300 MHz</TableCell>
                             <TableCell>10m - 1m</TableCell>
-                            <TableCell>Very high freq (VHF)</TableCell>
+                            <TableCell>Very high frequency (VHF)</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>TV Broadcasting and Phones</TableCell>
                             <TableCell>300MHz - 3GHz</TableCell>
                             <TableCell>1m - 10cm</TableCell>
-                            <TableCell>Ultra-high Freq (UHF)</TableCell>
+                            <TableCell>Ultra-high frequency (UHF)</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>Microwave link</TableCell>
                             <TableCell>3 GHz - 30 GHz</TableCell>
                             <TableCell>10cm - 1cm</TableCell>
-                            <TableCell>Super-high freq (SHF)</TableCell>
+                            <TableCell>Super-high frequency (SHF)</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>Satellite link</TableCell>
                             <TableCell>30 GHz - 300 GHz</TableCell>
                             <TableCell>1cm - 1mm</TableCell>
-                            <TableCell>Extra-high freq (EHF)</TableCell>
+                            <TableCell>Extra-high frequency (EHF)</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
