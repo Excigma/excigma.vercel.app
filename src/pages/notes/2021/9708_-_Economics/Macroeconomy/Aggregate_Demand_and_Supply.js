@@ -1,6 +1,8 @@
 import { Typography } from '@material-ui/core';
 import Information from 'components/Information';
 import Subheading from 'components/Subheading';
+import UnorderedList from 'components/UnorderedList';
+import UnorderedListItem from 'components/UnorderedListItem';
 import * as React from 'react';
 
 export default function Page() {
@@ -20,6 +22,20 @@ export default function Page() {
                 X: Exports (exports to elsewhere, tourism)
                 M: Imports
             </Information>
+
+            <Typography>
+                There are two types of modulation:
+            </Typography>
+
+            <UnorderedList>
+                <UnorderedListItem>
+                    A.M: Amplitude  modulation
+                </UnorderedListItem>
+                <UnorderedListItem>
+                    F.M: Frequency  modulation
+                </UnorderedListItem>
+            </UnorderedList>
+
 
             <Typography>
                 C + I = Private sector
