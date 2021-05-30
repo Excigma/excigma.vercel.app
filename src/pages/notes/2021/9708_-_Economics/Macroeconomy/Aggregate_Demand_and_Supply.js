@@ -8,48 +8,58 @@ import * as React from 'react';
 export default function Page() {
     return (
         <>
-            <Subheading>
-                Aggregate Demand and Aggregate
-                Supply analysis
+            <Subheading showJump>
+                Aggregate Demand
             </Subheading>
 
-            <Information>
-                Aggregate demand: Total demand for an economy at a given price level over time
-                AD = C + I + G + X - M
-                C: Consumption
-                I: Investment (Firms purchasing capital goods)
-                G: Government spending (Roads, Housing etc)
-                X: Exports (exports to elsewhere, tourism)
-                M: Imports
+            <Information title="Aggregate demand">
+                Total demand for an economy at a given price level over time
             </Information>
 
             <Typography>
-                There are two types of modulation:
+                AD = C + I + G + X - M
             </Typography>
 
             <Ul>
-                <Li>
-                    A.M: Amplitude  modulation
-                </Li>
-                <Li>
-                    F.M: Frequency  modulation
-                </Li>
+                <Li>C: Consumption</Li>
+                <Li>I: Investment (Firms purchasing capital goods)</Li>
+                <Li>G: Government spending (Roads, Housing etc)</Li>
+                <Li>X: Exports (exports to elsewhere, tourism)</Li>
+                <Li>M: Imports</Li>
             </Ul>
 
-
             <Typography>
-                C + I = Private sector
-                G = Public sector
-                X + M = Foreign / International sector
+                The largest component of aggregate demand is the spending of money on goods and services, also known as consumption. The most influential factor that may cause a change in consumer expenditure is probably a change in income.
             </Typography>
+            <Ul>
+                <Li>C + I = Private sector</Li>
+                <Li>G = Public sector</Li>
+                <Li>X + M = Foreign / International sector</Li>
+            </Ul>
 
-            <Typography>
+            <Subheading showJump>
                 Why is the AD curve downward sloping?
-                Price level increase
-                - Real income decrease
-                - Wealth effect, inflation
-                - Substitution of domestic goods away from international goods
+            </Subheading>
+
+            <Typography>
+                as  Price level increases...
             </Typography>
+
+            <Ul>
+                <Li>Real income decrease</Li>
+                <Li>Wealth effect, inflation</Li>
+                <Li>Substitution of domestic goods away from international goods</Li>
+            </Ul>
+
+            <Typography>
+                TODO: Add graph
+            </Typography>
+
+            <Subheading showJump>
+                Aggregate Supply analysis
+            </Subheading>
+
+
         </>
     );
 }

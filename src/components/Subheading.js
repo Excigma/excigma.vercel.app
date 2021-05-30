@@ -7,7 +7,7 @@ import * as React from 'react';
 export default function Subheading({ children, showJump, ...props }) {
     if (showJump) {
         const router = useRouter();
-        const id = children.toLowerCase().replace(/ /g, '-').replace(/[^A-Za-z0-9]/g, '');
+        const id = children.toLowerCase().replace(/ /g, '-').replace(/[^A-Za-z0-9-]/g, '');
 
         return (
             <Typography onClick={() => router.push(router.pathname + '#' + id)} variant="h6" component="p" id={id}  {...props} >
