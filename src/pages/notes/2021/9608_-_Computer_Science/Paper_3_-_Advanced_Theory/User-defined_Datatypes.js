@@ -107,7 +107,7 @@ MyDay <- DayPointer^
             </Codeblock>
 
             <Subheading>
-                Define and use <b>composite</b> data types: Set, Record and Class/Object
+                Define and use composite data types: Set, Record and Class/Object
             </Subheading>
 
             <Typography>
