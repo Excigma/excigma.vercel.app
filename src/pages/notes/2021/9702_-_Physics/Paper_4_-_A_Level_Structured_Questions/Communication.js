@@ -15,7 +15,7 @@ export default function Page() {
                 Most modern communication techniques use waves
             </Heading>
 
-            <Subheading>
+            <Subheading showJump>
                 Modulation
             </Subheading>
 
@@ -40,7 +40,7 @@ export default function Page() {
                 Carrier wave is a high frequency Electromagnetic wave modulated in either frequency or amplitude to transfer a signal
             </Information>
 
-            <Subheading>
+            <Subheading showJump>
                 Amplitude Modulation
             </Subheading>
 
@@ -124,7 +124,7 @@ export default function Page() {
                 <Line connectNulls type="monotone" dataKey="Inverted signal wave" isAnimationActive={false} stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
             </LineChart>
 
-            <Subheading>
+            <Subheading showJump>
                 Frequency Modulation
             </Subheading>
 
@@ -223,7 +223,9 @@ export default function Page() {
                 <Line connectNulls type="monotone" dataKey="Frequency modulated wave" stroke="#ff0066" isAnimationActive={false} strokeWidth={3} dot={null} />
             </LineChart>
 
-            <Subheading>Sidebands and bandwidth</Subheading>
+            <Subheading showJump>
+                Sidebands and bandwidth
+            </Subheading>
 
             <Typography>
                 TODO
@@ -298,7 +300,7 @@ export default function Page() {
                 Attenuation (dB) is the progressive loss in power of the signal with time as it travels along a transmission path
             </Information>
 
-            <Subheading>
+            <Subheading showJump>
                 Analog Signals
             </Subheading>
 
@@ -310,7 +312,7 @@ export default function Page() {
                 For the signal to continue to travel, it must be periodically amplified by a repeater, however this also amplifies any distortion/noise, negatively affecting the signal
             </Typography>
 
-            <Subheading>
+            <Subheading showJump>
                 Digital Signals
             </Subheading>
 
@@ -358,7 +360,7 @@ export default function Page() {
                 </UnorderedListItem>
             </UnorderedList>
 
-            <Subheading>
+            <Subheading showJump>
                 Binary number representation
             </Subheading>
 
@@ -400,7 +402,7 @@ export default function Page() {
                 </Table>
             </TableContainer>
 
-            <Subheading>
+            <Subheading showJump>
                 Converting Analogue to digital
             </Subheading>
 
@@ -442,7 +444,7 @@ export default function Page() {
                 When received, a serial to parallel converter can be used to convert the signal back to it's original form.
             </Typography>
 
-            <Subheading>
+            <Subheading showJump>
                 Improving reproduction of the input signal
             </Subheading>
 

@@ -32,7 +32,7 @@ export default function Page() {
                 Abstraction involves removing details that are not needed to solve a problem; only essential information is kept. Abstraction allows programmers to deal with complex problems.
             </Typography>
 
-            <Subheading>
+            <Subheading showJump>
                 Ways to abstract programs
             </Subheading>
 
@@ -45,7 +45,7 @@ export default function Page() {
                 </UnorderedListItem>
             </UnorderedList>
 
-            <Subheading>
+            <Subheading showJump>
                 Use datastructures
             </Subheading>
 
@@ -57,7 +57,7 @@ export default function Page() {
                 If none of them suit your needs you can use an another abstract datatype, for example stacks or queues which can be implemented on top of another already existing abstract datatype, for example an array. (Layers of abstraction)
             </Typography>
 
-            <Subheading>
+            <Subheading showJump>
                 Program development
             </Subheading>
 

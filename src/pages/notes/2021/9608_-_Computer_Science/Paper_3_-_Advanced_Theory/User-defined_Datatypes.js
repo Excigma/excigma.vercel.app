@@ -42,7 +42,7 @@ export default function Page() {
                 Define and use non-composite types: Enumerated, Pointer
             </Subheading>
 
-            <Subheading>
+            <Subheading showJump>
                 Enums, aka Enumerated
             </Subheading>
 
@@ -78,7 +78,7 @@ ENDIF
             `}
             </Codeblock>
 
-            <Subheading>
+            <Subheading showJump>
                 Pointer
             </Subheading>
 
@@ -106,7 +106,7 @@ MyDay <- DayPointer^
             `}
             </Codeblock>
 
-            <Subheading>
+            <Subheading showJump>
                 Define and use composite data types: Set, Record and Class/Object
             </Subheading>
 
@@ -142,7 +142,7 @@ Cats[1].Name <- "abcd"
                 `}
             </Codeblock>
 
-            <Subheading>
+            <Subheading showJump>
                 Sets
             </Subheading>
 
@@ -162,7 +162,7 @@ DEFINE Vowels("a", "e", "i", "o", "u") : <CustomTypeName>
                 `}
             </Codeblock>
 
-            <Subheading>
+            <Subheading showJump>
                 Class/Object
             </Subheading>
 

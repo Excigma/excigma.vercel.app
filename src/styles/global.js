@@ -10,8 +10,8 @@ body {
   line-height: 1.5em;
 }
 
-.MuiSvgIcon-fontSizeSmall {
-  transform: translateY(2px);
+.MuiSvgIcon-root {
+  transform: translateY(0.15em);
 }
 
 pre {
