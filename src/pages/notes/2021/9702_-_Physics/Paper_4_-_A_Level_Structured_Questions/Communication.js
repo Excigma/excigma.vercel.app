@@ -1,9 +1,9 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
 import Information from 'components/Information';
+import Li from 'components/Li';
 import Subheading from 'components/Subheading';
-import UnorderedList from 'components/UnorderedList';
-import UnorderedListItem from 'components/UnorderedListItem';
+import Ul from 'components/Ul';
 import * as React from 'react';
 import { InlineMath } from 'react-katex';
 import { Legend, Line, LineChart } from 'recharts';
@@ -23,14 +23,14 @@ export default function Page() {
                 There are two types of modulation:
             </Typography>
 
-            <UnorderedList>
-                <UnorderedListItem>
+            <Ul>
+                <Li>
                     A.M: Amplitude  modulation
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     F.M: Frequency  modulation
-                </UnorderedListItem>
-            </UnorderedList>
+                </Li>
+            </Ul>
 
             <Typography>
                 Both types of modulation uses a "Carrier Wave"
@@ -342,23 +342,23 @@ export default function Page() {
                 Advantages of digital signals
             </Typography>
 
-            <UnorderedList>
-                <UnorderedListItem>
+            <Ul>
+                <Li>
                     Signal can be regenerated and noise eliminated
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Extra data can be added to check for errors
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Multiplexing: Digital from a large number of different sources can share the same path
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Digital circuit are more reliable/cheaper to produce
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Data can be encrypted for security
-                </UnorderedListItem>
-            </UnorderedList>
+                </Li>
+            </Ul>
 
             <Subheading showJump>
                 Binary number representation

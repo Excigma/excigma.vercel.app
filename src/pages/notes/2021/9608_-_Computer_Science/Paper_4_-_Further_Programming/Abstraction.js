@@ -1,8 +1,8 @@
 import { Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
+import Li from 'components/Li';
 import Subheading from 'components/Subheading';
-import UnorderedList from 'components/UnorderedList';
-import UnorderedListItem from 'components/UnorderedListItem';
+import Ul from 'components/Ul';
 import * as React from 'react';
 
 
@@ -13,20 +13,20 @@ export default function Page() {
                 Syllabus: Show understanding of how to model a complex system by only including essential details, using
             </Heading>
 
-            <UnorderedList>
-                <UnorderedListItem>
+            <Ul>
+                <Li>
                     Functions and procedures with suitable parameters
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Abstract datatypes (ADTs) (Stacks, queues, linked-lists binary trees, hash tables, dictionaries)
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Classes (OOP aka Object-oriented programming paradigm)
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Facts, rules (Declarative programming paradigm)
-                </UnorderedListItem>
-            </UnorderedList>
+                </Li>
+            </Ul>
 
             <Typography>
                 Abstraction involves removing details that are not needed to solve a problem; only essential information is kept. Abstraction allows programmers to deal with complex problems.
@@ -36,14 +36,14 @@ export default function Page() {
                 Ways to abstract programs
             </Subheading>
 
-            <UnorderedList>
-                <UnorderedListItem>
+            <Ul>
+                <Li>
                     Use datastructures
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Program development
-                </UnorderedListItem>
-            </UnorderedList>
+                </Li>
+            </Ul>
 
             <Subheading showJump>
                 Use datastructures

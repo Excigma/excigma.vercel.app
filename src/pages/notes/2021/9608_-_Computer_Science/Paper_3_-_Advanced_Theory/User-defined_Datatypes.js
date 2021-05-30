@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core';
 import Codeblock from 'components/Codeblock';
 import Heading from 'components/Heading';
+import Li from 'components/Li';
 import Subheading from 'components/Subheading';
-import UnorderedList from 'components/UnorderedList';
-import UnorderedListItem from 'components/UnorderedListItem';
+import Ul from 'components/Ul';
 import * as React from 'react';
 
 
@@ -14,20 +14,20 @@ export default function Page() {
                 Syllabus:
             </Heading>
 
-            <UnorderedList>
-                <UnorderedListItem>
+            <Ul>
+                <Li>
                     Show understanding of why user-defined types are necessary
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Define and use non-composite types: enumerated, pointer
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Define and use composite data types: set, record and class/object
-                </UnorderedListItem>
-                <UnorderedListItem>
+                </Li>
+                <Li>
                     Choose and design an appropriate user-defined data type for a given problem
-                </UnorderedListItem>
-            </UnorderedList>
+                </Li>
+            </Ul>
 
             <Subheading>
                 Show understanding of why user-defined types are necessary
