@@ -1,23 +1,14 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
-import { default as Information } from 'components/Information';
+import Information from 'components/Information';
 import Subheading from 'components/Subheading';
 import UnorderedList from 'components/UnorderedList';
 import UnorderedListItem from 'components/UnorderedListItem';
 import * as React from 'react';
 import { InlineMath } from 'react-katex';
-import { Line, LineChart, XAxis, YAxis } from 'recharts';
+import { Legend, Line, LineChart } from 'recharts';
 
 export default function Page() {
-    const data = [
-        { uv: 1, amt: 0 },
-        { uv: 3, amt: 25 },
-        { uv: 1, amt: 50 },
-        { uv: 3, amt: 75 },
-        { uv: 1, amt: 100 },
-        { uv: 3, amt: 125 }
-    ];
-
     return (
         <>
             <Heading>
@@ -61,10 +52,79 @@ export default function Page() {
                 Frequency Modulation
             </Subheading>
 
-            <LineChart width={350} height={400} data={data}>
-                <XAxis hide={true} />
-                <YAxis hide={true} />
-                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+            <Typography>
+                Carrier Wave
+            </Typography>
+            <LineChart width={350} height={100} data={[
+                { 'Carrier wave': 0 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 0 },
+            ]}>
+                <Line type="monotone" dataKey="Carrier wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+            </LineChart>
+
+            <Typography>
+                + Signal wave
+            </Typography>
+
+            <LineChart width={350} height={100} data={[
+                { 'Signal wave': -1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': 1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': -1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': 1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': -1 },
+            ]}>
+                <Line connectNulls type="monotone" dataKey="Signal wave" strokeWidth={3} stroke="#d0b9e9" dot={null} />
+            </LineChart>
+
+            <Typography>
+                = Amplitude modulated wave
+            </Typography>
+
+            <LineChart width={350} height={200} data={[
+                { 'Amplitude modulated wave': 0, 'Signal wave': 0, 'Inverted signal wave': 0 },
+                { 'Amplitude modulated wave': 0.25, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': -0.5, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 0.75, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': -1, 'Signal wave': 1, 'Inverted signal wave': -1 },
+                { 'Amplitude modulated wave': 0.75, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': -0.5, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 0.25, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 0, 'Signal wave': 0, 'Inverted signal wave': 0 },
+                { 'Amplitude modulated wave': -0.25, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 0.5, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': -0.75, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 1, 'Signal wave': 1, 'Inverted signal wave': -1 },
+                { 'Amplitude modulated wave': -0.75, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 0.5, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': -0.25, 'Signal wave': null, 'Inverted signal wave': null },
+                { 'Amplitude modulated wave': 0, 'Signal wave': 0, 'Inverted signal wave': 0 },
+            ]}>
+                <Legend />
+                <Line type="monotone" dataKey="Amplitude modulated wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+                <Line connectNulls type="monotone" dataKey="Signal wave" stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
+                <Line connectNulls type="monotone" dataKey="Inverted signal wave" stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
             </LineChart>
 
             <Typography>
@@ -161,7 +221,6 @@ export default function Page() {
                 Because of this, even if the signal becomes noisy during transit, amplifiers in the middle are able to recreate the exact waveform and remove the data
             </Typography>
 
-
             <Typography>
                 Advantages of digital signals
             </Typography>
@@ -251,7 +310,7 @@ export default function Page() {
                 These sample (instantaneous voltages) are converted into a binary number representing their value. How accurate this depends on depends on the number of bits.
             </Typography>
 
-            <Information severity="error" title="ADCs can <b>ONLY</b> 'round' down">
+            <Information severity="error" title="ADCs can ONLY 'round' down">
                 Just drop the decimal completely. ADCs DO <b>NOT</b> ROUND UP.
             </Information>
         </>
