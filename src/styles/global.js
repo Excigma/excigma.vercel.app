@@ -10,7 +10,7 @@ body {
   line-height: 1.5em;
 }
 
-.MuiSvgIcon-root {
+.MuiTypography-root > .MuiSvgIcon-root {
   transform: translateY(0.15em);
 }
 
