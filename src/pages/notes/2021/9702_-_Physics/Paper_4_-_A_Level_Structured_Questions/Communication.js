@@ -191,7 +191,7 @@ export default function Page() {
                 = Frequency modulated wave
             </Typography>
 
-            <LineChart width={350} height={100} data={[
+            <LineChart width={350} height={200} data={[
                 { 'Frequency modulated wave': 0 },
                 { 'Frequency modulated wave': 1 },
                 { 'Frequency modulated wave': null },
