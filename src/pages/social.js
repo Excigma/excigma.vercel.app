@@ -4,8 +4,6 @@ import * as React from 'react';
 export default function Page() {
     return (
         <>
-            {/* use stack :@:@:@:@: */}
-
             <Grid container spacing={5}>
                 <Grid item xs={6}>
                     <Typography variant="h5" component="h4">

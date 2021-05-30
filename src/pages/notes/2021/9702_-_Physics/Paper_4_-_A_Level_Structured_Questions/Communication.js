@@ -62,8 +62,8 @@ export default function Page() {
             </Subheading>
 
             <LineChart width={350} height={400} data={data}>
-                <XAxis />
-                <YAxis />
+                <XAxis hide={true} />
+                <YAxis hide={true} />
                 <Line type="monotone" dataKey="uv" stroke="#8884d8" />
             </LineChart>
 

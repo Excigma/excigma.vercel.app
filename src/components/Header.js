@@ -20,7 +20,6 @@ function HideOnScroll(props) {
 }
 
 export default function Header(props) {
-
     const [state, setState] = React.useState({
         left: false
     });
