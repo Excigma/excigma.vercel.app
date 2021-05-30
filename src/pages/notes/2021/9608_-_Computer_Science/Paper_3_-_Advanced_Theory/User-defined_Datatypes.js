@@ -39,7 +39,7 @@ export default function Page() {
             </Typography>
 
             <Subheading>
-                Define and use <b>non-composite</b> types: Enumerated, Pointer
+                Define and use non-composite types: Enumerated, Pointer
             </Subheading>
 
             <Subheading>

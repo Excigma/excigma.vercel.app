@@ -7,10 +7,12 @@ export default function Page() {
     return (
         <>
             <Subheading>
-                Maybe try reconnecting to the internet, in the meantime you can <Link href="/"><b>Goto</b> home</Link>
+                Maybe try reconnecting to the internet ..or maybe the server is just dead right now
             </Subheading>
 
-            <Typography>..or maybe the server is just dead right now</Typography>
+            <Typography>
+                in the meantime you can <Link href="/"><b>Goto</b> home</Link>
+            </Typography>
         </>
     );
 }

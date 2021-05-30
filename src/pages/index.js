@@ -1,7 +1,4 @@
 import { Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
-import ChatBubbleIcon from '@material-ui/icons/ChatBubbleOutlined';
-import HelpIcon from '@material-ui/icons/HelpOutlined';
-import StorageIcon from '@material-ui/icons/StorageOutlined';
 import Blockquote from 'components/Blockquote.js';
 import Link from 'components/Link.js';
 import Subheading from 'components/Subheading';
@@ -15,7 +12,7 @@ export default function Page() {
             </Subheading>
 
             <Subheading>
-                <StorageIcon fontSize="small" /> A gallery of Excigma's projects, notes and other things he tinkers with.
+                A gallery of Excigma's projects, notes and other things he tinkers with.
             </Subheading>
 
             <Typography>
@@ -25,7 +22,7 @@ export default function Page() {
             <Grid container>
                 <Grid item xs={12} md={6}>
                     <Subheading>
-                        <HelpIcon fontSize="small" /> About
+                        About
                     </Subheading>
 
                     <Typography>
@@ -35,7 +32,7 @@ export default function Page() {
 
                 <Grid item xs={12} md={6}>
                     <Subheading>
-                        <HelpIcon fontSize="small" /> When + Why
+                        When + Why
                     </Subheading>
 
                     <Typography>
@@ -48,7 +45,7 @@ export default function Page() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Subheading>
-                        <ChatBubbleIcon fontSize="small" /> Unless statistics no one cares about
+                        Unless statistics no one cares about
                     </Subheading>
 
                     <TableContainer>
@@ -73,7 +70,7 @@ export default function Page() {
 
                 <Grid item xs={12} md={6}>
                     <Subheading>
-                        <ChatBubbleIcon fontSize="small" /> What other people have said to/about me
+                        What other people have said to/about me
                     </Subheading>
 
                     <Blockquote>
@@ -100,8 +97,9 @@ export default function Page() {
 
 
             <Subheading>
-                <ChatBubbleIcon fontSize="small" /> Cool programs, libraries and services used to make this website
+                Cool programs, libraries and services used to make this website
             </Subheading>
+
             <TableContainer>
                 <Table>
                     <TableBody>
