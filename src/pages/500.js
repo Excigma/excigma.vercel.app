@@ -7,8 +7,12 @@ export default function Page() {
     return (
         <>
             <Subheading>
-                (╯°□°）╯︵ ┻━┻. Well uhh you broke the server. Or maybe I did. We don't know how you got here. Nevertheless, right now probably want to <Link href="/"><b>Goto</b> home</Link>
+                (╯°□°）╯︵ ┻━┻. Well uhh you broke the server. Or maybe I did. We don't know how you got here.
             </Subheading>
+
+            <Typography>
+                Nevertheless, right now probably want to <Link href="/"><b>Goto</b> home</Link>
+            </Typography>
 
             <Typography>
                 WHY CAN I NOT WRITE GOOD CODE WITH ROBUST ERROR CHECKING REEEEEEEEEEEE
