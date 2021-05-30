@@ -441,6 +441,18 @@ export default function Page() {
             <Typography>
                 When received, a serial to parallel converter can be used to convert the signal back to it's original form.
             </Typography>
+
+            <Subheading>
+                Improving reproduction of the input signal
+            </Subheading>
+
+            <Typography>
+                Increase sampling frequency to reduce the width of each step (space between samples)
+            </Typography>
+
+            <Typography>
+                Increase number of bits per sample to allow for a more precise binary representation of the analog signal's initial voltage
+            </Typography>
         </>
     );
 }
