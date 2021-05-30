@@ -45,16 +45,13 @@ export default function Page() {
             </Subheading>
 
             <Typography>
-                Todo
+                In amplitude modulation the frequency of the modulated wave is constant, and the amplitude of the modulated wave varies proportionally to and in phase with the signal
             </Typography>
-
-            <Subheading>
-                Frequency Modulation
-            </Subheading>
 
             <Typography>
                 Carrier Wave
             </Typography>
+
             <LineChart width={350} height={100} data={[
                 { 'Carrier wave': 0 },
                 { 'Carrier wave': 1 },
@@ -127,17 +124,104 @@ export default function Page() {
                 <Line connectNulls type="monotone" dataKey="Inverted signal wave" stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
             </LineChart>
 
-            <Typography>
-                Todo
+            <Subheading>
+                Frequency Modulation
+            </Subheading>
+
+            <Typography title="Definition">
+                In frequency modulation (FM), the amplitude of the carrier wave remains constant. The frequency of the carrier wave is made to vary in sync with the displacement of this information signal
             </Typography>
 
-            <Information title="Definition">
-                In amplitude modulation (AM), the carrier wave has constant frequency. The amplitude of the carrier wave is made to vary. These variations are in sync with the displacement of the information signal
-            </Information>
 
-            <Information title="Definition">
-                In frequency modulation (FM), the amplitude of the carrier wave remains constant. The frequency of the carrier wave is made to very in sync with the displacement of this information signal
-            </Information>
+            <Typography>
+                Carrier Wave
+            </Typography>
+
+            <LineChart width={350} height={100} data={[
+                { 'Carrier wave': 0 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 1 },
+                { 'Carrier wave': -1 },
+                { 'Carrier wave': 0 },
+            ]}>
+                <Line type="monotone" dataKey="Carrier wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+            </LineChart>
+
+            <Typography>
+                + Signal wave
+            </Typography>
+
+            <LineChart width={350} height={100} data={[
+                { 'Signal wave': -1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': 1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': -1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': 1 },
+                { 'Signal wave': null },
+                { 'Signal wave': null },
+                { 'Signal wave': -1 },
+            ]}>
+                <Line connectNulls type="monotone" dataKey="Signal wave" strokeWidth={3} stroke="#d0b9e9" dot={null} />
+            </LineChart>
+
+
+            <Typography>
+                = Frequency modulated wave
+            </Typography>
+
+            <LineChart width={350} height={100} data={[
+                { 'Frequency modulated wave': 0 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': null },
+                { 'Frequency modulated wave': null },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': null },
+                { 'Frequency modulated wave': null },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 1 },
+                { 'Frequency modulated wave': null },
+                { 'Frequency modulated wave': null },
+                { 'Frequency modulated wave': -1 },
+                { 'Frequency modulated wave': 0 },
+            ]}>
+                <Legend />
+                <Line connectNulls type="monotone" dataKey="Frequency modulated wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+            </LineChart>
 
             <Information title="Definition">
                 The bandwidth is the range of frequency occupied amplitude modulated waveform
