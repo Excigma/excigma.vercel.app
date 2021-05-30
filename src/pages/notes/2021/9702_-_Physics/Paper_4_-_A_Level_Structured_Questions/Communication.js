@@ -70,7 +70,7 @@ export default function Page() {
                 { 'Carrier wave': -1 },
                 { 'Carrier wave': 0 },
             ]}>
-                <Line type="monotone" dataKey="Carrier wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+                <Line type="monotone" dataKey="Carrier wave" isAnimationActive={false} stroke="#ff0066" strokeWidth={3} dot={null} />
             </LineChart>
 
             <Typography>
@@ -92,7 +92,7 @@ export default function Page() {
                 { 'Signal wave': null },
                 { 'Signal wave': -1 },
             ]}>
-                <Line connectNulls type="monotone" dataKey="Signal wave" strokeWidth={3} stroke="#d0b9e9" dot={null} />
+                <Line connectNulls type="monotone" dataKey="Signal wave" isAnimationActive={false} strokeWidth={3} stroke="#d0b9e9" dot={null} />
             </LineChart>
 
             <Typography>
@@ -119,9 +119,9 @@ export default function Page() {
                 { 'Amplitude modulated wave': 0, 'Signal wave': 0, 'Inverted signal wave': 0 },
             ]}>
                 <Legend />
-                <Line type="monotone" dataKey="Amplitude modulated wave" stroke="#ff0066" strokeWidth={3} dot={null} />
-                <Line connectNulls type="monotone" dataKey="Signal wave" stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
-                <Line connectNulls type="monotone" dataKey="Inverted signal wave" stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
+                <Line type="monotone" dataKey="Amplitude modulated wave" isAnimationActive={false} stroke="#ff0066" strokeWidth={3} dot={null} />
+                <Line connectNulls type="monotone" dataKey="Signal wave" isAnimationActive={false} stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
+                <Line connectNulls type="monotone" dataKey="Inverted signal wave" isAnimationActive={false} stroke="#d0b9e9" strokeWidth={3} strokeDasharray="2 20" dot={null} />
             </LineChart>
 
             <Subheading>
@@ -161,7 +161,7 @@ export default function Page() {
                 { 'Carrier wave': -1 },
                 { 'Carrier wave': 0 },
             ]}>
-                <Line type="monotone" dataKey="Carrier wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+                <Line type="monotone" dataKey="Carrier wave" isAnimationActive={false} stroke="#ff0066" strokeWidth={3} dot={null} />
             </LineChart>
 
             <Typography>
@@ -183,7 +183,7 @@ export default function Page() {
                 { 'Signal wave': null },
                 { 'Signal wave': -1 },
             ]}>
-                <Line connectNulls type="monotone" dataKey="Signal wave" strokeWidth={3} stroke="#d0b9e9" dot={null} />
+                <Line connectNulls type="monotone" dataKey="Signal wave" isAnimationActive={false} strokeWidth={3} stroke="#d0b9e9" dot={null} />
             </LineChart>
 
 
@@ -220,7 +220,7 @@ export default function Page() {
                 { 'Frequency modulated wave': 0 },
             ]}>
                 <Legend />
-                <Line connectNulls type="monotone" dataKey="Frequency modulated wave" stroke="#ff0066" strokeWidth={3} dot={null} />
+                <Line connectNulls type="monotone" dataKey="Frequency modulated wave" stroke="#ff0066" isAnimationActive={false} strokeWidth={3} dot={null} />
             </LineChart>
 
             <Information title="Definition">
