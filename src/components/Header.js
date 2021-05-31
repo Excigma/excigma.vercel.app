@@ -6,20 +6,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'components/Link';
 import React from 'react';
 
-
-function HideOnScroll(props) {
-    const { children } = props;
-    const trigger = useScrollTrigger();
-
-    return (
-        <Slide appear={false} in={!trigger} {...props}>
-            {children}
-        </Slide>
-
-    );
-}
-
 export default function Header(props) {
+    const trigger = useScrollTrigger();
     const [state, setState] = React.useState({
         left: false
     });
@@ -34,7 +22,7 @@ export default function Header(props) {
 
     return (
         <>
-            <HideOnScroll direction="down" {...props}>
+            <Slide appear={false} in={!trigger} direction="down"{...props}>
                 <AppBar>
                     <Toolbar>
                         <NoSsr>
@@ -79,8 +67,7 @@ export default function Header(props) {
                             </Stack>
                         </NoSsr>
                     </Toolbar>
-                </AppBar>
-            </HideOnScroll>
+                </AppBar></Slide>
 
 
             <SwipeableDrawer

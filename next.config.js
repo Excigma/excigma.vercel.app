@@ -5,7 +5,7 @@ module.exports = withPWA({
     poweredByHeader: false,
     reactStrictMode: true,
     pwa: {
-        disable: process.env.VERCEL != '1',
+        disable: process.env.VERCEL !== '1',
         dest: 'public',
         dynamicStartUrl: false,
         runtimeCaching
