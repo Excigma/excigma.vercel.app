@@ -14,10 +14,6 @@ body {
   transform: translateY(0.15em);
 }
 
-pre {
-  padding: 1em;
-}
-
 /* Prevent CSS layout shifting...? Emotion isn't inlining for some reason */
 .css-nu13me-Stack-root > * {
     margin: 0;
