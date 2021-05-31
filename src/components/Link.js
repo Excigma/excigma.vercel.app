@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import * as React from 'react';
+import React, * as React from 'react';
 
 
 

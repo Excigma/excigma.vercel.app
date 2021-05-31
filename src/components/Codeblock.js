@@ -10,18 +10,16 @@ SyntaxHighlighter.registerLanguage('psuedocode', psuedocode);
 export default function Codeblock({ children, language, ...other }) {
     // 🥛 <-- Eye bleach
 
-    return (
-        <>
-            {language && <pre>Example code ({language.charAt(0).toUpperCase() + language.replace(/-/g, ' ').slice(1)}):</pre>}
+    return <>
+        {language && <pre>Example code ({language.charAt(0).toUpperCase() + language.replace(/-/g, ' ').slice(1)}):</pre>}
 
-            <SyntaxHighlighter
-                showLineNumbers
-                style={codeTheme}
-                codeTagProps={{ style: { fontFamily: '"Fira Code", "Inconsolata", "Monaco", "Consolas", "Ubuntu Mono", "Courier New", "Courier", "monospace"' } }}
-                language={language}
-                {...other}>
-                {children.trim()}
-            </SyntaxHighlighter>
-        </>
-    );
+        <SyntaxHighlighter
+            showLineNumbers
+            style={codeTheme}
+            codeTagProps={{ style: { fontFamily: '"Fira Code", "Inconsolata", "Monaco", "Consolas", "Ubuntu Mono", "Courier New", "Courier", "monospace"' } }}
+            language={language}
+            {...other}>
+            {children.trim()}
+        </SyntaxHighlighter>
+    </>;
 }
