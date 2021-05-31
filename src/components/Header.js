@@ -4,7 +4,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'components/Link';
-import React, * as React from 'react';
+import React from 'react';
 
 
 function HideOnScroll(props) {
