@@ -42,6 +42,10 @@ export default function Page() {
                 Define and use non-composite types: Enumerated, Pointer
             </Subheading>
 
+            <Typography>
+                <b>NON-</b>composite data type, does not include/compose of other datatypes. Also includes integer, string
+            </Typography>
+
             <Subheading showJump>
                 Enums, aka Enumerated
             </Subheading>
@@ -109,6 +113,10 @@ MyDay <- DayPointer^
             <Subheading showJump>
                 Define and use composite data types: Set, Record and Class/Object
             </Subheading>
+
+            <Typography>
+                Composite data type, includes/composes of other datatypes.
+            </Typography>
 
             <Typography>
                 You can able to define your own datatypes in Pseudocode (and VB - However this is not needed.)
