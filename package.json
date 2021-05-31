@@ -25,6 +25,7 @@
         "recharts": "^2.0.9"
     },
     "devDependencies": {
+        "babel-plugin-transform-imports": "^2.0.0",
         "eslint": "^7.26.0",
         "eslint-plugin-mui-unused-classes": "^1.0.3",
         "eslint-plugin-react": "^7.23.2"

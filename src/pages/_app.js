@@ -1,4 +1,5 @@
-import { Box, Container, CssBaseline, Stack, ThemeProvider, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';

@@ -13,6 +13,7 @@ export default function Codeblock({ children, language, ...other }) {
     return (
         <>
             {language && <pre>Example code ({language.charAt(0).toUpperCase() + language.replace(/-/g, ' ').slice(1)}):</pre>}
+
             <SyntaxHighlighter
                 showLineNumbers
                 style={codeTheme}
