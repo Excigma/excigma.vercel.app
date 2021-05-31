@@ -31,13 +31,13 @@ function psuedocode(Prism) {
         boolean: /\.(?:TRUE|FALSE)\.(?:_\w+)?/i,
         number: /(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:[ED][+-]?\d+)?(?:_\w+)?/i,
         keyword: [
-            // Types
-            /\b(?:INTEGER|REAL|DOUBLE ?PRECISION|COMPLEX|CHARACTER|LOGICAL)\b/i, // END statements
-            /\b(?:END ?)?(?:BLOCK ?DATA|DO|FILE|FORALL|FUNCTION|IF|INTERFACE|MODULE(?! PROCEDURE)|PROGRAM|SELECT|SUBROUTINE|TYPE|WHERE)\b/i, // Statements
-            /\b(?:ALLOCATABLE|ALLOCATE|BACKSPACE|CALL|CASE|CLOSE|COMMON|CONTAINS|CONTINUE|CYCLE|DATA|DEALLOCATE|DIMENSION|DO|END|EQUIVALENCE|EXIT|EXTERNAL|FORMAT|GO ?TO|IMPLICIT(?: NONE)?|INQUIRE|INTENT|INTRINSIC|MODULE PROCEDURE|NAMELIST|NULLIFY|OPEN|OPTIONAL|PARAMETER|POINTER|PRINT|PRIVATE|PUBLIC|READ|RETURN|REWIND|SAVE|SELECT|STOP|TARGET|WHILE|WRITE)\b/i, // Others
-            /\b(?:ASSIGNMENT|DEFAULT|ELEMENTAL|ELSE|ELSEWHERE|ELSEIF|ENTRY|IN|INCLUDE|INOUT|KIND|NULL|ONLY|OPERATOR|OUT|PURE|RECURSIVE|RESULT|SEQUENCE|STAT|THEN|USE)\b/i
+            {
+                pattern: /((?::|OF) )(?:[A-Z<>]+)/i,
+                lookbehind: true,
+            },
+            /\b(?:END ?)?(?:DO|WHILE|FUNCTION|IF|INTERFACE|MODULE|PROCEDURE|TYPE|IF)\b/i,
+            /\b(?:DECLARE|DEFINE|CALL|CASE|CLOSE|CONTINUE|DO|END|EXIT|GO ?TO|POINTER|PRIVATE|PUBLIC|READ|WRITE|RETURN|ELSE|ELSEIF|NULL|THEN)\b/i, // Others
         ],
-        operator: /\*\*|\/\/|=>|[<>]=?|::|[+\-*=%]|\.[A-Z]+\./i,
-        punctuation: /\(\/|\/\)|[(),;:&]/
+        operator: /[+\-*=%]|<-|:/i
     };
 }

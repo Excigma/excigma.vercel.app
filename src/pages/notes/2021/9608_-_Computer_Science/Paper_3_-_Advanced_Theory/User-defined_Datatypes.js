@@ -134,7 +134,7 @@ TYPE <Typename>
 	// <etc>...
 ENDTYPE
 
-' Example
+// Example
 
 TYPE Cat
 	DECLARE Name : STRING
