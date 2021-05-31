@@ -78,7 +78,6 @@ Direction <- East
 IF Day > Friday THEN
     // It is the weekend.
 ENDIF
-
             `}
             </Codeblock>
 

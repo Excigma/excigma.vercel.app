@@ -18,26 +18,22 @@ function psuedocode(Prism) {
         },
         comment: [
             {
-                pattern: /(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,
-                lookbehind: true,
-                greedy: true
-            },
-            {
                 pattern: /(^|[^\\:])\/\/.*/,
                 lookbehind: true,
                 greedy: true
             }
         ],
         boolean: /\.(?:TRUE|FALSE)\.(?:_\w+)?/i,
-        number: /(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:[ED][+-]?\d+)?(?:_\w+)?/i,
+        number: /\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,
         keyword: [
             {
                 pattern: /((?::|OF) )(?:[A-Z<>]+)/i,
                 lookbehind: true,
             },
-            /\b(?:END ?)?(?:DO|WHILE|FUNCTION|IF|INTERFACE|MODULE|PROCEDURE|TYPE|IF)\b/i,
-            /\b(?:DECLARE|DEFINE|CALL|CASE|CLOSE|CONTINUE|DO|END|EXIT|GO ?TO|POINTER|PRIVATE|PUBLIC|READ|WRITE|RETURN|ELSE|ELSEIF|NULL|THEN)\b/i, // Others
+            /\b(?:END ?)?(?:DO|WHILE|FUNCTION|CASE|TRY|FOR|LOOP|IF|PROCEDURE|TYPE|IF)\b/i,
+            /\b(?:DECLARE|DEFINE|CALL|CLOSE|CONTINUE|END|EXIT|GO ?TO|PRIVATE|PUBLIC|READ|WRITE|RETURN|ELSE|ELSEIF|NULL|THEN)\b/i,
         ],
-        operator: /[+\-*=%<>()]|<-|:/i
+        function: /\w+(?=\()/,
+        operator: /[+//\-*=%<>()[\]:]|<-|/i
     };
 }
