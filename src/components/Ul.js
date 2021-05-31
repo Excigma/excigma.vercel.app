@@ -3,6 +3,6 @@ import * as React from 'react';
 
 export default function Ul(props) {
     return (
-        <List dense {...props} />
+        <List dense disablePadding {...props} />
     );
 }

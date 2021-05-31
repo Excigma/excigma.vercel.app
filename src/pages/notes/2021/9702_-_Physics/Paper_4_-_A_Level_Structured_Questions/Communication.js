@@ -19,11 +19,11 @@ export default function Page() {
                 Modulation
             </Subheading>
 
-            <Typography>
-                There are two types of modulation:
-            </Typography>
 
-            <Ul>
+
+            <Ul subheader={<Typography>
+                There are two types of modulation:
+            </Typography>}>
                 <Li>
                     A.M: Amplitude  modulation
                 </Li>
@@ -191,7 +191,7 @@ export default function Page() {
                 = Frequency modulated wave
             </Typography>
 
-            <LineChart width={350} height={200} data={[
+            <LineChart width={350} height={150} data={[
                 { 'Frequency modulated wave': 0 },
                 { 'Frequency modulated wave': 1 },
                 { 'Frequency modulated wave': null },

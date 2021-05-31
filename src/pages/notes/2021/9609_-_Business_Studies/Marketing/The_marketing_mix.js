@@ -27,6 +27,14 @@ export default function Page() {
             </Ul>
 
             <Subheading showJump>
+                Customer
+            </Subheading>
+
+            <Typography>
+                The product and advertising of the product needs to be targeted towards a group of people
+            </Typography>
+
+            <Subheading showJump>
                 The four P's
             </Subheading>
 
