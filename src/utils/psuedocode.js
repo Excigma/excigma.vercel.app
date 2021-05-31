@@ -38,6 +38,6 @@ function psuedocode(Prism) {
             /\b(?:END ?)?(?:DO|WHILE|FUNCTION|IF|INTERFACE|MODULE|PROCEDURE|TYPE|IF)\b/i,
             /\b(?:DECLARE|DEFINE|CALL|CASE|CLOSE|CONTINUE|DO|END|EXIT|GO ?TO|POINTER|PRIVATE|PUBLIC|READ|WRITE|RETURN|ELSE|ELSEIF|NULL|THEN)\b/i, // Others
         ],
-        operator: /[+\-*=%]|<-|:/i
+        operator: /[+\-*=%<>()]|<-|:/i
     };
 }
