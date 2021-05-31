@@ -10,6 +10,7 @@ export default function DirectoryList({ directoryTree }) {
         <>
             <Divider />
 
+            {/* Possibly use <accordion> for this */}
             {Object.entries(directoryTree).map(([directoryName, directoryFiles], i) => (
                 <React.Fragment key={i}>
                     <Typography variant="h4" id={`nested-list-subheader-${i}`} gutterBottom>

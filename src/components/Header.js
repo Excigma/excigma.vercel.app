@@ -50,7 +50,9 @@ export default function Header(props) {
 
                             <Link href="/">
                                 <IconButton  >
-                                    <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                                    <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} >
+                                        E
+                                    </Avatar>
                                 </IconButton>
                             </Link>
 

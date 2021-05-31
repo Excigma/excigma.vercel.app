@@ -455,6 +455,35 @@ export default function Page() {
             <Typography>
                 Increase number of bits per sample to allow for a more precise binary representation of the analog signal's initial voltage
             </Typography>
+
+            <Subheading showJump>
+                Channels of communications
+            </Subheading>
+
+            <Ul>
+                <Li>Wire pairs</Li>
+                <Li>Wire pairs</Li>
+            </Ul>
+
+            <Typography>
+                Wire pairs are normally used for phone lines, the potential difference between the wires is the signal. Each wire acts as an aerial and picks up unwanted noise. attenuation is high since energy is lost as heat due to the high resistance.
+            </Typography>
+
+            <Heading>
+                I need to do this later lol
+            </Heading>
+
+            <Subheading showJump>
+                Attenuation
+            </Subheading>
+
+            <Typography>
+                Gradual decrease in power of signal over distance
+            </Typography>
+
+            <Typography>
+                measured in decibels, value is negative as it is a loss of power
+            </Typography>
         </>
     );
 }
