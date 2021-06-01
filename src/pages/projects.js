@@ -43,6 +43,26 @@ export default function Page() {
                         </CardActions>
                     </Card>
                 </Grid>
+
+
+                
+                <Grid item xs={12} md={4}>
+                    <Card>
+                        <CardContent>
+                            <Typography variant="h5" component="h4">
+                                Text to KaTeX
+                            </Typography>
+
+                            <Typography>
+                                        Mostly used for this website, you can find other ones online but idk lol
+                            </Typography>
+                        </CardContent>
+
+                        <CardActions>
+                            <Button variant="contained" href="/tools/KaTeX" component={Link} sx={{ color: 'white' }}>See KaTeX</Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
             </Grid>
         </>
     );

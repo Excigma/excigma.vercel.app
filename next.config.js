@@ -14,16 +14,23 @@ module.exports = withPWA({
         runtimeCaching
     },
     redirects: () => {
-        return [{
-            source: '/notes/:year',
-            destination: '/notes',
-            permanent: true,
-        },
-        {
-            source: '/notes/:year/:subject/:paper',
-            destination: '/notes/:year/:subject',
-            permanent: true,
-        }];
+        return [
+            {
+                source: '/tools',
+                destination: '/projects',
+                permanent: false,
+            },
+            {
+                source: '/notes/:year',
+                destination: '/notes',
+                permanent: true,
+            },
+            {
+                source: '/notes/:year/:subject/:paper',
+                destination: '/notes/:year/:subject',
+                permanent: true,
+            }
+        ];
     },
     webpack: (config, { isServer }) => {
         if (!isServer) config.resolve.fallback = {

@@ -46,7 +46,6 @@ export default function MyApp({ Component, pageProps }) {
                                     overflow: 'clip',
                                     overflowClipMargin: '1em'
                                 }}>
-
                                 {path}
                             </Typography>
 

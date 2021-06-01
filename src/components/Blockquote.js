@@ -2,9 +2,9 @@ import { Typography } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import * as React from 'react';
 
-export default function Blockquote(props) {
+export default function Blockquote({ color = 'secondary', ...props }) {
     const { palette } = useTheme();
-    const borderColor = palette.secondary.main;
+    const borderColor = palette[color].main;
 
     // TODO: Add CSS class stuff
     return (
