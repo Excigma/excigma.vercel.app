@@ -17,7 +17,6 @@
         "Roboto",
         "Segoe",
         "Swipeable",
-        "apos",
         "aren",
         "browserslist",
         "clsx",
@@ -34,11 +33,6 @@
         "postbuild",
         "prismjs",
         "psuedocode",
-        "sies",
         "sitename",
-        "textbf",
-        "textit",
-        "textrm",
-        "textsf"
     ]
 }

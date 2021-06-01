@@ -15,7 +15,6 @@
         "@material-ui/icons": "^5.0.0-alpha.34",
         "@material-ui/styles": "^5.0.0-alpha.33",
         "clsx": "^1.1.1",
-        "katex": "^0.13.11",
         "next": "^10.2.0",
         "next-pwa": "^5.2.21",
         "next-sitemap": "^1.6.95",

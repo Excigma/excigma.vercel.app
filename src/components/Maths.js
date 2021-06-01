@@ -1,6 +1,6 @@
 import { Alert, AlertTitle, Typography } from '@material-ui/core';
-import KaTeX from 'katex';
 import * as React from 'react';
+import { renderToString } from 'utils/KaTeX.min.js';
 
 const sanitize = (str) => {
     return str
@@ -11,7 +11,7 @@ const sanitize = (str) => {
 
 export default function Maths({ children, onEvaluate, ...props }) {
     try {
-        const html = KaTeX.renderToString(children, {
+        const html = renderToString(children, {
             throwOnError: true,
             displayMode: true,
             trust: false
