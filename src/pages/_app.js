@@ -7,7 +7,7 @@ import ScrollToTop from 'components/ScrollToTop';
 import 'katex/dist/katex.min.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import React from 'react';
+import * as React from 'react';
 import { globalStyles } from 'styles/global.js';
 import theme from 'themes/dark';
 

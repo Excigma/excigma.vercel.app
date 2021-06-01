@@ -4,7 +4,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'components/Link';
-import React from 'react';
+import * as React from 'react';
 
 export default function Header(props) {
     const trigger = useScrollTrigger();
