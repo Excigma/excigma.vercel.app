@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://excigma.vercel.app
+
+# Sitemaps
+Sitemap: https://excigma.vercel.app/sitemap.xml
