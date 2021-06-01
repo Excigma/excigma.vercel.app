@@ -54,12 +54,12 @@ export default function Page() {
                             </Typography>
 
                             <Typography>
-                                        Mostly used for this website, you can find other ones online but idk lol
+                                Mostly used for this website, you can find other ones online but idk lol
                             </Typography>
                         </CardContent>
 
                         <CardActions>
-                            <Button variant="contained" href="/tools/KaTeX" component={Link} sx={{ color: 'white' }}>See KaTeX</Button>
+                            <Button variant="contained" href="/projects/KaTeX" component={Link} sx={{ color: 'white' }}>See KaTeX</Button>
                         </CardActions>
                     </Card>
                 </Grid>

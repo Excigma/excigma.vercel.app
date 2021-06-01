@@ -16,11 +16,6 @@ module.exports = withPWA({
     redirects: () => {
         return [
             {
-                source: '/tools',
-                destination: '/projects',
-                permanent: false,
-            },
-            {
                 source: '/notes/:year',
                 destination: '/notes',
                 permanent: true,
