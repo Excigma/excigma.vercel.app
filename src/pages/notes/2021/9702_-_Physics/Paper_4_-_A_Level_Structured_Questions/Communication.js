@@ -2,10 +2,10 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typog
 import Heading from 'components/Heading';
 import Information from 'components/Information';
 import Li from 'components/Li';
+import Maths from 'components/Maths';
 import Subheading from 'components/Subheading';
 import Ul from 'components/Ul';
 import * as React from 'react';
-import { BlockMath, InlineMath } from 'react-katex';
 import { Legend, Line, LineChart } from 'recharts';
 
 export default function Page() {
@@ -231,6 +231,10 @@ export default function Page() {
                 TODO
             </Typography>
 
+            <Subheading showJump>
+                TODO: Advantages and disadvantages to AM and FM
+            </Subheading>
+
             <Information title="Definition">
                 The bandwidth is the range of frequency occupied amplitude modulated waveform
             </Information>
@@ -424,7 +428,7 @@ export default function Page() {
             </Typography>
 
             <Typography>
-                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<InlineMath>20,000 * 2 = 40,000</InlineMath>)
+                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<Maths>20,000 * 2 = 40,000</Maths>)
             </Typography>
 
             <Typography>
@@ -485,21 +489,21 @@ export default function Page() {
                 Measured in decibels, value is negative as it is a loss of power
             </Typography>
 
-            <BlockMath>
+            <Maths>
                 {'dB = 10 * log(\\frac{P_{out}}{P_{in}})'}
-            </BlockMath>
+            </Maths>
 
-            <BlockMath>
+            <Maths>
                 {'dB = \\text{Attenuation per unit length} * Length'}
-            </BlockMath>
+            </Maths>
 
             <Subheading>
                 Signal-to-noise ratio (SNR)
             </Subheading>
 
-            <BlockMath>
+            <Maths>
                 {'dB = 10 * log(\\frac{P_{signal}}{P_{noise}})'}
-            </BlockMath>
+            </Maths>
         </>
     );
 }
