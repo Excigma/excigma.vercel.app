@@ -19,7 +19,7 @@ export default function Page() {
             </Typography>
 
             <Typography>
-                Powered by <Link href="https://katex.org/" rel="noreferrer" target="_blank">KaTeX</Link>, then syntax for that is <Link href="https://katex.org/docs/supported.html" rel="noreferrer" target="_blank">here</Link>
+                Powered by <Link href="https://katex.org/" rel="noreferrer" target="_blank">KaTeX</Link>, the syntax for that is <Link href="https://katex.org/docs/supported.html" rel="noreferrer" target="_blank">here</Link>
             </Typography>
 
             <TextField
