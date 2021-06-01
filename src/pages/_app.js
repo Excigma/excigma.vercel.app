@@ -7,9 +7,9 @@ import ScrollToTop from 'components/ScrollToTop';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { globalStyles } from 'styles/global.js';
 import 'styles/KaTeX.min.css';
-import theme from 'themes/dark';
+import theme from 'styling/dark';
+import { globalStyles } from 'styling/global.js';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
