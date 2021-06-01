@@ -8,7 +8,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { globalStyles } from 'styles/global.js';
-import 'styles/katex.min.css';
+import 'styles/KaTeX.min.css';
 import theme from 'themes/dark';
 
 export default function MyApp({ Component, pageProps }) {

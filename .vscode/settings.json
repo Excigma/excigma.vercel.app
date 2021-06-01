@@ -4,6 +4,7 @@
         "ADCs",
         "Basetype",
         "Birthdate",
+        "Caligraphic",
         "Cantarell",
         "Consolas",
         "ENDTYPE",
@@ -23,6 +24,8 @@
         "datastructures",
         "dicedtomato",
         "goto'd",
+        "katex",
+        "mathml",
         "monospace",
         "noindex",
         "normalised",
@@ -32,6 +35,10 @@
         "prismjs",
         "psuedocode",
         "sies",
-        "sitename"
+        "sitename",
+        "textbf",
+        "textit",
+        "textrm",
+        "textsf"
     ]
 }
