@@ -18,12 +18,6 @@ export default function Page() {
             </Alert>
 
             <Grid container item xs={12} spacing={2}>
-                <Grid item xs={12}>
-                    <Typography variant="h4" component="h3">
-                        2021
-                    </Typography>
-                </Grid>
-
                 <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
