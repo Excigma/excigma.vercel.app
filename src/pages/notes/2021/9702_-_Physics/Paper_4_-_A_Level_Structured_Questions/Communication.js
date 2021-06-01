@@ -5,7 +5,7 @@ import Li from 'components/Li';
 import Subheading from 'components/Subheading';
 import Ul from 'components/Ul';
 import * as React from 'react';
-import { InlineMath } from 'react-katex';
+import { BlockMath, InlineMath } from 'react-katex';
 import { Legend, Line, LineChart } from 'recharts';
 
 export default function Page() {
@@ -482,8 +482,24 @@ export default function Page() {
             </Typography>
 
             <Typography>
-                measured in decibels, value is negative as it is a loss of power
+                Measured in decibels, value is negative as it is a loss of power
             </Typography>
+
+            <BlockMath>
+                {'dB = 10 * log(\\frac{P_{out}}{P_{in}})'}
+            </BlockMath>
+
+            <BlockMath>
+                {'dB = \\text{Attenuation per unit length} * Length'}
+            </BlockMath>
+
+            <Subheading>
+                Signal-to-noise ratio (SNR)
+            </Subheading>
+
+            <BlockMath>
+                {'dB = 10 * log(\\frac{P_{signal}}{P_{noise}})'}
+            </BlockMath>
         </>
     );
 }
