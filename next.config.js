@@ -4,13 +4,15 @@ const runtimeCaching = require('next-pwa/cache');
 module.exports = withPWA({
     poweredByHeader: false,
     reactStrictMode: true,
+    future: {
+        webpack5: true,
+    },
     pwa: {
         disable: process.env.VERCEL !== '1',
         dest: 'public',
         dynamicStartUrl: false,
         runtimeCaching
     },
-    future: { webpack5: true, },
     redirects: () => {
         return [{
             source: '/notes/:year',
