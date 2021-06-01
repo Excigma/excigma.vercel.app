@@ -1,25 +1,35 @@
+import { Alert, AlertTitle, Typography } from '@material-ui/core';
 import KaTeX from 'katex';
 import * as React from 'react';
-import Blockquote from './Blockquote';
+
+const sanitize = (str) => {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+};
 
 export default function Maths({ children, onEvaluate, ...props }) {
     try {
         const html = KaTeX.renderToString(children, {
-            throwOnError: true
+            throwOnError: true,
+            displayMode: true,
+            trust: false
         });
 
         if (onEvaluate) onEvaluate(false);
 
         return (
-            <Blockquote dangerouslySetInnerHTML={{ __html: html }} {...props} />
+            <Typography dangerouslySetInnerHTML={{ __html: html }} {...props} />
         );
     } catch (e) {
         if (onEvaluate) onEvaluate(true);
 
         return (
-            <Blockquote color="error" {...props} >
-                {e.toString()}
-            </Blockquote>
+            <Alert severity="error" {...props} >
+                <AlertTitle>Error rendering KaTeX expression</AlertTitle>
+                {sanitize(e.toString())}
+            </Alert>
         );
     }
 }
