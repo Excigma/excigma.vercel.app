@@ -30,7 +30,7 @@ export default function Header(props) {
                                 <IconButton
                                     aria-label="menu"
                                     onClick={toggleDrawer('left', true)}
-                                    style={{ color: 'white' }}
+                                    sx={{ color: 'white' }}
                                     hidden={{ xs: 'block', md: 'none' }}>
                                     <MenuIcon />
                                 </IconButton>
@@ -44,8 +44,8 @@ export default function Header(props) {
                                 </IconButton>
                             </Link>
 
-                            <Typography variant="h6" style={{ flexGrow: 1 }}>
-                                <Link href="/" style={{ color: 'white' }}>
+                            <Typography variant="h6" sx={{ flexGrow: 1 }}>
+                                <Link href="/" sx={{ color: 'white' }}>
                                     Excigma
                                 </Link>
                             </Typography>
@@ -78,7 +78,7 @@ export default function Header(props) {
                 disableBackdropTransition={true}
                 sx={{ width: '10em' }}
             >
-                <List onClick={toggleDrawer('left', false)} style={{ width: 250 }}>
+                <List onClick={toggleDrawer('left', false)} sx={{ width: 250 }}>
                     <Link href="/" color="inherit">
                         <ListItem button>
                             <ListItemIcon>

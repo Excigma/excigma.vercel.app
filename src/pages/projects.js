@@ -39,7 +39,7 @@ export default function Page() {
                         </CardContent>
 
                         <CardActions>
-                            <Button variant="contained" href="/" component={Link} style={{ color: 'white' }}>:c</Button>
+                            <Button variant="contained" href="/" component={Link} sx={{ color: 'white' }}>:c</Button>
                         </CardActions>
                     </Card>
                 </Grid>

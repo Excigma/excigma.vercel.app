@@ -8,6 +8,6 @@ export default function Blockquote(props) {
 
     // TODO: Add CSS class stuff
     return (
-        <Typography style={{ borderLeft: '5px solid ' + borderColor, paddingLeft: '1.5rem', margin: '20px 0' }} {...props} />
+        <Typography sx={{ borderLeft: '5px solid ' + borderColor, paddingLeft: '1.5rem', margin: '20px 0' }} {...props} />
     );
 }

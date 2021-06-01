@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, NoSsr, Stack, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
@@ -46,14 +46,11 @@ export default function MyApp({ Component, pageProps }) {
                                     overflow: 'clip',
                                     overflowClipMargin: '1em'
                                 }}>
+
                                 {path}
                             </Typography>
 
-
-                            {process.env.VERCEL === '1'
-                                ? <Component {...pageProps} />
-                                : <NoSsr> <Component {...pageProps} /> </NoSsr>
-                            }
+                            <Component {...pageProps} />
 
                         </Stack>
                     </Container>
