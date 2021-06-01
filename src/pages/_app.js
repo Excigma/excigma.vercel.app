@@ -1,4 +1,4 @@
-import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
+import { Box, Container, CssBaseline, NoSsr, Stack, Typography } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
@@ -49,7 +49,12 @@ export default function MyApp({ Component, pageProps }) {
                                 {path}
                             </Typography>
 
-                            <Component {...pageProps} />
+
+                            {process.env.VERCEL === '1'
+                                ? <Component {...pageProps} />
+                                : <NoSsr> <Component {...pageProps} /> </NoSsr>
+                            }
+
                         </Stack>
                     </Container>
                 </Box>
