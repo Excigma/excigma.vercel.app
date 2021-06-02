@@ -1,7 +1,7 @@
 const presets = ["next/babel"];
 const plugins = [];
 
-if (process.env.VERCEL !== "1") {
+if (process.env.NODE_ENV !== "production") {
     plugins.push([
         "babel-plugin-transform-imports",
         {

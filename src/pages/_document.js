@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
                     <NextScript />
                 </body>
 
-                {process.env.VERCEL === '1' ? <script async defer data-website-id="0b58b0f1-03c3-4420-aec0-d4ae8e4518c8" src="https://umami.up.railway.app/umami.js"></script> : null}
+                {process.env.NODE_ENV === 'production' ? <script async defer data-website-id="0b58b0f1-03c3-4420-aec0-d4ae8e4518c8" src="https://umami.up.railway.app/umami.js"></script> : null}
 
                 <link
                     rel="preload"

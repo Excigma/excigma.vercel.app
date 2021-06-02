@@ -8,7 +8,7 @@ module.exports = withPWA({
         webpack5: true,
     },
     pwa: {
-        disable: process.env.VERCEL !== '1',
+        disable: process.env.NODE_ENV !== 'production',
         dest: 'public',
         dynamicStartUrl: false,
         runtimeCaching
