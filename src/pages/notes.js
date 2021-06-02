@@ -3,7 +3,7 @@ import AlertTitle from '@material-ui/core/AlertTitle';
 import DirectoryList from 'components/DirectoryList';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
-import getChildren from 'utils/getChildren';
+import scanDirectory from 'utils/scanDirectory';
 
 
 export default function Page({ directoryTree }) {
@@ -34,7 +34,7 @@ export default function Page({ directoryTree }) {
 }
 
 export async function getStaticProps() {
-    const directoryTree = await getChildren(__filename);
+    const directoryTree = await scanDirectory(__filename);
 
     return { props: { directoryTree } };
 }
