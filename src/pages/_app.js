@@ -37,7 +37,7 @@ export default function MyApp({ Component, pageProps }) {
                     <Container>
                         <Breadcrumbs />
 
-                        <Stack>
+                        <Stack spacing={3}>
                             <Typography
                                 variant="h2"
                                 fontWeight="fontWeightMedium"
