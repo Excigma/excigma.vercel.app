@@ -13,8 +13,8 @@ module.exports = withPWA({
         dynamicStartUrl: false,
         cacheOnFrontEndNav: true,
         runtimeCaching,
-        publicExcludes: ['!icons/icon-*.png', '*.otf', '*.ttf'],
-        buildExcludes: [/^media\/KaTeX_(?!.*(woff2$))/]
+        publicExcludes: ['!icons/icon-*.png'],
+        buildExcludes: [/media\/KaTeX_(?!.*(woff2$))/]
     },
     redirects: () => {
         return [
