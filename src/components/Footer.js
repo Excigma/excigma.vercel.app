@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer>
             <Box my={5}>
-                <Stack alignItems="center" spacing={2}>
+                <Stack alignItems="center">
                     <Typography variant="h6" component="p" align="center">
                         Excigma's Webpage
                     </Typography>
