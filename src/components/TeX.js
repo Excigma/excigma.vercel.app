@@ -16,7 +16,7 @@ export default function TeX({ children, ...props }) {
                 <AlertTitle>Error rendering KaTeX expression</AlertTitle>
                 {sanitize(error.toString())}
             </Alert>
-        )
+        );
     });
 
     return (
@@ -26,5 +26,5 @@ export default function TeX({ children, ...props }) {
             renderError={handleError}
             {...props}
         />
-    )
+    );
 }

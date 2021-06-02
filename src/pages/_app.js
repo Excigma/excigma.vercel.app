@@ -21,15 +21,15 @@ export default function MyApp({ Component, pageProps }) {
 
     React.useEffect(() => {
         if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
-            window.workbox.addEventListener('waiting', () => setUpdate(true))
-            window.workbox.register()
+            window.workbox.addEventListener('waiting', () => setUpdate(true));
+            window.workbox.register();
         }
-    }, [])
+    }, []);
 
     const reload = React.useCallback(() => {
-        window.workbox.addEventListener('controlling', () => window.location.reload())
-        window.workbox.messageSkipWaiting()
-    })
+        window.workbox.addEventListener('controlling', () => window.location.reload());
+        window.workbox.messageSkipWaiting();
+    });
 
     return (
         <>
@@ -53,7 +53,7 @@ export default function MyApp({ Component, pageProps }) {
                     action={
                         <Button onClick={reload} aria-label="Reload" color="secondary">
                             Reload
-                            </Button>
+                        </Button>
                     } />
 
                 <Box my={17.5}>

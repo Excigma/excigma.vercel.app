@@ -8,7 +8,7 @@ export default function Subheading({ children, showJump, ...props }) {
     if (showJump) {
         const router = useRouter();
         const id = children.toLowerCase().replace(/ /g, '-').replace(/[^A-Za-z0-9-]/g, '');
-        const clickHandler = React.useCallback(() => router.push(router.pathname + '#' + id))
+        const clickHandler = React.useCallback(() => router.push(router.pathname + '#' + id));
 
         return (
             <Typography onClick={clickHandler} variant="h6" component="p" id={id}  {...props} >

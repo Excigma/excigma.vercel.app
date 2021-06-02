@@ -29,9 +29,7 @@ export default function Page() {
                 label="KaTeX Expression"
                 variant="outlined" />
 
-            <TeX onEvaluate={(isError) => setError(isError)}>
-                {expression}
-            </TeX>
+            <TeX math={expression} />
         </>
     );
 }
