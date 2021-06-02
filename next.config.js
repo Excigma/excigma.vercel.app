@@ -11,7 +11,10 @@ module.exports = withPWA({
         disable: process.env.NODE_ENV !== 'production',
         dest: 'public',
         dynamicStartUrl: false,
-        runtimeCaching
+        cacheOnFrontEndNav: true,
+        runtimeCaching,
+        publicExcludes: ['!icons/icon-*.png', '*.otf', '*.ttf'],
+        buildExcludes: [/^media\/KaTeX_(?!.*(woff2$))/]
     },
     redirects: () => {
         return [
