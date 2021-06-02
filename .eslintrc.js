@@ -17,7 +17,8 @@ module.exports = {
     },
     'plugins': [
         'react',
-        'mui-unused-classes'
+        'mui-unused-classes',
+        'next'
     ],
     'rules': {
         'indent': [

@@ -1,4 +1,5 @@
 {
+    "todo-tree.tree.scanMode": "open files",
     "cSpell.words": [
         "ADCs",
         "Basetype",
@@ -33,5 +34,6 @@
         "prismjs",
         "psuedocode",
         "sitename",
+        "LRAS"
     ]
 }
