@@ -83,6 +83,14 @@ export default function Page() {
             <Typography>
                 Supply side policies. These are policies that leads to an increase in LRAS. These policies increase the quality and quality of factors of production and lead to an increase in the productive capacity of an economy
             </Typography>
+
+            <Typography>
+                Increasing Land, Labour, Capital or Enterprise.
+            </Typography>
+
+            <Typography>
+                :v
+            </Typography>
         </>
     );
 }

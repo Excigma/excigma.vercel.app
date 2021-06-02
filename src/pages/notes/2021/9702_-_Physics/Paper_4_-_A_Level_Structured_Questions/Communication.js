@@ -2,8 +2,8 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typog
 import Heading from 'components/Heading';
 import Information from 'components/Information';
 import Li from 'components/Li';
-import Maths from 'components/Maths';
 import Subheading from 'components/Subheading';
+import TeX from 'components/TeX';
 import Ul from 'components/Ul';
 import * as React from 'react';
 import { Legend, Line, LineChart } from 'recharts';
@@ -18,8 +18,6 @@ export default function Page() {
             <Subheading showJump>
                 Modulation
             </Subheading>
-
-
 
             <Ul subheader={<Typography>
                 There are two types of modulation:
@@ -428,7 +426,7 @@ export default function Page() {
             </Typography>
 
             <Typography>
-                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<Maths>20,000 * 2 = 40,000</Maths>)
+                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<TeX block={false}>20,000 * 2 = 40,000</TeX>)
             </Typography>
 
             <Typography>
@@ -489,21 +487,21 @@ export default function Page() {
                 Measured in decibels, value is negative as it is a loss of power
             </Typography>
 
-            <Maths>
+            <TeX>
                 {'dB = 10 * log(\\frac{P_{out}}{P_{in}})'}
-            </Maths>
+            </TeX>
 
-            <Maths>
+            <TeX>
                 {'dB = \\text{Attenuation per unit length} * Length'}
-            </Maths>
+            </TeX>
 
             <Subheading>
                 Signal-to-noise ratio (SNR)
             </Subheading>
 
-            <Maths>
+            <TeX>
                 {'dB = 10 * log(\\frac{P_{signal}}{P_{noise}})'}
-            </Maths>
+            </TeX>
         </>
     );
 }

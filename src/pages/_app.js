@@ -4,12 +4,12 @@ import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
 import ScrollToTop from 'components/ScrollToTop';
+import 'katex/dist/katex.min.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import theme from 'styling/dark';
 import { globalStyles } from 'styling/global.js';
-import 'styling/KaTeX.min.css';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();

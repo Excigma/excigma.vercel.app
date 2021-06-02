@@ -1,12 +1,12 @@
 import { TextField, Typography } from '@material-ui/core';
 import Link from 'components/Link';
-import Maths from 'components/Maths';
 import Subheading from 'components/Subheading';
+import TeX from 'components/TeX';
 import * as React from 'react';
 
 export default function Page() {
     const [expression, setExpression] = React.useState('\\KaTeX \\text{ is cool}');
-    const [error, setError] = React.useState(false);
+    const handleChange = React.useCallback((event) => setExpression(event.target.value), [setExpression]);
 
     return (
         <>
@@ -25,14 +25,13 @@ export default function Page() {
             <TextField
                 id="katex-expression"
                 color="secondary"
-                onChange={(event) => setExpression(event.target.value)}
+                onChange={handleChange}
                 label="KaTeX Expression"
-                variant="outlined"
-                error={error} />
+                variant="outlined" />
 
-            <Maths onEvaluate={(isError) => setError(isError)}>
+            <TeX onEvaluate={(isError) => setError(isError)}>
                 {expression}
-            </Maths>
+            </TeX>
         </>
     );
 }
