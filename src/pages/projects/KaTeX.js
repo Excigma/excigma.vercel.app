@@ -19,10 +19,12 @@ export default function Page() {
             </Typography>
 
             <Typography>
-                Powered by <Link href="https://katex.org/" rel="noreferrer" target="_blank">KaTeX</Link>, the syntax for that is <Link href="https://katex.org/docs/supported.html" rel="noreferrer" target="_blank">here</Link>
+                Powered by <Link href="https://katex.org/" rel="noreferrer" target="_blank">KaTeX</Link>. <Link href="https://katex.org/docs/supported.html" rel="noreferrer" target="_blank">Supported syntax here</Link>
             </Typography>
 
+
             <TextField
+                id="katex-expression"
                 color="secondary"
                 onChange={(event) => setExpression(event.target.value)}
                 label="KaTeX Expression"
