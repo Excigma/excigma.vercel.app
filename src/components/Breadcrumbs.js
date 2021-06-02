@@ -15,6 +15,8 @@ export default function Crumbs() {
     if (linkPath.length) linkPath.shift();
 
     const paths = linkPath.map((path, i) => {
+        path = path.replace(/_/g, ' ');
+
         return {
             breadcrumb: path.charAt(0).toUpperCase().concat(path.slice(1)),
             href: '/' + linkPath.slice(0, i + 1).join('/')
@@ -29,7 +31,7 @@ export default function Crumbs() {
 
             {paths.map((path, index) => (
                 <Link key={index + 1} href={path.href}>
-                    {path.breadcrumb.replace(/_/g, ' ')}
+                    {path.breadcrumb}
                 </Link>
             ))}
         </Breadcrumbs>
