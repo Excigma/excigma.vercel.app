@@ -18,6 +18,25 @@ export default function MyApp({ Component, pageProps }) {
     const name = router.pathname.substring(1).replace(/_/g, ' ').split('/').pop().trim() || 'Home';
     const path = name.charAt(0).toUpperCase().concat(name.slice(1));
 
+    useEffect(() => {
+        if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
+            const wb = window.workbox
+
+            wb.addEventListener('waiting', (event) => {
+                console.log("New update!")
+                // if (confirm('A newer version of this web app is available, reload to update?')) {
+                //     wb.addEventListener('controlling', event => {
+                //         window.location.reload()
+                //     })
+
+                //     // wb.messageSkipWaiting()
+                // }
+            })
+
+            wb.register()
+        }
+    }, [])
+
     return (
         <>
             <Head>
