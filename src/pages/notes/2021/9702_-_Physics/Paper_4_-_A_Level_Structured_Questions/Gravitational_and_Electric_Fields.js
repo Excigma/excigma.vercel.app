@@ -66,6 +66,14 @@ export default function Page() {
                 Where did the negative come from?
             </Typography>
 
+            <Typography>
+                Gravitational potential energy is defined as the work done in bringing a small test mass from infinity to that point
+            </Typography>
+
+            <Typography>
+                Maximum <TeX inline>E_p</TeX> is at <TeX inline>r = \infty</TeX> so at any <TeX inline>r</TeX> less than <TeX inline>\infty</TeX> there must be a smaller <TeX inline>E_p</TeX>. Since at <TeX inline>r = \infty</TeX>, <TeX inline>E_p = 0</TeX>, any smaller value must be negative
+            </Typography>
+
         </>
     );
 }
