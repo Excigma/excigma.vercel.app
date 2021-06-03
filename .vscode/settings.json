@@ -10,6 +10,7 @@
         "ENDTYPE",
         "Fira",
         "Inconsolata",
+        "LRAS",
         "Neue",
         "Pastpaper",
         "Pastpapers",
@@ -23,6 +24,7 @@
         "datastructures",
         "dicedtomato",
         "goto'd",
+        "infty",
         "katex",
         "mathml",
         "monospace",
@@ -33,7 +35,6 @@
         "postbuild",
         "prismjs",
         "psuedocode",
-        "sitename",
-        "LRAS"
+        "sitename"
     ]
 }

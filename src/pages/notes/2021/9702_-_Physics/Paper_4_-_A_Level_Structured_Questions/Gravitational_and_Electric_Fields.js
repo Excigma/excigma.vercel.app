@@ -13,7 +13,7 @@ export default function PageContent() {
                 cool stuff i can walk on ground ojy!
             </Heading>
 
-            <Subheading>
+            <Subheading showJump>
                 Newton's lawn of gravitation
             </Subheading>
 
@@ -36,7 +36,7 @@ export default function PageContent() {
                 <TeX inline>{String.raw`F_g = mg`}</TeX> is related to this formula: <TeX inline>{String.raw`g = \frac{GM}{r^2}`}</TeX>
             </Typography>
 
-            <Subheading>
+            <Subheading showJump>
                 Gravitational field strength
             </Subheading>
 
@@ -48,7 +48,7 @@ export default function PageContent() {
                 {String.raw`g = \frac{GM}{r ^ 2}`}
             </TeX>
 
-            <Subheading>
+            <Subheading showJump>
                 Gravitational potential energy
             </Subheading>
 
@@ -74,6 +74,17 @@ export default function PageContent() {
                 Maximum <TeX inline>E_p</TeX> is at <TeX inline>r = \infty</TeX> so at any <TeX inline>r</TeX> less than <TeX inline>\infty</TeX> there must be a smaller <TeX inline>E_p</TeX>. Since at <TeX inline>r = \infty</TeX>, <TeX inline>E_p = 0</TeX>, any smaller value must be negative
             </Typography>
 
+            <Subheading showJump>
+                Gravitational potential
+            </Subheading>
+
+            <Typography>
+                The gravitational potential at a point is work done <b>per unit mass</b> in bringing a small test mass from infinity to that point
+            </Typography>
+
+            <TeX>
+                {String.raw`\phi = \frac{-GM}{r}`}
+            </TeX>
         </>
     );
 }
