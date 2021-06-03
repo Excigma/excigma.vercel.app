@@ -1,8 +1,7 @@
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
-const withPreact = require('next-plugin-preact');
 
-module.exports = withPreact(withPWA({
+module.exports = withPWA({
     poweredByHeader: false,
     reactStrictMode: true,
     future: {
@@ -38,4 +37,4 @@ module.exports = withPreact(withPWA({
 
         return config;
     }
-}));
+});
