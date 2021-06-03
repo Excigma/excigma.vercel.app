@@ -14,8 +14,6 @@ module.exports = withPWA({
         cacheOnFrontEndNav: true,
         publicExcludes: ['!icons/icon-*.png'],
         buildExcludes: [/media\/KaTeX_(?!.*(woff2$))/],
-        register: false,
-        skipWaiting: false,
         runtimeCaching
     },
     redirects: () => {
