@@ -4,7 +4,7 @@ import Subheading from 'components/Subheading';
 import TeX from 'components/TeX';
 import * as React from 'react';
 
-export default function Page() {
+export default function PageContent() {
     const [expression, setExpression] = React.useState('\\KaTeX \\text{ is cool}');
     const handleChange = React.useCallback((event) => setExpression(event.target.value), [setExpression]);
 

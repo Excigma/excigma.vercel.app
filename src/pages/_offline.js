@@ -3,7 +3,7 @@ import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
-export default function Page() {
+export default function PageContent() {
     return (
         <>
             <Subheading>

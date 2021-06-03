@@ -5,7 +5,7 @@ import Link from 'components/Link';
 import * as React from 'react';
 import scanDirectory from 'utils/scanDirectory';
 
-export default function Page({ directoryTree }) {
+export default function PageContent({ directoryTree }) {
     return (
         <>
             <Heading>

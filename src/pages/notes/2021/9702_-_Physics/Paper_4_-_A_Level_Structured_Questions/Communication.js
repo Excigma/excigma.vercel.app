@@ -8,7 +8,7 @@ import Ul from 'components/Ul';
 import * as React from 'react';
 import { Legend, Line, LineChart } from 'recharts';
 
-export default function Page() {
+export default function PageContent() {
     return (
         <>
             <Heading>

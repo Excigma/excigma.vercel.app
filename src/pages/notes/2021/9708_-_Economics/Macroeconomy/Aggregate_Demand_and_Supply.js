@@ -5,7 +5,7 @@ import Subheading from 'components/Subheading';
 import Ul from 'components/Ul';
 import * as React from 'react';
 
-export default function Page() {
+export default function PageContent() {
     return (
         <>
             <Subheading showJump>

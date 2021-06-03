@@ -5,7 +5,7 @@ import AlertTitle from '@material-ui/core/AlertTitle';
 import Link from 'components/Link';
 import * as React from 'react';
 
-export default function Page() {
+export default function PageContent() {
     return (
         <>
             <Typography variant="h5" component="h3">

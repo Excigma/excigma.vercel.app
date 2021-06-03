@@ -3,7 +3,7 @@ import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
-export default function ErrorPage() {
+export default function ErrorPageContent() {
     return (
         <>
             <Subheading>
