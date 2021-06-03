@@ -426,7 +426,7 @@ export default function Page() {
             </Typography>
 
             <Typography>
-                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<TeX block={false}>20,000 * 2 = 40,000</TeX>)
+                The human ear can detect 20Hz - 20KHz. Max sampling required for ADC (Analog to digital convert) is 40KHz (<TeX inline>20,000 * 2 = 40,000</TeX>)
             </Typography>
 
             <Typography>
@@ -488,11 +488,11 @@ export default function Page() {
             </Typography>
 
             <TeX>
-                {'dB = 10 * log(\\frac{P_{out}}{P_{in}})'}
+                {String.raw`dB = 10 * log(\frac{P_{out}}{P_{in}})`}
             </TeX>
 
             <TeX>
-                {'dB = \\text{Attenuation per unit length} * Length'}
+                {String.raw`dB = \text{Attenuation per unit length} * Length`}
             </TeX>
 
             <Subheading>
@@ -500,7 +500,7 @@ export default function Page() {
             </Subheading>
 
             <TeX>
-                {'dB = 10 * log(\\frac{P_{signal}}{P_{noise}})'}
+                {String.raw`dB = 10 * log(\frac{P_{signal}}{P_{noise}})`}
             </TeX>
         </>
     );

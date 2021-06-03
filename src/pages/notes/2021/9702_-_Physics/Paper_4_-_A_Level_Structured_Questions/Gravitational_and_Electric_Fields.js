@@ -1,0 +1,52 @@
+import { Typography } from '@material-ui/core';
+import Heading from 'components/Heading';
+import Li from 'components/Li';
+import Subheading from 'components/Subheading';
+import TeX from 'components/TeX';
+import Ul from 'components/Ul';
+import * as React from 'react';
+
+export default function Page() {
+    return (
+        <>
+            <Heading>
+                cool stuff i can walk on ground ojy!
+            </Heading>
+
+            <Subheading>
+                Newton's lawn of gravitation
+            </Subheading>
+
+            <Typography>
+                Force between two point masses is proportional to the product of their masses and inversely proportional to the square of their separation
+            </Typography>
+
+            <TeX>
+                {String.raw`F_g = \frac{GMm}{r ^ 2}`}
+            </TeX>
+
+            <Ul>
+                <Li><TeX inline>F_g</TeX> Force due to gravitation (N) </Li>
+                <Li><TeX inline>G</TeX> Gravitational constant <TeX inline>{String.raw`6.67*10^{-11}`}</TeX></Li>
+                <Li><TeX inline>{String.raw`M\text{ and } n`}</TeX> Two pointer masses</Li>
+                <Li><TeX inline>r^2</TeX> Separation of C.O.Ms</Li>
+            </Ul>
+
+            <Typography>
+                <TeX inline>{String.raw`F_g = mg`}</TeX> is related to this formula: <TeX inline>{String.raw`g = \frac{GM}{r^2}`}</TeX>
+            </Typography>
+
+            <Subheading>
+                Gravitational field strength
+            </Subheading>
+
+            <Typography>
+                The gravitational force exerted at a point per unit mass on a small test mass
+            </Typography>
+
+            <TeX>
+                {String.raw`g = \frac{GM}{r ^ 2}`}
+            </TeX>
+        </>
+    );
+}

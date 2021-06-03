@@ -9,7 +9,7 @@ const sanitize = (str) => {
         .replace(/>/g, '&gt;');
 };
 
-export default function TeX({ children, ...props }) {
+export default function TeX({ children, inline = false, ...props }) {
     const handleError = React.useCallback((error) => {
         return (
             <Alert severity="error" {...props} >
@@ -21,7 +21,7 @@ export default function TeX({ children, ...props }) {
 
     return (
         <KaTeX
-            block={true}
+            block={!inline}
             math={children}
             renderError={handleError}
             {...props}
