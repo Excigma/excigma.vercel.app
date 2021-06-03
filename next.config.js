@@ -35,6 +35,10 @@ module.exports = withPWA({
 
         config.mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
+        if (config.mode === 'production' && config.name === 'client') {
+            config.optimization.splitChunks.cacheGroups.commons.minChunks = 2;
+        }
+
         return config;
     }
 });
