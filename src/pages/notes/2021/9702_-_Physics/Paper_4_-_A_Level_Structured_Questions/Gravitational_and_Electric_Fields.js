@@ -41,12 +41,31 @@ export default function Page() {
             </Subheading>
 
             <Typography>
-                The gravitational force exerted at a point per unit mass on a small test mass
+                The gravitational force exerted at a point per unit mass on a small test mass at that point
             </Typography>
 
             <TeX>
                 {String.raw`g = \frac{GM}{r ^ 2}`}
             </TeX>
+
+            <Subheading>
+                Gravitational potential energy
+            </Subheading>
+
+            <Typography>
+                Recall <TeX inline>{String.raw`\Delta{E_p} = mg\Delta{h}`}</TeX> but now it's <TeX inline>{String.raw`g = \frac{GM}{r^2}`}</TeX>
+            </Typography>
+
+            <TeX inline>{String.raw`h = r`}</TeX>
+
+            <TeX>
+                {String.raw`E_p = \frac{-GMm*h}{r^2} = \frac{-GMn}{r}`}
+            </TeX>
+
+            <Typography>
+                Where did the negative come from?
+            </Typography>
+
         </>
     );
 }
