@@ -39,6 +39,14 @@ module.exports = withPWA({
             config.optimization.splitChunks.cacheGroups.commons.minChunks = 2;
         }
 
+        if (!isServer) {
+            Object.assign(config.resolve.alias, {
+                react: 'preact/compat',
+                'react-dom/test-utils': 'preact/test-utils',
+                'react-dom': 'preact/compat',
+            });
+        }
+
         return config;
     }
 });
