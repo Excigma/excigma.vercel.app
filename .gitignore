@@ -10,6 +10,7 @@
 public/fallback-*.js*
 public/workbox-*.js*
 public/sw.js*
+public/sitemap.xml
 
 # misc
 .DS_Store
