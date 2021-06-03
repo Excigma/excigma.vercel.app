@@ -5,8 +5,6 @@ import Subheading from 'components/Subheading';
 import * as React from 'react';
 import scanDirectory from 'utils/scanDirectory';
 
-
-
 export default function Page({ directoryTree }) {
     return (
         <>

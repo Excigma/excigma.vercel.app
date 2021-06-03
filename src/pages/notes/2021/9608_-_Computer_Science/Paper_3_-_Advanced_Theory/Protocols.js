@@ -1,3 +1,4 @@
+import { Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
 import Li from 'components/Li';
 import Subheading from 'components/Subheading';
@@ -38,6 +39,11 @@ export default function Page() {
             <Subheading showJump>
                 Protocol
             </Subheading>
+
+            <Typography>
+                A protocol is a standard set of rules that govern how devices on a network are able to communicate with each other. It is essential to have to make sure most computers on a network are able to communicate with each other with minimal or no extra special code.
+            </Typography>
+
         </>
     );
 }

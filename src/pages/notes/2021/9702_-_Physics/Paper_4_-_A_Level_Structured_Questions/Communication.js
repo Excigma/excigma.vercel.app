@@ -495,13 +495,102 @@ export default function Page() {
                 {String.raw`dB = \text{Attenuation per unit length} * Length`}
             </TeX>
 
-            <Subheading>
+            <Subheading showJump>
                 Signal-to-noise ratio (SNR)
             </Subheading>
 
             <TeX>
                 {String.raw`dB = 10 * log(\frac{P_{signal}}{P_{noise}})`}
             </TeX>
+
+            <Typography>
+                Repeaters will amplify both signal and noise, and thus will not affect SNR. Attenuation WILL lower SNR, as the signal is getting weaker relative to noise.
+            </Typography>
+
+            <Typography>
+                Repeaters repeating a digital signal are able to remove noise and amplify signal, improving SNR.
+            </Typography>
+
+            <Subheading>
+                Satellites
+            </Subheading>
+
+            <Typography>
+                For any satellite in constant orbital motion:
+            </Typography>
+
+            <TeX>
+                {String.raw`F_c\text{(required)} = F_g\text{(provided)}`}
+            </TeX>
+
+            <Typography>
+                as
+            </Typography>
+
+            <TeX>
+                {String.raw`F_c = \frac{mv^2}{r}`}
+            </TeX>
+
+            <Typography>
+                and
+            </Typography>
+
+            <TeX>
+                {String.raw`F_g = \frac{GMm}{r^2}`}
+            </TeX>
+
+            <Typography>
+                and if <TeX inline>F_c = F_g</TeX>, then
+            </Typography>
+
+            <TeX>
+                {String.raw`\frac{GM\cancel{m}}{r^{\xcancel{2}}} = \frac{\cancel{m}v^2}{\cancel{r}}`}
+            </TeX>
+
+            <Subheading showJump>
+                Satellite communications
+            </Subheading>
+
+            <Typography>
+                Carrier wave is transmitted from earth to the satellite, the signal is attenuated a lot and received. The signal is amplified and transmitted back to earth at a different carrier frequency, which will avoid "Swapping" of highly attenuated signal by the high power transmission.
+            </Typography>
+
+            <Typography>
+                The Electromagnetic frequency used is very high (10GHz-30GHz) to prevent ionosphere reflections and to have a large information carrying capacity.
+            </Typography>
+
+            <TableContainer>
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Polar Satellite</TableCell>
+                            <TableCell>Geostationary Satellite</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        <TableRow>
+                            <TableCell>Travels from pole to pole with a shorter period</TableCell>
+                            <TableCell>Geostationary. Travels from west to east with the same orbital period as the earth (24 hours)</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Able to cover the surface of the earth</TableCell>
+                            <TableCell>Can only cover <TeX inline>{String.raw`\frac{1}{3}`}</TeX> of the earth</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Lower altitude 700km-800km (Cheaper to launch into space)</TableCell>
+                            <TableCell>Higher altitude 36000km</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Lower latency (as closer to Earth), however you will need to calculate or track it's position to communicate with it</TableCell>
+                            <TableCell>Higher latency (takes approximately 0.5s for 1 signal to travel to and back again)</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>As lower, it is able to resolve smaller objects while imaging.</TableCell>
+                            <TableCell>As it remains in a fixed position above a point on the equator it can be used for continuous communication and weather</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </TableContainer>
         </>
     );
 }

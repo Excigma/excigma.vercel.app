@@ -21,7 +21,6 @@ export default function Page({ directoryTree }) {
     );
 }
 
-
 export async function getStaticProps() {
     const directoryTree = await scanDirectory(__filename);
 
