@@ -5,11 +5,6 @@ import Subheading from 'components/Subheading';
 import * as React from 'react';
 import LazyHydrate from 'react-lazy-hydration';
 
-// Test disabling client side JS
-export const config = {
-    unstable_runtimeJS: false
-};
-
 export default function PageContent() {
     return (
         <>
