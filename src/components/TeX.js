@@ -1,6 +1,7 @@
 import KaTeX from '@matejmazur/react-katex';
 import { Alert, AlertTitle } from '@material-ui/core';
 import * as React from 'react';
+import LazyHydrate from 'react-lazy-hydration';
 
 const sanitize = (str) => {
     return str
@@ -20,11 +21,13 @@ export default function TeX({ children, inline = false, ...props }) {
     });
 
     return (
-        <KaTeX
-            block={!inline}
-            math={children}
-            renderError={handleError}
-            {...props}
-        />
+        <LazyHydrate whenVisible >
+            <KaTeX
+                block={!inline}
+                math={children}
+                renderError={handleError}
+                {...props}
+            />
+        </LazyHydrate>
     );
 }
