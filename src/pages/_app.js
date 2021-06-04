@@ -34,8 +34,8 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Header />
 
-                <Box my={17.5}>
-                    <Container>
+                <Container>
+                    <Box my={17.5}>
                         <Breadcrumbs />
 
                         <LazyHydrate whenIdle>
@@ -49,13 +49,14 @@ export default function MyApp({ Component, pageProps }) {
                                 }}>
                                 {path}
                             </Typography>
+                            <br />
                         </LazyHydrate>
 
                         <LazyHydrate whenIdle>
                             <Component {...pageProps} />
                         </LazyHydrate>
-                    </Container>
-                </Box>
+                    </Box>
+                </Container>
 
                 <LazyHydrate whenIdle>
                     <ScrollToTop />

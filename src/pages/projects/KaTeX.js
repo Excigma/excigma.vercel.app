@@ -9,7 +9,7 @@ export default function PageContent() {
     const handleChange = React.useCallback((event) => setExpression(event.target.value), [setExpression]);
 
     return (
-        <Stack>
+        <Stack spacing={3}>
             <Subheading>
                 Testing KaTeX expressions in real time or something, idk
             </Subheading>
