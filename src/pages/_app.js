@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }) {
     const path = name.charAt(0).toUpperCase().concat(name.slice(1));
 
     return (
-        <Stack>
+        <>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
@@ -34,36 +34,35 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Header />
 
-                <Container>
-                    <Box my={17.5}>
-                        <Breadcrumbs />
-
-                        <LazyHydrate whenIdle>
-                            <Typography
-                                variant="h2"
-                                fontWeight="fontWeightMedium"
-                                sx={{
-                                    textOverflow: 'ellipsis',
-                                    overflow: 'clip',
-                                    overflowClipMargin: '1em'
-                                }}>
-                                {path}
-                            </Typography>
-                            <br />
-                        </LazyHydrate>
-
-                        <LazyHydrate whenIdle>
-                            <Component {...pageProps} />
-                        </LazyHydrate>
-                    </Box>
-                </Container>
-
                 <LazyHydrate whenIdle>
+                    <Container>
+                        <Box my={17.5}>
+                            <Stack spacing={3}>
+                                <Breadcrumbs />
+
+                                <Typography
+                                    variant="h2"
+                                    fontWeight="fontWeightMedium"
+                                    sx={{
+                                        textOverflow: 'ellipsis',
+                                        overflow: 'clip',
+                                        overflowClipMargin: '1em'
+                                    }}>
+                                    {path}
+                                </Typography>
+
+                                <br />
+
+                                <Component {...pageProps} />
+                            </Stack>
+                        </Box>
+                    </Container>
+
                     <ScrollToTop />
                 </LazyHydrate>
 
                 <Footer />
             </ThemeProvider>
-        </Stack>
+        </>
     );
 }

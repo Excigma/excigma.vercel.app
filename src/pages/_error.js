@@ -1,4 +1,3 @@
-import { Stack } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
@@ -6,7 +5,7 @@ import * as React from 'react';
 
 export default function ErrorPageContent() {
     return (
-        <Stack>
+        <>
             <Subheading>
                 An unknown error has occurred
             </Subheading>
@@ -24,6 +23,6 @@ export default function ErrorPageContent() {
             <Typography>
                 Thank you for coming to my TED talk.
             </Typography>
-        </Stack>
+        </>
     );
 }

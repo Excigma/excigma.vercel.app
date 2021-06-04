@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import Li from 'components/Li';
 import Subheading from 'components/Subheading';
 import Ul from 'components/Ul';
@@ -6,7 +6,7 @@ import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <Stack>
+        <>
             <Subheading showJump>
                 The four C's
             </Subheading>
@@ -60,6 +60,6 @@ export default function PageContent() {
             <Typography>
                 The product needs to be good and have unique selling points that other brands or products do not have. Tangible and Intangible attributes of brands and products. Position of the product should be suitable (region or suburb, which type of shop it's sold at, and where it is placed on shelves)
             </Typography>
-        </Stack>
+        </>
     );
 }

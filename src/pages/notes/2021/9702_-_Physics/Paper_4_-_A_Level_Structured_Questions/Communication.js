@@ -1,4 +1,4 @@
-import { Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
 import Information from 'components/Information';
 import Li from 'components/Li';
@@ -10,7 +10,7 @@ import { Legend, Line, LineChart } from 'recharts';
 
 export default function PageContent() {
     return (
-        <Stack>
+        <>
             <Heading>
                 Most modern communication techniques use waves
             </Heading>
@@ -591,6 +591,6 @@ export default function PageContent() {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </Stack>
+        </>
     );
 }

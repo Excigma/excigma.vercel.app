@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
 import Li from 'components/Li';
 import Subheading from 'components/Subheading';
@@ -8,7 +8,7 @@ import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <Stack>
+        <>
             <Heading>
                 cool stuff i can walk on ground ojy!
             </Heading>
@@ -85,6 +85,6 @@ export default function PageContent() {
             <TeX>
                 {String.raw`\phi = \frac{-GM}{r}`}
             </TeX>
-        </Stack>
+        </>
     );
 }
