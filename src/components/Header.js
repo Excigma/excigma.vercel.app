@@ -5,7 +5,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from 'components/Link';
 import * as React from 'react';
-import LazyHydrate from 'react-lazy-hydration';
 
 export default function Header(props) {
     const trigger = useScrollTrigger();
@@ -23,49 +22,47 @@ export default function Header(props) {
         <>
             <Slide appear={false} in={!trigger} direction="down"{...props}>
                 <AppBar>
-                    <LazyHydrate on="mouseenter" >
-                        <Toolbar>
-                            <Box display={{ xs: 'block', md: 'none' }}>
-                                <IconButton
-                                    aria-label="menu"
-                                    onClick={toggleDrawer(true)}
-                                    sx={{ color: 'white' }}
-                                    hidden={{ xs: 'block', md: 'none' }}>
-                                    <MenuIcon />
-                                </IconButton>
-                            </Box>
+                    <Toolbar>
+                        <Box display={{ xs: 'block', md: 'none' }}>
+                            <IconButton
+                                aria-label="menu"
+                                onClick={toggleDrawer(true)}
+                                sx={{ color: 'white' }}
+                                hidden={{ xs: 'block', md: 'none' }}>
+                                <MenuIcon />
+                            </IconButton>
+                        </Box>
 
-                            <Link href="/">
-                                <IconButton  >
-                                    <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} >
-                                        E
-                                    </Avatar>
-                                </IconButton>
+                        <Link href="/">
+                            <IconButton  >
+                                <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} >
+                                    E
+                                </Avatar>
+                            </IconButton>
+                        </Link>
+
+                        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+                            <Link href="/" sx={{ color: 'white' }}>
+                                Excigma
                             </Link>
+                        </Typography>
 
-                            <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                                <Link href="/" sx={{ color: 'white' }}>
-                                    Excigma
-                                </Link>
-                            </Typography>
-
-                            <Stack
-                                spacing={1}
-                                direction="row"
-                                color="white"
-                                display={{ xs: 'none', md: 'block' }}>
-                                <Button variant="outline" href="/social" component={Link}>
-                                    Social
-                                </Button>
-                                <Button variant="outline" href="/projects" component={Link}>
-                                    Projects
-                                </Button>
-                                <Button variant="outline" href="/notes" component={Link}>
-                                    Notes
-                                </Button>
-                            </Stack>
-                        </Toolbar>
-                    </LazyHydrate>
+                        <Stack
+                            spacing={1}
+                            direction="row"
+                            color="white"
+                            display={{ xs: 'none', md: 'block' }}>
+                            <Button variant="outline" href="/social" component={Link}>
+                                Social
+                            </Button>
+                            <Button variant="outline" href="/projects" component={Link}>
+                                Projects
+                            </Button>
+                            <Button variant="outline" href="/notes" component={Link}>
+                                Notes
+                            </Button>
+                        </Stack>
+                    </Toolbar>
                 </AppBar>
             </Slide>
 
