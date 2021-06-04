@@ -1,4 +1,4 @@
-import { Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
+import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
 import Blockquote from 'components/Blockquote.js';
 import Link from 'components/Link.js';
 import Subheading from 'components/Subheading';
@@ -6,7 +6,7 @@ import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <>
+        <Stack>
             <Subheading>
                 Welcome here.
             </Subheading>
@@ -130,6 +130,6 @@ export default function PageContent() {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </>
+        </Stack>
     );
 }

@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Stack, Typography } from '@material-ui/core';
 import DirectoryList from 'components/DirectoryList';
 import Heading from 'components/Heading';
 import Link from 'components/Link';
@@ -7,7 +7,7 @@ import scanDirectory from 'utils/scanDirectory';
 
 export default function PageContent({ directoryTree }) {
     return (
-        <>
+        <Stack>
             <Heading>
                 ecnomicks
             </Heading>
@@ -17,7 +17,7 @@ export default function PageContent({ directoryTree }) {
             </Typography>
 
             <DirectoryList directoryTree={directoryTree} />
-        </>
+        </Stack>
     );
 }
 

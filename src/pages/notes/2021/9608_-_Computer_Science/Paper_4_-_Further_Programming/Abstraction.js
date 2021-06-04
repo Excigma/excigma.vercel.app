@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Stack, Typography } from '@material-ui/core';
 import Heading from 'components/Heading';
 import Li from 'components/Li';
 import Subheading from 'components/Subheading';
@@ -8,7 +8,7 @@ import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <>
+        <Stack>
             <Heading>
                 Syllabus: Show understanding of how to model a complex system by only including essential details, using
             </Heading>
@@ -72,6 +72,6 @@ export default function PageContent() {
             <Subheading>
                 TODO: Add links to other pages for abstraction
             </Subheading>
-        </>
+        </Stack>
     );
 }

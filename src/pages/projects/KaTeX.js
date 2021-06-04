@@ -1,4 +1,4 @@
-import { TextField, Typography } from '@material-ui/core';
+import { Stack, TextField, Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import TeX from 'components/TeX';
@@ -9,7 +9,7 @@ export default function PageContent() {
     const handleChange = React.useCallback((event) => setExpression(event.target.value), [setExpression]);
 
     return (
-        <>
+        <Stack>
             <Subheading>
                 Testing KaTeX expressions in real time or something, idk
             </Subheading>
@@ -30,6 +30,6 @@ export default function PageContent() {
                 variant="outlined" />
 
             <TeX math={expression} />
-        </>
+        </Stack>
     );
 }

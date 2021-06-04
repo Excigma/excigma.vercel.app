@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Stack, Typography } from '@material-ui/core';
 import Codeblock from 'components/Codeblock';
 import Heading from 'components/Heading';
 import Li from 'components/Li';
@@ -8,7 +8,7 @@ import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <>
+        <Stack>
             <Heading>
                 Syllabus:
             </Heading>
@@ -176,6 +176,6 @@ DEFINE Vowels("a", "e", "i", "o", "u") : <CustomTypeName>
                 TODO. Maybe check it out in paper 4 i think later im not even done yet AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             </Typography>
 
-        </>
+        </Stack>
     );
 }

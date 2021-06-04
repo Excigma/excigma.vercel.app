@@ -1,11 +1,11 @@
-import { Typography } from '@material-ui/core';
+import { Stack, Typography } from '@material-ui/core';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <>
+        <Stack>
             <Subheading>
                 Maybe try reconnecting to the internet ..or maybe the server is just dead right now
             </Subheading>
@@ -13,6 +13,6 @@ export default function PageContent() {
             <Typography>
                 in the meantime you can <Link href="/"><b>Goto</b> home</Link>
             </Typography>
-        </>
+        </Stack>
     );
 }

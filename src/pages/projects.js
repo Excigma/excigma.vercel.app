@@ -1,5 +1,5 @@
 
-import { Button, Card, CardActions, CardContent, Grid, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, Grid, Stack, Typography } from '@material-ui/core';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import Link from 'components/Link';
@@ -7,7 +7,7 @@ import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <>
+        <Stack>
             <Typography variant="h5" component="h3">
                 This is where you'd choose a subject and get more things like notes and past papers.
             </Typography>
@@ -58,6 +58,6 @@ export default function PageContent() {
                     </Card>
                 </Grid>
             </Grid>
-        </>
+        </Stack>
     );
 }

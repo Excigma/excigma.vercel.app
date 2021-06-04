@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }) {
     const path = name.charAt(0).toUpperCase().concat(name.slice(1));
 
     return (
-        <>
+        <Stack>
             <Head>
                 <title>{path} - xΣ's Page</title>
                 <meta name="og:title" content={`${path} - xΣ's Webpage`} />
@@ -38,33 +38,33 @@ export default function MyApp({ Component, pageProps }) {
                     <Container>
                         <Breadcrumbs />
 
-                        <Stack spacing={3}>
-                            <LazyHydrate ssrOnly>
-                                <Typography
-                                    variant="h2"
-                                    fontWeight="fontWeightMedium"
-                                    sx={{
-                                        textOverflow: 'ellipsis',
-                                        overflow: 'clip',
-                                        overflowClipMargin: '1em'
-                                    }}>
-                                    {path}
-                                </Typography>
-                            </LazyHydrate>
+                        <LazyHydrate whenIdle>
+                            <Typography
+                                variant="h2"
+                                fontWeight="fontWeightMedium"
+                                sx={{
+                                    textOverflow: 'ellipsis',
+                                    overflow: 'clip',
+                                    overflowClipMargin: '1em'
+                                }}>
+                                {path}
+                            </Typography>
+                        </LazyHydrate>
 
-                            <LazyHydrate whenIdle>
-                                <Component {...pageProps} />
-                            </LazyHydrate>
-                        </Stack>
+                        <LazyHydrate whenIdle>
+                            <Component {...pageProps} />
+                        </LazyHydrate>
                     </Container>
                 </Box>
 
-                <ScrollToTop />
+                <LazyHydrate whenIdle>
+                    <ScrollToTop />
+                </LazyHydrate>
 
                 <LazyHydrate ssrOnly>
                     <Footer />
                 </LazyHydrate>
             </ThemeProvider>
-        </>
+        </Stack>
     );
 }

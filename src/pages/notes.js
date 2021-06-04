@@ -1,3 +1,4 @@
+import { Stack } from '@material-ui/core';
 import Alert from '@material-ui/core/Alert';
 import AlertTitle from '@material-ui/core/AlertTitle';
 import DirectoryList from 'components/DirectoryList';
@@ -8,7 +9,7 @@ import scanDirectory from 'utils/scanDirectory';
 
 export default function PageContent({ directoryTree }) {
     return (
-        <>
+        <Stack>
             <Subheading>
                 This is where you'd choose a subject and get more things like notes and past papers.
             </Subheading>
@@ -29,7 +30,7 @@ export default function PageContent({ directoryTree }) {
             </Alert>
 
             <DirectoryList directoryTree={directoryTree} />
-        </>
+        </Stack>
     );
 }
 

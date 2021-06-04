@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Stack, Typography } from '@material-ui/core';
 import DirectoryList from 'components/DirectoryList';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
@@ -7,7 +7,7 @@ import scanDirectory from 'utils/scanDirectory';
 
 export default function PageContent({ directoryTree }) {
     return (
-        <>
+        <Stack>
             <Subheading>
                 oMG pleASE Fix my prInter i know you've goto'd school to learnt dis
             </Subheading>
@@ -17,7 +17,7 @@ export default function PageContent({ directoryTree }) {
             </Typography>
 
             <DirectoryList directoryTree={directoryTree} />
-        </>
+        </Stack>
     );
 }
 

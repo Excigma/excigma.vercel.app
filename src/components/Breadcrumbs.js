@@ -5,6 +5,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import LazyHydrate from 'react-lazy-hydration';
 
 export default function Crumbs() {
     const { pathname } = useRouter();
@@ -24,16 +25,18 @@ export default function Crumbs() {
     });
 
     return (
-        <Breadcrumbs maxItems={useMediaQuery(breakpoints.up('md')) ? 8 : 3} separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-            <Link href="/">
-                Home
-            </Link>
-
-            {paths.map((path, index) => (
-                <Link key={index + 1} href={path.href}>
-                    {path.breadcrumb}
+        <LazyHydrate whenIdle>
+            <Breadcrumbs maxItems={useMediaQuery(breakpoints.up('md')) ? 8 : 3} separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
+                <Link href="/">
+                    Home
                 </Link>
-            ))}
-        </Breadcrumbs>
+
+                {paths.map((path, index) => (
+                    <Link key={index + 1} href={path.href}>
+                        {path.breadcrumb}
+                    </Link>
+                ))}
+            </Breadcrumbs>
+        </LazyHydrate>
     );
 }

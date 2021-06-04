@@ -24,8 +24,8 @@ export default function Header(props) {
     return (
         <>
             <Slide appear={false} in={!trigger} direction="down"{...props}>
-                <LazyHydrate on="mouseenter" >
-                    <AppBar>
+                <AppBar>
+                    <LazyHydrate on="mouseenter" >
                         <Toolbar>
                             <Box display={{ xs: 'block', md: 'none' }}>
                                 <IconButton
@@ -67,11 +67,13 @@ export default function Header(props) {
                                 </Button>
                             </Stack>
                         </Toolbar>
-                    </AppBar>
-                </LazyHydrate>
+                    </LazyHydrate>
+                </AppBar>
             </Slide>
 
-            <LazyHydrate whenIdle >
+
+            {/* Todo: fix up this */}
+            <LazyHydrate whenIdle>
                 <Drawer
                     anchor="left"
                     open={state['left']}

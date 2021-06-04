@@ -1,10 +1,10 @@
-import { Typography } from '@material-ui/core';
+import { Stack, Typography } from '@material-ui/core';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
 export default function PageContent() {
     return (
-        <>
+        <Stack>
             <Subheading showJump>
                 Fiscal policy
             </Subheading>
@@ -28,6 +28,6 @@ export default function PageContent() {
             <Typography>
                 Multiplier is the change in reap GDP when there is a change in an injection
             </Typography>
-        </>
+        </Stack>
     );
 }
