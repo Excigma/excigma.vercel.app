@@ -1,8 +1,8 @@
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: true });
 
-module.exports = withBundleAnalyzer(withPWA({
+module.exports = withBundleAnalyzer({
     poweredByHeader: false,
     reactStrictMode: true,
     future: {
@@ -36,4 +36,4 @@ module.exports = withBundleAnalyzer(withPWA({
         config.mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
         return config;
     }
-}));
+});
