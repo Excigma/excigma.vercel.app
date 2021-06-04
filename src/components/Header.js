@@ -71,52 +71,47 @@ export default function Header(props) {
                 </AppBar>
             </Slide>
 
+            <Drawer
+                anchor="left"
+                open={state['left']}
+                onClose={toggleDrawer('left', false)}
+                onOpen={toggleDrawer('left', true)}
+                disableBackdropTransition={true}
+                sx={{ width: '10em' }}
+            >
+                <List onClick={toggleDrawer('left', false)} sx={{ width: 250 }}>
+                    <Link href="/" color="inherit">
+                        <ListItem button>
+                            <ListItemIcon>
+                                <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
+                            </ListItemIcon>
+                            <ListItemText primary="Excigma" />
+                        </ListItem>
+                    </Link>
+                </List>
 
-            {/* Todo: fix up this */}
-            <LazyHydrate whenIdle>
-                <Drawer
-                    anchor="left"
-                    open={state['left']}
-                    onClose={toggleDrawer('left', false)}
-                    onOpen={toggleDrawer('left', true)}
-                    disableBackdropTransition={true}
-                    sx={{ width: '10em' }}
-                >
-                    <List onClick={toggleDrawer('left', false)} sx={{ width: 250 }}>
-                        <Link href="/" color="inherit">
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Excigma" />
-                            </ListItem>
-                        </Link>
-                    </List>
+                <Divider />
 
-                    <Divider />
+                <List onClick={toggleDrawer('left', false)}>
+                    <Link href="/social" color="inherit">
+                        <ListItem button>
+                            <ListItemText primary="Social" />
+                        </ListItem>
+                    </Link>
 
-                    <List onClick={toggleDrawer('left', false)}>
-                        <Link href="/social" color="inherit">
-                            <ListItem button>
-                                <ListItemText primary="Social" />
-                            </ListItem>
-                        </Link>
+                    <Link href="/projects" color="inherit">
+                        <ListItem button>
+                            <ListItemText primary="Projects" />
+                        </ListItem>
+                    </Link>
 
-                        <Link href="/projects" color="inherit">
-                            <ListItem button>
-                                <ListItemText primary="Projects" />
-                            </ListItem>
-                        </Link>
-
-                        <Link href="/notes" color="inherit">
-                            <ListItem button>
-                                <ListItemText primary="Notes" />
-                            </ListItem>
-                        </Link>
-                    </List>
-                </Drawer>
-            </LazyHydrate>
-
+                    <Link href="/notes" color="inherit">
+                        <ListItem button>
+                            <ListItemText primary="Notes" />
+                        </ListItem>
+                    </Link>
+                </List>
+            </Drawer>
         </>
     );
 }

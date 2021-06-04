@@ -32,9 +32,9 @@ export default function MyApp({ Component, pageProps }) {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
 
-                <Header />
-
                 <LazyHydrate whenIdle>
+                    <Header />
+
                     <Container>
                         <Box my={17.5}>
                             <Stack spacing={3}>
@@ -59,9 +59,9 @@ export default function MyApp({ Component, pageProps }) {
                     </Container>
 
                     <ScrollToTop />
-                </LazyHydrate>
 
-                <Footer />
+                    <Footer />
+                </LazyHydrate>
             </ThemeProvider>
         </>
     );
