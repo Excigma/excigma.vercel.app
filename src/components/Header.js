@@ -9,16 +9,14 @@ import LazyHydrate from 'react-lazy-hydration';
 
 export default function Header(props) {
     const trigger = useScrollTrigger();
-    const [state, setState] = React.useState({
-        left: false
-    });
+    const [state, setState] = React.useState(false);
 
-    const toggleDrawer = (anchor, open) => (event) => {
+    const toggleDrawer = (open) => (event) => {
         if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
 
-        setState({ ...state, [anchor]: open });
+        setState(open);
     };
 
     return (
@@ -30,7 +28,7 @@ export default function Header(props) {
                             <Box display={{ xs: 'block', md: 'none' }}>
                                 <IconButton
                                     aria-label="menu"
-                                    onClick={toggleDrawer('left', true)}
+                                    onClick={toggleDrawer(true)}
                                     sx={{ color: 'white' }}
                                     hidden={{ xs: 'block', md: 'none' }}>
                                     <MenuIcon />
@@ -73,13 +71,12 @@ export default function Header(props) {
 
             <Drawer
                 anchor="left"
-                open={state['left']}
-                onClose={toggleDrawer('left', false)}
-                onOpen={toggleDrawer('left', true)}
-                disableBackdropTransition={true}
+                open={state}
+                onClose={toggleDrawer(false)}
+                onOpen={toggleDrawer(true)}
                 sx={{ width: '10em' }}
             >
-                <List onClick={toggleDrawer('left', false)} sx={{ width: 250 }}>
+                <List onClick={toggleDrawer(false)} sx={{ width: 250 }}>
                     <Link href="/" color="inherit">
                         <ListItem button>
                             <ListItemIcon>
@@ -92,7 +89,7 @@ export default function Header(props) {
 
                 <Divider />
 
-                <List onClick={toggleDrawer('left', false)}>
+                <List onClick={toggleDrawer(false)}>
                     <Link href="/social" color="inherit">
                         <ListItem button>
                             <ListItemText primary="Social" />
