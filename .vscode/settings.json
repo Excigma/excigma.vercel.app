@@ -35,6 +35,7 @@
         "postbuild",
         "prismjs",
         "psuedocode",
-        "sitename"
+        "sitename",
+        "umami"
     ]
 }

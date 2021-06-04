@@ -12,7 +12,7 @@ module.exports = withPWA({
         dest: 'public',
         dynamicStartUrl: false,
         cacheOnFrontEndNav: true,
-        publicExcludes: ['!icons/icon-*.png', '!js/umami.js'],
+        publicExcludes: ['!icons/icon-*.png', '!umami.js'],
         buildExcludes: [/media\/KaTeX_(?!.*(woff2$))/],
         runtimeCaching
     },
