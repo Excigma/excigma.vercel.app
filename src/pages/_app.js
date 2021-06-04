@@ -8,6 +8,7 @@ import 'katex/dist/katex.min.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import LazyHydrate from 'react-lazy-hydration';
 import theme from 'styling/dark';
 import { globalStyles } from 'styling/global.js';
 
@@ -35,29 +36,39 @@ export default function MyApp({ Component, pageProps }) {
 
                 <Box my={17.5}>
                     <Container>
-                        <Breadcrumbs />
+                        <LazyHydrate ssrOnly>
+                            <Breadcrumbs />
+                        </LazyHydrate>
 
                         <Stack spacing={3}>
-                            <Typography
-                                variant="h2"
-                                fontWeight="fontWeightMedium"
-                                sx={{
-                                    textOverflow: 'ellipsis',
-                                    overflow: 'clip',
-                                    overflowClipMargin: '1em'
-                                }}>
-                                {path}
-                            </Typography>
+                            <LazyHydrate ssrOnly>
+                                <Typography
+                                    variant="h2"
+                                    fontWeight="fontWeightMedium"
+                                    sx={{
+                                        textOverflow: 'ellipsis',
+                                        overflow: 'clip',
+                                        overflowClipMargin: '1em'
+                                    }}>
+                                    {path}
+                                </Typography>
+                            </LazyHydrate>
 
-                            <Component {...pageProps} />
+                            <LazyHydrate whenIdle>
+                                <Component {...pageProps} />
+                            </LazyHydrate>
 
                         </Stack>
                     </Container>
                 </Box>
 
-                <ScrollToTop />
+                <LazyHydrate whenIdle>
+                    <ScrollToTop />
+                </LazyHydrate>
 
-                <Footer />
+                <LazyHydrate ssrOnly>
+                    <Footer />
+                </LazyHydrate>
             </ThemeProvider>
         </>
     );
