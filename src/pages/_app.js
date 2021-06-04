@@ -61,9 +61,7 @@ export default function MyApp({ Component, pageProps }) {
                     <ScrollToTop />
                 </LazyHydrate>
 
-                <LazyHydrate ssrOnly>
-                    <Footer />
-                </LazyHydrate>
+                <Footer />
             </ThemeProvider>
         </Stack>
     );

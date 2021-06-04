@@ -13,11 +13,4 @@ body {
 .MuiTypography-root > .MuiSvgIcon-root {
   transform: translateY(0.15em);
 }
-
-/* Prevent CSS layout shifting...? Emotion isn't inlining for some reason */
-.css-nu13me-Stack-root  > *,
-.css-m72s89-Stack-root > * {
-    margin: 0;
-    margin-top: 24px !important;
-}
 `} />);
