@@ -43,6 +43,7 @@ export default function PageContent() {
                         I decided to continue to project and expand it to also include notes, which I usually lack motivation to write. This site will force me to write notes to a standard that I am willing to share with others
                     </Typography>
                 </Grid>
+
                 <Grid item xs={12} md={6}>
                     <Subheading>
                         Unless statistics no one cares about
@@ -94,7 +95,6 @@ export default function PageContent() {
                     </Blockquote>
                 </Grid>
             </Grid>
-
 
             <Subheading>
                 Cool programs, libraries and services used to make this website
