@@ -1,7 +1,8 @@
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
 
-module.exports = withPWA({
+module.exports = withBundleAnalyzer(withPWA({
     poweredByHeader: false,
     reactStrictMode: true,
     future: {
@@ -32,13 +33,7 @@ module.exports = withPWA({
     },
     webpack: (config, { isServer }) => {
         if (!isServer) config.resolve.fallback = { fs: false, path: false };
-
         config.mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
-
-        if (config.mode === 'production' && config.name === 'client') {
-            config.optimization.splitChunks.cacheGroups.commons.minChunks = 2;
-        }
-
         return config;
     }
-});
+}));

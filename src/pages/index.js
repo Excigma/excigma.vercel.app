@@ -4,6 +4,11 @@ import Link from 'components/Link.js';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 
+// Test disabling client side JS
+export const config = {
+    unstable_runtimeJS: false
+};
+
 export default function PageContent() {
     return (
         <>

@@ -21,6 +21,7 @@
         "@material-ui/core": "^5.0.0-alpha.35",
         "@material-ui/icons": "^5.0.0-alpha.35",
         "@material-ui/styles": "^5.0.0-alpha.35",
+        "@next/bundle-analyzer": "^10.2.3",
         "clsx": "^1.1.1",
         "katex": "^0.13.11",
         "next": "^10.2.3",
