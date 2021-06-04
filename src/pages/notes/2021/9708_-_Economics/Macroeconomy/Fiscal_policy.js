@@ -20,6 +20,14 @@ export default function PageContent() {
             <Typography>
                 Budget deficit: this occurs when government expenditure is greater than government taxation revenue in the budget year
             </Typography>
+
+            <Typography>
+                Fiscal policy will cause the money invested to multiply. "One person's expenditure is another person's income"
+            </Typography>
+
+            <Typography>
+                Multiplier is the change in reap GDP when there is a change in an injection
+            </Typography>
         </>
     );
 }
