@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, Button, IconButton, List, ListItem, NoSsr, Slide, Stack, SwipeableDrawer, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Avatar, Box, Button, Drawer, IconButton, List, ListItem, NoSsr, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -67,10 +67,10 @@ export default function Header(props) {
                             </Stack>
                         </NoSsr>
                     </Toolbar>
-                </AppBar></Slide>
+                </AppBar>
+            </Slide>
 
-
-            <SwipeableDrawer
+            <Drawer
                 anchor="left"
                 open={state['left']}
                 onClose={toggleDrawer('left', false)}
@@ -110,7 +110,7 @@ export default function Header(props) {
                         </ListItem>
                     </Link>
                 </List>
-            </SwipeableDrawer>
+            </Drawer>
         </>
     );
 }
