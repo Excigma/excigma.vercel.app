@@ -11,13 +11,13 @@ export default function Header(props) {
     const trigger = useScrollTrigger();
     const [state, setState] = React.useState(false);
 
-    const toggleDrawer = (open) => (event) => {
+    const toggleDrawer = (open) => React.useCallback((event) => {
         if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
 
         setState(open);
-    };
+    });
 
     return (
         <>
