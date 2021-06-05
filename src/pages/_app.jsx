@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import LazyHydrate from 'react-lazy-hydration';
+import 'styling/atom-dark.css';
 import theme from 'styling/dark';
 import { globalStyles } from 'styling/global.js';
 import components from 'utils/MDXcomponents';
@@ -54,6 +55,7 @@ export default function MyApp({ Component, pageProps }) {
                                 </Typography>
 
                                 <br />
+
                                 <MDXProvider components={components}>
                                     <Component {...pageProps} />
                                 </MDXProvider>

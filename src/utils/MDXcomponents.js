@@ -7,7 +7,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import Blockquote from 'components/Blockquote';
-import Codeblock from 'components/Codeblock';
 import Heading from 'components/Heading';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
@@ -78,10 +77,6 @@ const components = {
     thead: (() => {
         const THead = props => <TableHead {...props} />;
         return memo(THead);
-    })(),
-    code: (() => {
-        const CB = props => <Codeblock {...props} />;
-        return memo(CB);
     })(),
     hr: Divider,
     input: (() => {

@@ -21,6 +21,6 @@ body {
     margin-top: 24px !important;
 }
 .markdown-body > * {
-  margin-top: 1.5em !important;
+  margin-top: 24px !important;
 }
 `} />);

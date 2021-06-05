@@ -1,18 +1,14 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
-
-const remarkMath = require('remark-math');
-const rehypeKatex = require('rehype-katex');
-
 const withMDX = require('@next/mdx')({
     extension: /\.mdx$/,
     options: {
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex]
+        remarkPlugins: [require('remark-math')],
+        rehypePlugins: [require('@mapbox/rehype-prism'), require('rehype-katex')]
     }
 });
 
 module.exports = withBundleAnalyzer(withMDX({
-    pageExtensions: ['jsx', 'mdx'],
+    pageExtensions: ['js', 'jsx', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
     future: {
