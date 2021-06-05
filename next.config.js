@@ -1,21 +1,13 @@
-const runtimeCaching = require('next-pwa/cache');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
+const withMDX = require('@next/mdx')({ extension: /\.mdx$/ });
 
-module.exports = withBundleAnalyzer({
+module.exports = withBundleAnalyzer(withMDX({
+    pageExtensions: ['jsx', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
     future: {
         webpack5: true,
     },
-    // pwa: {
-    //     disable: process.env.NODE_ENV !== 'production',
-    //     dest: 'public',
-    //     dynamicStartUrl: false,
-    //     cacheOnFrontEndNav: true,
-    //     publicExcludes: ['!icons/icon-*.png', '!umami.js'],
-    //     buildExcludes: [/media\/KaTeX_(?!.*(woff2$))/],
-    //     runtimeCaching
-    // },
     redirects: () => {
         return [
             {
@@ -35,4 +27,4 @@ module.exports = withBundleAnalyzer({
         config.mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
         return config;
     }
-});
+}));

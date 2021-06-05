@@ -1,9 +1,12 @@
 import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
+import { MDXProvider } from '@mdx-js/react';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
+import Heading from 'components/Heading';
 import ScrollToTop from 'components/ScrollToTop';
+import Subheading from 'components/Subheading';
 import 'katex/dist/katex.min.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -11,6 +14,12 @@ import * as React from 'react';
 import LazyHydrate from 'react-lazy-hydration';
 import theme from 'styling/dark';
 import { globalStyles } from 'styling/global.js';
+
+const components = {
+    h1: Heading,
+    h2: Subheading,
+    p: Typography
+};
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -52,8 +61,9 @@ export default function MyApp({ Component, pageProps }) {
                                 </Typography>
 
                                 <br />
-
-                                <Component {...pageProps} />
+                                <MDXProvider components={components}>
+                                    <Component {...pageProps} />
+                                </MDXProvider>
                             </Stack>
                         </Box>
                     </Container>
