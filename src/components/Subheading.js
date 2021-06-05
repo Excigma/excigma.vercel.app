@@ -11,13 +11,13 @@ export default function Subheading({ children, showJump, ...props }) {
         const clickHandler = React.useCallback(() => router.push(router.pathname + '#' + id));
 
         return (
-            <Typography onClick={clickHandler} variant="h6" component="p" id={id}  {...props} >
+            <Typography onClick={clickHandler} variant="h4" component="p" id={id}  {...props} >
                 <LinkIcon /> {children}
             </Typography>
         );
     } else {
         return (
-            <Typography variant="h6" component="p" {...props} >
+            <Typography variant="h4" component="p" {...props} >
                 {children}
             </Typography>
         );

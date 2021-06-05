@@ -4,9 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';
-import Heading from 'components/Heading';
 import ScrollToTop from 'components/ScrollToTop';
-import Subheading from 'components/Subheading';
 import 'katex/dist/katex.min.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -14,12 +12,7 @@ import * as React from 'react';
 import LazyHydrate from 'react-lazy-hydration';
 import theme from 'styling/dark';
 import { globalStyles } from 'styling/global.js';
-
-const components = {
-    h1: Heading,
-    h2: Subheading,
-    p: Typography
-};
+import components from 'utils/MDXcomponents';
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -50,7 +43,7 @@ export default function MyApp({ Component, pageProps }) {
                                 <Breadcrumbs />
 
                                 <Typography
-                                    variant="h2"
+                                    variant="h1"
                                     fontWeight="fontWeightMedium"
                                     sx={{
                                         textOverflow: 'ellipsis',

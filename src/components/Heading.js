@@ -3,6 +3,6 @@ import * as React from 'react';
 
 export default function Heading(props) {
     return (
-        <Typography variant="h5" component="h3" {...props} />
+        <Typography variant="h2" component="p" {...props} />
     );
 }

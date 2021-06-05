@@ -20,4 +20,7 @@ body {
     margin: 0;
     margin-top: 24px !important;
 }
+.markdown-body > * {
+  margin-top: 10px;
+}
 `} />);
