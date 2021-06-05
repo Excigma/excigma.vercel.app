@@ -94,13 +94,13 @@ const components = {
         };
         return memo(Input);
     })(),
-    wrapper: (() => {
-        const Wrapper = props => <div {...props} className="markdown-body" />;
-        return memo(Wrapper);
-    })(),
     a: (() => {
         const a = props => <Link {...props} />;
         return memo(a);
+    })(),
+    wrapper: (() => {
+        const Wrapper = props => <div {...props} className="markdown-body" />;
+        return memo(Wrapper);
     })(),
 };
 

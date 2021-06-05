@@ -1,5 +1,15 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
-const withMDX = require('@next/mdx')({ extension: /\.mdx$/ });
+
+const remarkMath = require('remark-math');
+const rehypeKatex = require('rehype-katex');
+
+const withMDX = require('@next/mdx')({
+    extension: /\.mdx$/,
+    options: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex]
+    }
+});
 
 module.exports = withBundleAnalyzer(withMDX({
     pageExtensions: ['jsx', 'mdx'],
