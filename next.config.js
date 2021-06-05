@@ -1,22 +1,21 @@
-const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
 
-module.exports = withBundleAnalyzer(withPWA({
+module.exports = withBundleAnalyzer({
     poweredByHeader: false,
     reactStrictMode: true,
     future: {
         webpack5: true,
     },
-    pwa: {
-        disable: process.env.NODE_ENV !== 'production',
-        dest: 'public',
-        dynamicStartUrl: false,
-        cacheOnFrontEndNav: true,
-        publicExcludes: ['!icons/icon-*.png', '!umami.js'],
-        buildExcludes: [/media\/KaTeX_(?!.*(woff2$))/],
-        runtimeCaching
-    },
+    // pwa: {
+    //     disable: process.env.NODE_ENV !== 'production',
+    //     dest: 'public',
+    //     dynamicStartUrl: false,
+    //     cacheOnFrontEndNav: true,
+    //     publicExcludes: ['!icons/icon-*.png', '!umami.js'],
+    //     buildExcludes: [/media\/KaTeX_(?!.*(woff2$))/],
+    //     runtimeCaching
+    // },
     redirects: () => {
         return [
             {
@@ -36,4 +35,4 @@ module.exports = withBundleAnalyzer(withPWA({
         config.mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
         return config;
     }
-}));
+});

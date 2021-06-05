@@ -79,6 +79,7 @@ export default function Header(props) {
                             <ListItemIcon>
                                 <Avatar src="/icons/icon.svg" alt="Excigma" sx={{ width: 30, height: 30 }} />
                             </ListItemIcon>
+
                             <ListItemText primary="Excigma" />
                         </ListItem>
                     </Link>
