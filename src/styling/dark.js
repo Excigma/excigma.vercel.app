@@ -34,9 +34,6 @@ const theme = responsiveFontSizes(createTheme({
         MuiAppBar: {
             defaultProps: { color: 'grey' }
         },
-        // MuiStack: {
-        //     defaultProps: { spacing: 3 }
-        // }
     },
 }));
 

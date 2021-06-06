@@ -63,9 +63,9 @@ export default function MyApp({ Component, pageProps }) {
                         </Box>
                     </Container>
 
-                    <ScrollToTop />
-
                     <Footer />
+
+                    <ScrollToTop />
                 </LazyHydrate>
             </ThemeProvider>
         </>

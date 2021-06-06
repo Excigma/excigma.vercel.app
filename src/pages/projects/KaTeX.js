@@ -29,6 +29,8 @@ export default function PageContent() {
                 label="KaTeX Expression"
                 variant="outlined" />
 
+            <br />
+
             <TeX math={expression} />
         </>
     );

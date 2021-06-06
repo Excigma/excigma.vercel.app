@@ -25,6 +25,8 @@ export default function PageContent() {
                         About
                     </Subheading>
 
+                    <br />
+
                     <Typography>
                         This is a webpage where I will write my notes and put other thingos that I make here. I need a rounded favicon bruh.
                     </Typography>
@@ -34,6 +36,8 @@ export default function PageContent() {
                     <Subheading>
                         When + Why
                     </Subheading>
+
+                    <br />
 
                     <Typography>
                         Whilst this really did start as a coding challenge, and also a project in the holidays of 2021 before the mid year exams which then became the group project for Computer Science, it become clear that this could be useful as a study tool when exams started.
@@ -48,6 +52,8 @@ export default function PageContent() {
                     <Subheading>
                         Unless statistics no one cares about
                     </Subheading>
+
+                    <br />
 
                     <TableContainer>
                         <Table>
@@ -73,6 +79,8 @@ export default function PageContent() {
                     <Subheading>
                         What other people have said to/about me
                     </Subheading>
+
+                    <br />
 
                     <Blockquote>
                         You're gonna waste 100 hours to write a stupid script instead of doing it yourself in less time
