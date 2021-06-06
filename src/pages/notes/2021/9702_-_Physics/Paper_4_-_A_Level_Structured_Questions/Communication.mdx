@@ -23,7 +23,7 @@ In amplitude modulation the frequency of the modulated wave is constant, and the
 
 Carrier Wave
 
-<LineChart dataKey="Carrier wave" data={[
+<LineChart data={[
     { 'Carrier wave': 0 },
     { 'Carrier wave': 1 },
     { 'Carrier wave': -1 },
@@ -46,7 +46,7 @@ Carrier Wave
     + Signal wave
 </Typography>
 
-<LineChart width={350} height={100} data={[
+<LineChart data={[
     { 'Signal wave': -1 },
     { 'Signal wave': null },
     { 'Signal wave': null },
@@ -65,7 +65,7 @@ Carrier Wave
     = Amplitude modulated wave
 </Typography>
 
-<LineChart width={350} height={200} data={[
+<LineChart height={200} data={[
     {'Signal wave': 0, 'Amplitude modulated wave': 0,  'Inverted signal wave': 0 },
     { 'Signal wave': null,'Amplitude modulated wave': 0.25, 'Inverted signal wave': null },
     { 'Signal wave': null,'Amplitude modulated wave': -0.5, 'Inverted signal wave': null },
@@ -127,7 +127,7 @@ Carrier Wave
     + Signal wave
 </Typography>
 
-<LineChart width={350} height={100} data={[
+<LineChart data={[
     { 'Signal wave': -1 },
     { 'Signal wave': null },
     { 'Signal wave': null },
@@ -148,7 +148,7 @@ Carrier Wave
     = Frequency modulated wave
 </Typography>
 
-<LineChart width={350} height={150} data={[
+<LineChart data={[
     { 'Frequency modulated wave': 0 },
     { 'Frequency modulated wave': 1 },
     { 'Frequency modulated wave': null },
@@ -274,7 +274,7 @@ Carrier Wave
     Digital Signals
 </Subheading>
 
-<LineChart width={350} height={100} data={[
+<LineChart lineProps={{type: "step"}} data={[
     { 'Signal wave': 0 }, { 'Signal wave': 1 },
     { 'Signal wave': 1 }, { 'Signal wave': 0 },
     { 'Signal wave': 1 }, { 'Signal wave': 0 },

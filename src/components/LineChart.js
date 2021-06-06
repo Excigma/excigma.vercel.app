@@ -10,7 +10,7 @@ export default function LineChart({ data, lineProps, ...props }) {
     return (
         <ReLineChart
             width={350}
-            height={200}
+            height={150}
             data={data} {...props}>
 
             {lines.map((dataKey, index) => {
