@@ -1,4 +1,3 @@
-import Checkbox from '@material-ui/core/Checkbox';
 import Divider from '@material-ui/core/Divider';
 import MuiTable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -80,16 +79,6 @@ const components = {
         return memo(THead);
     })(),
     hr: Divider,
-    input: (() => {
-        const Input = props => {
-            const { type } = props;
-            if (type === 'checkbox') {
-                return <Checkbox {...props} disabled={false} readOnly={true} />;
-            }
-            return <input {...props} />;
-        };
-        return memo(Input);
-    })(),
     a: (() => {
         const a = props => <Link {...props} />;
         return memo(a);

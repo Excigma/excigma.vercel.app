@@ -29,7 +29,7 @@ module.exports = withBundleAnalyzer(withMDX({
         ];
     },
     webpack: (config, { isServer }) => {
-        if (!isServer) config.resolve.fallback = { fs: false, path: false };
+        if (!isServer) config.resolve.fallback = { fs: false, path: false, crypto: false };
         config.mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
         return config;
     }

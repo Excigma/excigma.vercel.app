@@ -56,6 +56,7 @@ export default function MyApp({ Component, pageProps }) {
 
                                 <br />
 
+                                {/* Bad performance; large bundle size from components imports..., fix later */}
                                 <MDXProvider components={components}>
                                     <Component {...pageProps} />
                                 </MDXProvider>
