@@ -8,10 +8,10 @@ import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import Blockquote from 'components/Blockquote';
 import Heading from 'components/Heading';
+import LineChart from 'components/LineChart';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import React, { memo } from 'react';
-import { Line, LineChart } from 'recharts';
 
 const components = {
     p: Typography,
@@ -99,13 +99,9 @@ const components = {
         return memo(Wrapper);
     })(),
     LineChart: (() => {
-        const Chart = props => <LineChart {...props} />;
-        return memo(Chart);
+        const chart = props => <LineChart {...props} />;
+        return memo(chart);
     })(),
-    Line: (() => {
-        const line = props => <Line {...props} />;
-        return memo(line);
-    })()
 };
 
 export default components;

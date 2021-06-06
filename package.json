@@ -37,7 +37,8 @@
         "react-syntax-highlighter": "^15.4.3",
         "recharts": "^2.0.9",
         "rehype-katex": "^5.0.0",
-        "remark-math": "3"
+        "remark-math": "3",
+        "victory": "^35.8.4"
     },
     "devDependencies": {
         "@next/eslint-plugin-next": "^10.2.3",
