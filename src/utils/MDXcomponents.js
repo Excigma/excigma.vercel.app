@@ -1,9 +1,4 @@
 import Divider from '@material-ui/core/Divider';
-import MuiTable from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import Blockquote from 'components/Blockquote';
 import Heading from 'components/Heading';
@@ -50,34 +45,34 @@ const components = {
         const Li = props => <Typography {...props} component="li" />;
         return memo(Li);
     })(),
-    table: (() => {
-        const Table = props => <MuiTable {...props} />;
-        return memo(Table);
-    })(),
-    tr: (() => {
-        const Tr = props => <TableRow {...props} />;
-        return memo(Tr);
-    })(),
-    td: (() => {
-        const Td = ({ align, ...props }) => (
-            <TableCell align={align || undefined} {...props} />
-        );
-        return memo(Td);
-    })(),
-    tbody: (() => {
-        const TBody = props => <TableBody {...props} />;
-        return memo(TBody);
-    })(),
-    th: (() => {
-        const Th = ({ align, ...props }) => (
-            <TableCell align={align || undefined} {...props} />
-        );
-        return memo(Th);
-    })(),
-    thead: (() => {
-        const THead = props => <TableHead {...props} />;
-        return memo(THead);
-    })(),
+    // table: (() => {
+    //     const Table = props => <MuiTable {...props} />;
+    //     return memo(Table);
+    // })(),
+    // tr: (() => {
+    //     const Tr = props => <TableRow {...props} />;
+    //     return memo(Tr);
+    // })(),
+    // td: (() => {
+    //     const Td = ({ align, ...props }) => (
+    //         <TableCell align={align || undefined} {...props} />
+    //     );
+    //     return memo(Td);
+    // })(),
+    // tbody: (() => {
+    //     const TBody = props => <TableBody {...props} />;
+    //     return memo(TBody);
+    // })(),
+    // th: (() => {
+    //     const Th = ({ align, ...props }) => (
+    //         <TableCell align={align || undefined} {...props} />
+    //     );
+    //     return memo(Th);
+    // })(),
+    // thead: (() => {
+    //     const THead = props => <TableHead {...props} />;
+    //     return memo(THead);
+    // })(),
     hr: Divider,
     a: (() => {
         const a = props => <Link {...props} />;
