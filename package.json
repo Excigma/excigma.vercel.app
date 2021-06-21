@@ -11,7 +11,6 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "postbuild": "next-sitemap --config next-sitemap.config.js",
         "start": "next start"
     },
     "dependencies": {
@@ -24,12 +23,11 @@
         "@material-ui/styles": "^5.0.0-alpha.35",
         "@mdx-js/loader": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
-        "@next/bundle-analyzer": "^10.2.3",
-        "@next/mdx": "^10.2.3",
+        "@next/bundle-analyzer": "^11.0.0",
+        "@next/mdx": "^11.0.0",
         "clsx": "^1.1.1",
         "katex": "^0.13.11",
-        "next": "^10.2.3",
-        "next-sitemap": "^1.6.99",
+        "next": "^11.0.0",
         "prismjs": "^1.23.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -37,11 +35,10 @@
         "react-syntax-highlighter": "^15.4.3",
         "recharts": "^2.0.9",
         "rehype-katex": "^5.0.0",
-        "remark-math": "3",
-        "victory": "^35.8.4"
+        "remark-math": "^4.0.0"
     },
     "devDependencies": {
-        "@next/eslint-plugin-next": "^10.2.3",
+        "@next/eslint-plugin-next": "^11.0.0",
         "babel-plugin-transform-imports": "^2.0.0",
         "eslint": "^7.26.0",
         "eslint-plugin-mui-unused-classes": "^1.0.3",
