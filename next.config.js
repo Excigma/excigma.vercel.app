@@ -11,7 +11,6 @@ module.exports = withBundleAnalyzer(withMDX({
     pageExtensions: ['js', 'jsx', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
-    webpack5: true,
     redirects: () => {
         return [
             {
