@@ -52,22 +52,22 @@ export default function PageContent() {
         // s-s-stammaeww~
         for (const pos in text) {
             if (text[pos].length >= 2) {
-                if (Math.random() > 0.5) text[pos] = text[pos].charAt(0) + '-' + text[pos]
-                if (Math.random() > 0.5) text[pos] = text[pos].charAt(0) + '-' + text[pos]
+                if (Math.random() > 0.4) text[pos] = text[pos].charAt(0) + '-' + text[pos]
+                if (Math.random() > 0.4) text[pos] = text[pos].charAt(0) + '-' + text[pos]
             }
         }
         text = text.join(' ')
 
-        text = owofy(text, 'uvu')
+        text = owofy(text, owofy(text, owofy(text, 'owo'), 'uwu'), 'ovo')
         text = text
             .replace(/ t/g, ' tw')
 
-        if (Math.random() > 0.6) text += '~'
-        if (Math.random() > 0.7) text += '!'
+        if (Math.random() > 0.5) text += '~'
+        if (Math.random() > 0.6) text += '!'
 
-        if (Math.random() > 0.9) text += ' owo'
+        if (Math.random() > 0.7) text += ' owo'
         // eslint-disable-next-line no-dupe-else-if
-        else if (Math.random() > 0.95) text += ' uwu'
+        else if (Math.random() > 0.75) text += ' uwu'
         return text
     }
 }
