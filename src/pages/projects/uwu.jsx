@@ -53,7 +53,7 @@ export default function PageContent() {
         for (const pos in text) {
             if (text[pos].length >= 2) {
                 if (Math.random() > 0.4) text[pos] = text[pos].charAt(0) + '-' + text[pos]
-                if (Math.random() > 0.4) text[pos] = text[pos].charAt(0) + '-' + text[pos]
+                if (Math.random() > 0.7) text[pos] = text[pos].charAt(0) + '-' + text[pos]
             }
         }
         text = text.join(' ')
