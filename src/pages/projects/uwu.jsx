@@ -32,14 +32,13 @@ export default function PageContent() {
             </Alert>
 
             <TextField
-                multiline
                 id="uwu-expression"
                 color="secondary"
                 onChange={handleChange}
                 label={uwu('I regret this')}
                 variant="outlined" />
 
-            <Typography >
+            <Typography>
                 {expression}
             </Typography>
         </>
