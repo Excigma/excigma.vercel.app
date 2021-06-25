@@ -43,10 +43,9 @@ export default function PageContent() {
 
         // s-stammaerr
         for (const pos in text) {
-            const word = text[pos]
-            if (word.length > 3) {
-                if (Math.random() > 0.5) text[pos] = word.charAt(0) + '-' + word
-                if (Math.random() > 0.5) text[pos] = word.charAt(0) + '-' + word
+            if (text[pos].length >= 2) {
+                if (Math.random() > 0.5) text[pos] = text[pos].charAt(0) + '-' + text[pos]
+                if (Math.random() > 0.5) text[pos] = text[pos].charAt(0) + '-' + text[pos]
             }
         }
 
