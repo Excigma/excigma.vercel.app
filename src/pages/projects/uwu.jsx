@@ -1,5 +1,5 @@
 /* eslint-disable semi */
-import { TextField, Typography } from '@material-ui/core';
+import { Alert, AlertTitle, TextField, Typography } from '@material-ui/core';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 const owofy = require('owoify-js').default;
@@ -22,6 +22,16 @@ export default function PageContent() {
                 {uwu('btw you should try refreshing a few times')}
             </Typography>
 
+            <Alert severity="error">
+                <AlertTitle>{uwu('WARNING')} </AlertTitle>
+                {uwu('Disclaimer: any loss of braincells is not my problem, please leave the page now if you will lose braincells to this')}
+
+                <Typography variant="subtitle2">
+                    Disclaimer: Any loss of braincells is not my problem, please leave the page now if you will lose braincells to this
+                </Typography>
+            </Alert>
+
+
             <TextField
                 id="uwu-expression"
                 color="secondary"
@@ -37,11 +47,7 @@ export default function PageContent() {
 
     // please save me
     function uwu(text) {
-        text = owofy(text, 'uvu')
-        text = text
-            .replace(/ t/g, ' tw')
-            .split(' ')
-
+        text = text.split(' ')
         // s-stammaerr
         for (const pos in text) {
             if (text[pos].length >= 2) {
@@ -49,8 +55,11 @@ export default function PageContent() {
                 if (Math.random() > 0.5) text[pos] = text[pos].charAt(0) + '-' + text[pos]
             }
         }
-
         text = text.join(' ')
+
+        text = owofy(text, 'uvu')
+        text = text
+            .replace(/ t/g, ' tw')
 
         if (Math.random() > 0.6) text += '~'
         if (Math.random() > 0.7) text += '!'
