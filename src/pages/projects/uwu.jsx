@@ -46,8 +46,10 @@ export default function PageContent() {
 
     // please save me
     function uwu(text) {
+        if (typeof window === 'undefined') return text
+
         text = text.split(' ')
-        // s-stammaerr
+        // s-s-stammaeww~
         for (const pos in text) {
             if (text[pos].length >= 2) {
                 if (Math.random() > 0.5) text[pos] = text[pos].charAt(0) + '-' + text[pos]
