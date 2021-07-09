@@ -237,6 +237,45 @@ V_{out} = \frac{V_{in} * R_T}{R + R_T}
 $$$
 
 #### Electronics
+
+##### Op-amps
+- $A_0$ : Open-loop gain of op-amp
 $$$
-\text{Todo}
+A_0 = \frac{V_{out}}{V_{in}}
+$$$
+
+$$$
+V_{out} = A_0(V^+ - V^-)
+$$$
+
+Gain of inverting feedback loop
+- $R_f$ : Resistance of inverting feedback loop 
+$$$
+A = \frac{V_{out}}{V_{in}} = \frac{-R_f}{R}
+$$$
+
+Gain of **non**-inverting feedback loop
+- $R_f$ : Resistance of inverting feedback loop 
+$$$
+A = \frac{V_{out}}{V_{in}} = 1 + \frac{-R_f}{R_1}
+$$$
+
+##### Signal attenuation
+$$$
+dB = 10 * log(\frac{P_{out}}{P_{in}})
+$$$
+
+$$$
+dB = \text{Attenuation per unit length} * \text{Length}
+$$$
+
+##### Signal to noise Ratio
+$$$
+SNR (dB) = 10 * log(\frac{P_{Signal}}{P_{Noise}})
+$$$
+
+##### Orbit
+- $G$ : Gravitational constant: $6.67x10^{-11}$
+$$$
+F_c \text{(Required)} = \frac{mv^2}{r} = \frac{GMm}{r^2} = F_g \text{(Provided)} 
 $$$
