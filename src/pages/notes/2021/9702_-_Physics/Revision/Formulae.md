@@ -51,7 +51,7 @@ $$
 Velocity
 
 $$
-x = -x_0 \omega sin(\omega t)
+x = -x_0 \omega * sin(\omega t)
 $$
 
 $$
@@ -402,13 +402,13 @@ $$
 #### Force on a current-carrying conductor inside a magnetic field
 - $\theta$ : Angle between $B$ and $I$
 $$
-F = BIL sin(\theta)
+F = BIL * sin(\theta)
 $$
 
 ##### Force on a charged particle moving through a magnetic field
 - $\theta$ : Angle between $B$ and $v$
 $$
-F = Bqv sin(\theta)
+F = Bqv * sin(\theta)
 $$
 
 ##### Hall Effect
