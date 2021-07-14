@@ -9,7 +9,7 @@ export default function PageContent({ directoryTree }) {
     return (
         <>
             <Heading>
-                ecnomicks
+                Economics
             </Heading>
 
             <Typography>
