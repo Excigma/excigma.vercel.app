@@ -11,6 +11,11 @@ module.exports = withBundleAnalyzer(withMDX({
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
+    eslint: {
+        // Warning: Dangerously allow production builds to successfully complete even if
+        // your project has ESLint errors.
+        ignoreDuringBuilds: true,
+    },
     redirects: () => {
         return [{
                 source: '/notes/:year',

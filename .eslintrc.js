@@ -6,7 +6,8 @@ module.exports = {
     },
     'extends': [
         'eslint:recommended',
-        'plugin:react/recommended'
+        'plugin:react/recommended',
+        'next'
     ],
     'parserOptions': {
         'ecmaFeatures': { 'jsx': true },
@@ -15,10 +16,10 @@ module.exports = {
     },
     'plugins': ['react', 'mui-unused-classes', '@next/eslint-plugin-next'],
     'rules': {
+        'react/no-unescaped-entities': 'off',
+        'react/prop-types': 'off',
+        'linebreak-style': 'off',
         'indent': ['error', 4],
-        'react/no-unescaped-entities': [0],
-        'react/prop-types': [0],
-        'linebreak-style': ['warn', 'windows'],
         'quotes': ['error', 'single'],
         'semi': ['error', 'always']
     }
