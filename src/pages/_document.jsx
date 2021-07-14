@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
                     <meta name="og:type" content="website" />
                     {/* <meta name="og:image" content="/icons/icon-72x72.png" /> */}
                     <meta name="og:site_name" content="Excigma's Webpage" />
-                    <meta name="og:description" content="A gallery of Excigma's projects, notes and other things he tinkers with." />
+                    {/* <meta name="og:description" content="A gallery of Excigma's projects, notes and other things he tinkers with." /> */}
 
                     <link rel="shortcut icon" href="favicon.ico" />
 
