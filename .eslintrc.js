@@ -18,7 +18,7 @@ module.exports = {
         'indent': ['error', 4],
         'react/no-unescaped-entities': [0],
         'react/prop-types': [0],
-        'linebreak-style': ['error', 'windows'],
+        'linebreak-style': ['warn', 'windows'],
         'quotes': ['error', 'single'],
         'semi': ['error', 'always']
     }
