@@ -323,3 +323,97 @@ $$
 $$
 \Phi = \frac{-GM}{r}
 $$
+
+##### Keplar's third law
+$$
+T^2 \propto r^3
+$$
+
+#### Electric fields
+
+$$
+F = Eq
+$$
+
+##### Coulomb's law
+- $\epsilon_0 = \text{Permittivity of free space} = 8.85 * 10^{-12}$
+$$
+F = \frac{1}{4 \pi \epsilon_0} * \frac{Q_1 Q_2}{r^2} = \frac{K Q_1 Q_2}{r^2}
+$$
+
+##### Electric field strength
+$$
+E = \frac{q_1}{4 \pi \epsilon_0 r^2}
+$$
+
+##### Electric potential between two points
+$$
+\Delta V_{AB} = \frac{Kq_1}{\Delta r} = K q_1  (\frac{1}{r_B} - \frac{1}{r_A})
+$$
+
+##### Potential Gradient
+$$
+E = - \nabla V
+$$
+
+#### Capacitance
+$$
+C = \frac{Q_{total}}{V_{total}}
+$$
+
+$$
+C \propto A \text{; } C \propto \frac{1}{d}
+$$
+
+Capacitors in Series
+$$
+\frac{1}{C_{total}} = \frac{1}{C_1} + \frac{1}{C_2} + ... + \frac{1}{C_n}
+$$
+
+Capacitors in Parallel
+$$
+C_{total} = C_1 + C_2 + ... + C_n
+$$
+
+##### Energy in Capacitors
+$$
+W = \frac{1}{2}QV
+$$
+$$
+W = \frac{1}{2}CV^2
+$$
+
+##### Charged conducting isolated space
+$$
+V = \frac{Q}{4 \pi \epsilon R} = \frac{KQ}{R}
+$$
+
+$$
+\text{Since } C = \frac{Q}{V} \text{, } C = 4 \pi \epsilon_0 R
+$$
+
+#### Magnetic fields
+
+##### Magnetic Flux density
+$$
+B = \frac{F}{IL}
+$$
+
+#### Force on a current-carrying conductor inside a magnetic field
+- $\theta$ : Angle between $B$ and $I$
+$$
+F = BIL sin(\theta)
+$$
+
+##### Force on a charged particle moving through a magnetic field
+- $\theta$ : Angle between $B$ and $v$
+$$
+F = Bqv sin(\theta)
+$$
+
+##### Hall Effect
+- $n$ : Density of charge carriers
+- $t$ : Thickness of wafer
+$$
+V_H = \frac{IB}{nqt}
+$$
