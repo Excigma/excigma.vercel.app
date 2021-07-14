@@ -1,6 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: false });
 const withMDX = require('@next/mdx')({
-    extension: /\.mdx$/,
+    extension: /\.mdx?$/,
     options: {
         remarkPlugins: [require('remark-math')],
         rehypePlugins: [require('@mapbox/rehype-prism'), require('rehype-katex')]
@@ -8,17 +8,11 @@ const withMDX = require('@next/mdx')({
 });
 
 module.exports = withBundleAnalyzer(withMDX({
-    pageExtensions: ['js', 'jsx', 'mdx'],
+    pageExtensions: ['js', 'jsx', 'md', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
-    eslint: {
-        // Warning: Dangerously allow production builds to successfully complete even if
-        // your project has ESLint errors.
-        ignoreDuringBuilds: true,
-    },
     redirects: () => {
-        return [
-            {
+        return [{
                 source: '/notes/:year',
                 destination: '/notes',
                 permanent: true,

@@ -318,3 +318,8 @@ $$
 $$
 \sqrt{\frac{2GM}{r_e}} = v_{escape}
 $$
+
+##### Gravitational Potential
+$$
+\Phi = \frac{-GM}{r}
+$$
