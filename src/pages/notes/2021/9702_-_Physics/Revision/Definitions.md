@@ -222,4 +222,4 @@ $$
 > One tesla is the uniform magnitude flux density when a wire carrying a current 1.0A is placed at right angles to a magnetic field and experiences a force per unit length of $1.0Nm^-1$
 
 ##### Hall effect 
-> When a thin semi-conducting wafer is placed inside a magnetic field with a small current passing through it, the charge carriers moving within the wafer are deflected (Fleming's left-hand rule) to create a potential difference (and also an electric field) across the width of the water. This is called the **Hall Voltage**
+> When a thin semiconducting wafer is placed inside a magnetic field with a small current passing through it, the charge carriers moving within the wafer are deflected (Fleming's left-hand rule) to create a potential difference (and also an electric field) across the width of the water. This is called the **Hall Voltage**
