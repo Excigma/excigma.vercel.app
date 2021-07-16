@@ -29,6 +29,10 @@ $$
 v = \omega r
 $$
 
+$$
+\omega = 2 \pi f
+$$
+
 ##### Circular motion - Banked corners
 
 $$
