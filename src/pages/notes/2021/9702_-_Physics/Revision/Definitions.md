@@ -104,8 +104,8 @@ $$
 ##### Piezo-electric transducer 
 > Some crystals such as quartz produce a force when a potential difference is applied across them, causing their shape to change. This is known as the piezo-electric effect.
 
-##### Acoustic impedance
-> Product of the density of a medium and the velocity of waves traveling through that medium
+##### Specific acoustic impedance
+> Product of the density of a medium and the velocity of sound waves traveling through that medium
 
 ##### Attenuation
 > Progressive reduction of power/energy of a wave with distance as it travels along a transmission path through a medium
