@@ -259,7 +259,7 @@ A = \frac{V_{out}}{V_{in}} = \frac{-R_f}{R}
 $$
 
 Gain of **non**-inverting feedback loop
-- $R_f$ : Resistance of inverting feedback loop 
+- $R_f$ : Resistance of non-inverting feedback loop 
 $$
 A = \frac{V_{out}}{V_{in}} = 1 + \frac{-R_f}{R_1}
 $$
