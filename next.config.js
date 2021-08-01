@@ -31,7 +31,7 @@ module.exports = withBundleAnalyzer(withMDX({
     },
     headers: () => {
         return [{
-            source: '*',
+            source: '/:anything*',
             headers: [{
                 key: 'Cross-Origin-Opener-Policy',
                 value: 'same-origin'
