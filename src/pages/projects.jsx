@@ -66,12 +66,12 @@ export default function PageContent() {
                             </Typography>
 
                             <Typography>
-                                Mainly used to compress videos above 8mb to just around 8mb for uploading to Discord.
+                                Mainly used to compress videos below 8mb to just around 8mb for uploading to Discord.
                             </Typography>
                         </CardContent>
 
                         <CardActions>
-                            <Button variant="contained" href="/projects/Compressor" component={Link} sx={{ color: 'white' }}>See the compressor</Button>
+                            <Button variant="contained" href="/projects/compressor" component={Link} sx={{ color: 'white' }}>See the compressor</Button>
                         </CardActions>
                     </Card>
                 </Grid>
