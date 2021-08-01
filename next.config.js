@@ -18,16 +18,29 @@ module.exports = withBundleAnalyzer(withMDX({
     },
     redirects: () => {
         return [{
-                source: '/notes/:year',
-                destination: '/notes',
-                permanent: true,
+            source: '/notes/:year',
+            destination: '/notes',
+            permanent: true,
+        },
+        {
+            source: '/notes/:year/:subject/:paper',
+            destination: '/notes/:year/:subject',
+            permanent: true,
+        }
+        ];
+    },
+    headers: () => {
+        return [{
+            source: '/projects/compressor',
+            headers: [{
+                key: 'Cross-Origin-Opener-Policy',
+                value: 'same-origin'
             },
             {
-                source: '/notes/:year/:subject/:paper',
-                destination: '/notes/:year/:subject',
-                permanent: true,
-            }
-        ];
+                key: 'Cross-Origin-Embedder-Policy',
+                value: 'require-corp'
+            }]
+        }];
     },
     webpack: (config, { isServer }) => {
         if (!isServer) config.resolve.fallback = { fs: false, path: false, crypto: false };
