@@ -48,12 +48,30 @@ export default function PageContent() {
                             </Typography>
 
                             <Typography>
-                                Mostly used for this website, you can find other ones online but idk lol
+                                Mostly used by me to write physics notes for this website, you can find other ones online but idk lol
                             </Typography>
                         </CardContent>
 
                         <CardActions>
                             <Button variant="contained" href="/projects/KaTeX" component={Link} sx={{ color: 'white' }}>See KaTeX</Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+                
+                <Grid item xs={12} md={4}>
+                    <Card>
+                        <CardContent>
+                            <Typography variant="h5" component="h4">
+                                Simple mp4 compressor 
+                            </Typography>
+
+                            <Typography>
+                                Mainly used to compress videos above 8mb to just around 8mb for uploading to Discord.
+                            </Typography>
+                        </CardContent>
+
+                        <CardActions>
+                            <Button variant="contained" href="/projects/Compressor" component={Link} sx={{ color: 'white' }}>See the compressor</Button>
                         </CardActions>
                     </Card>
                 </Grid>
