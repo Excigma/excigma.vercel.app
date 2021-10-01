@@ -59,14 +59,14 @@ export default function PageContent() {
         }
         text = text.join(' ')
 
-        text = text.replace(". ", () => {
+        text = text.replaceAll(". ", () => {
             let ending = ""
 
-            if (Math.random() > 0.8) ending += ' owo'
-            else if (Math.random() > 0.5) ending += ' uwu'
+            if (Math.random() > 0.9) ending += ' owo'
+            else if (Math.random() > 0.7) ending += ' uwu'
 
-            if (Math.random() > 0.6) ending += '~'
-            if (Math.random() > 0.8) ending += '!'
+            if (Math.random() > 0.8) ending += '~'
+            if (Math.random() > 0.95) ending += '!'
             else ending += "."
 
             return ending + " "
