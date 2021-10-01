@@ -59,16 +59,22 @@ export default function PageContent() {
         }
         text = text.join(' ')
 
+        text = text.replace(". ", () => {
+            let ending = ""
+
+            if (Math.random() > 0.9) ending += ' owo'
+            else if (Math.random() > 0.5) ending += ' uwu'
+
+            if (Math.random() > 0.8) ending += '~'
+            if (Math.random() > 0.9) ending += '!'
+            else ending += "."
+
+            ending += " "
+        })
+
         text = owofy(text, owofy(text, owofy(text, 'owo'), 'uwu'), 'ovo')
-        text = text
-            .replace(/ t/g, ' tw')
+        text = text.replace(/ t/g, ' tw')
 
-        if (Math.random() > 0.8) text += '~'
-        if (Math.random() > 0.9) text += '!'
-
-        if (Math.random() > 0.9) text += ' owo'
-        // eslint-disable-next-line no-dupe-else-if
-        else if (Math.random() > 0.9) text += ' uwu'
         return text
     }
 }
