@@ -65,11 +65,11 @@ export default function PageContent() {
             if (Math.random() > 0.9) ending += ' owo'
             else if (Math.random() > 0.5) ending += ' uwu'
 
-            if (Math.random() > 0.8) ending += '~'
+            if (Math.random() > 0.7) ending += '~'
             if (Math.random() > 0.9) ending += '!'
             else ending += "."
 
-            ending += " "
+            return ending + " "
         })
 
         text = owofy(text, owofy(text, owofy(text, 'owo'), 'uwu'), 'ovo')
