@@ -62,11 +62,11 @@ export default function PageContent() {
         text = text.replace(". ", () => {
             let ending = ""
 
-            if (Math.random() > 0.9) ending += ' owo'
+            if (Math.random() > 0.8) ending += ' owo'
             else if (Math.random() > 0.5) ending += ' uwu'
 
-            if (Math.random() > 0.7) ending += '~'
-            if (Math.random() > 0.9) ending += '!'
+            if (Math.random() > 0.6) ending += '~'
+            if (Math.random() > 0.8) ending += '!'
             else ending += "."
 
             return ending + " "
