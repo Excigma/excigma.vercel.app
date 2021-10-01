@@ -47,13 +47,14 @@ export default function PageContent() {
     // please save me
     function uwu(text) {
         if (typeof window === 'undefined') return text
+        const letters = "abcdefghijklmnopqrstuvwxyz";
 
         text = text.split(' ')
         // s-s-stammaeww~
         for (const pos in text) {
             if (text[pos].length >= 2) {
-                if (Math.random() > 0.4) text[pos] = text[pos].charAt(0) + '-' + text[pos]
-                if (Math.random() > 0.7) text[pos] = text[pos].charAt(0) + '-' + text[pos]
+                const firstChar = text[pos].charAt(0);
+                if (letters.includes(firstChar.toLowerCase()) && Math.random() > 0.9) text[pos] = firstChar.charAt(0) + '-' + text[pos]
             }
         }
         text = text.join(' ')
@@ -62,12 +63,12 @@ export default function PageContent() {
         text = text
             .replace(/ t/g, ' tw')
 
-        if (Math.random() > 0.5) text += '~'
-        if (Math.random() > 0.6) text += '!'
+        if (Math.random() > 0.8) text += '~'
+        if (Math.random() > 0.9) text += '!'
 
-        if (Math.random() > 0.7) text += ' owo'
+        if (Math.random() > 0.9) text += ' owo'
         // eslint-disable-next-line no-dupe-else-if
-        else if (Math.random() > 0.75) text += ' uwu'
+        else if (Math.random() > 0.9) text += ' uwu'
         return text
     }
 }
