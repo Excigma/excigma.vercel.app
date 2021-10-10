@@ -1,6 +1,6 @@
-import { Box, Container, CssBaseline, Stack, Typography } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/core/styles';
 import { MDXProvider } from '@mdx-js/react';
+import { Box, Container, CssBaseline, Stack, Typography } from '@mui/material';
+import { ThemeProvider } from '@mui/styles';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Footer from 'components/Footer.js';
 import Header from 'components/Header.js';

@@ -1,5 +1,5 @@
-import Divider from '@material-ui/core/Divider';
-import Typography from '@material-ui/core/Typography';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 import Blockquote from 'components/Blockquote';
 import Heading from 'components/Heading';
 import LineChart from 'components/LineChart';

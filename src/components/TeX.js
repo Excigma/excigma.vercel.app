@@ -1,5 +1,5 @@
 import KaTeX from '@matejmazur/react-katex';
-import { Alert, AlertTitle } from '@material-ui/core';
+import { Alert, AlertTitle } from '@mui/material';
 import * as React from 'react';
 import LazyHydrate from 'react-lazy-hydration';
 

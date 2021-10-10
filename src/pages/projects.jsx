@@ -1,7 +1,7 @@
 
-import { Button, Card, CardActions, CardContent, Grid, Typography } from '@material-ui/core';
-import Alert from '@material-ui/core/Alert';
-import AlertTitle from '@material-ui/core/AlertTitle';
+import { Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 import Link from 'components/Link';
 import * as React from 'react';
 
@@ -14,7 +14,7 @@ export default function PageContent() {
 
             <Alert severity="info">
                 <AlertTitle>Outdated</AlertTitle>
-                List is incomplete, and some of the things listed here are from ancient projects that I've since not worked on anymore. 
+                List is incomplete, and some of the things listed here are from ancient projects that I've since not worked on anymore.
             </Alert>
 
             <Grid container item xs={12} spacing={2}>
@@ -22,13 +22,13 @@ export default function PageContent() {
                     <Card>
                         <CardContent>
                             <Typography variant="h5" component="h4">
-                                        This site
+                                This site
                             </Typography>
 
                             <Typography>
-                                        Yea, literally nothing else I made since 2013 have survived until this day. :crying_face_with_tear:
-                                         
-                                        Many projects just ended up not being useful, either superseded by better existing software or just became not useful
+                                Yea, literally nothing else I made since 2013 have survived until this day. :crying_face_with_tear:
+
+                                Many projects just ended up not being useful, either superseded by better existing software or just became not useful
                             </Typography>
                         </CardContent>
 
@@ -39,7 +39,7 @@ export default function PageContent() {
                 </Grid>
 
 
-                
+
                 <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
@@ -57,12 +57,12 @@ export default function PageContent() {
                         </CardActions>
                     </Card>
                 </Grid>
-                
+
                 <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
                             <Typography variant="h5" component="h4">
-                                Simple mp4 compressor 
+                                Simple mp4 compressor
                             </Typography>
 
                             <Typography>

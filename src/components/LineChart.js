@@ -1,4 +1,4 @@
-import { useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@mui/styles';
 import * as React from 'react';
 import { Legend, Line, LineChart as ReLineChart } from 'recharts';
 

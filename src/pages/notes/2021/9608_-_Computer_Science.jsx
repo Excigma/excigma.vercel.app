@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import DirectoryList from 'components/DirectoryList';
 import Heading from 'components/Heading';
 import Link from 'components/Link';

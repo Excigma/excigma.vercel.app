@@ -1,4 +1,4 @@
-import { TextField, Typography } from '@material-ui/core';
+import { TextField, Typography } from '@mui/material';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import TeX from 'components/TeX';

@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import Codeblock from 'components/Codeblock';
 import Heading from 'components/Heading';
 import Li from 'components/Li';

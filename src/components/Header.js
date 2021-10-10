@@ -1,8 +1,8 @@
-import { AppBar, Avatar, Box, Button, Drawer, IconButton, List, ListItem, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
-import Divider from '@material-ui/core/Divider';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Avatar, Box, Button, Drawer, IconButton, List, ListItem, Slide, Stack, Toolbar, Typography, useScrollTrigger } from '@mui/material';
+import Divider from '@mui/material/Divider';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Link from 'components/Link';
 import * as React from 'react';
 

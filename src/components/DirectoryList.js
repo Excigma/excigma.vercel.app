@@ -1,4 +1,4 @@
-import { Divider, List, ListItem, ListItemText, Paper, Typography } from '@material-ui/core';
+import { Divider, List, ListItem, ListItemText, Paper, Typography } from '@mui/material';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';
 import * as React from 'react';

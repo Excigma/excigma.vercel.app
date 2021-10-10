@@ -1,6 +1,6 @@
 // From: https://github.com/mui-org/material-ui/blob/next/examples/nextjs/src/Link.js
 
-import MuiLink from '@material-ui/core/Link';
+import MuiLink from '@mui/material/Link';
 import clsx from 'clsx';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';

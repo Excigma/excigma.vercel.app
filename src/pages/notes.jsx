@@ -1,5 +1,5 @@
-import Alert from '@material-ui/core/Alert';
-import AlertTitle from '@material-ui/core/AlertTitle';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 import DirectoryList from 'components/DirectoryList';
 import Subheading from 'components/Subheading';
 import * as React from 'react';

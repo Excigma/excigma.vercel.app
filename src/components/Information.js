@@ -1,4 +1,4 @@
-import { Alert, AlertTitle } from '@material-ui/core';
+import { Alert, AlertTitle } from '@mui/material';
 import * as React from 'react';
 
 export default function Information({ title = 'Information', severity = 'info', children, ...props }) {

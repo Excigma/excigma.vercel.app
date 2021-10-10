@@ -1,4 +1,4 @@
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import Link from 'components/Link';
 import Subheading from 'components/Subheading';
 import * as React from 'react';

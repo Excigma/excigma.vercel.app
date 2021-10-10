@@ -1,5 +1,5 @@
-import { Typography } from '@material-ui/core';
-import LinkIcon from '@material-ui/icons/Link';
+import LinkIcon from '@mui/icons-material/Link';
+import { Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 

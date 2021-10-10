@@ -1,5 +1,5 @@
 /* eslint-disable semi */
-import { Alert, AlertTitle, TextField, Typography } from '@material-ui/core';
+import { Alert, AlertTitle, TextField, Typography } from '@mui/material';
 import Subheading from 'components/Subheading';
 import * as React from 'react';
 const owofy = require('owoify-js').default;

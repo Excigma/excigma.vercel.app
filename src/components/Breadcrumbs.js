@@ -1,7 +1,7 @@
-import { Breadcrumbs } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { Breadcrumbs } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/styles';
 import Link from 'components/Link';
 import { useRouter } from 'next/router';
 import * as React from 'react';

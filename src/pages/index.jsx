@@ -1,4 +1,4 @@
-import { Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@material-ui/core';
+import { Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material';
 import Blockquote from 'components/Blockquote.js';
 import Link from 'components/Link.js';
 import Subheading from 'components/Subheading';

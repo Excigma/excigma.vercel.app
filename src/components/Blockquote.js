@@ -1,5 +1,5 @@
-import { Typography } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Typography } from '@mui/material';
+import { useTheme } from '@mui/styles';
 import * as React from 'react';
 
 export default function Blockquote({ color = 'secondary', ...props }) {

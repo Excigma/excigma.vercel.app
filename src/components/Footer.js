@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography } from '@material-ui/core';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import * as React from 'react';
 
 function scrollToTop() {

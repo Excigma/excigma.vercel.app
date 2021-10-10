@@ -1,4 +1,4 @@
-import { ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemText } from '@mui/material';
 import * as React from 'react';
 
 export default function Li({ children, ...props }) {
